@@ -1,6 +1,6 @@
 +++
 date = '2025-01-27T20:32:26+05:30'
-draft = true
+draft = false
 title = 'Switch to NVIDIA GPU on Linux'
 +++
 # Install & Switch to NVIDIA
