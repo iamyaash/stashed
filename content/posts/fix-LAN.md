@@ -1,6 +1,6 @@
 +++
 date = '2025-01-30T20:58:55+05:30'
-draft = true
+draft = false
 title = 'Fix LAN'
 +++
 
