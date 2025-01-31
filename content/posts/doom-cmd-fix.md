@@ -1,7 +1,7 @@
 +++
 date = '2025-01-31T18:44:50+05:30'
 draft = false
-title = 'Unrecognized doom command fix for doom emacs'
+title = 'Unrecognized `doom` Command Fix'
 +++
 
 # Install Doom Emacs 
