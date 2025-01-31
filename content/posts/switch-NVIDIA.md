@@ -1,8 +1,9 @@
 +++
-date = '2025-01-27T20:32:26+05:30'
+date = '2025-01-31T20:32:26+05:30'
 draft = false
 title = 'Switch to NVIDIA GPU on Linux'
 +++
+> `Note`: Make sure to **Disable Secure Boot**, else whatever you do it won't work :)
 # Install & Switch to NVIDIA
 **1\. Install the required dependencies**
 
@@ -54,6 +55,10 @@ lsmod | grep nvidia
 > If no output then it's not loaded, else **Good**!
 
 **2. Reinstall the NVIDIA drivers**
+- **check whether the NVIDIA driver is connected**
+```sh
+/sbin/lspci | grep -e VGA
+```
 - **remove existing drivers**
 ```bash
 sudo dnf remove *nvidia*
@@ -65,6 +70,11 @@ sudo dnf install akmod-nvidia xorg-x11-drv-nvidia xorg-x11-drv-nvidia-cuda
 - **rebuild the kernel**
 ```bash
 sudo akmods --force
+```
+- **ensure the NVIDIA modules are loaded**
+```sh
+sudo modprobe nvidia
+lsmod | grep nvidia
 ```
 - **reboot**
 ```sh
