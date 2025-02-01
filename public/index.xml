@@ -6,8 +6,15 @@
     <description>Recent content on blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 31 Jan 2025 19:22:06 +0530</lastBuildDate>
+    <lastBuildDate>Sat, 01 Feb 2025 16:01:19 +0530</lastBuildDate>
     <atom:link href="https://iamyaash.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker fix for accessing without sudo</title>
+      <link>https://iamyaash.github.io/blog/posts/docker-sudo-fix/</link>
+      <pubDate>Sat, 01 Feb 2025 16:01:19 +0530</pubDate>
+      <guid>https://iamyaash.github.io/blog/posts/docker-sudo-fix/</guid>
+      <description>&lt;h1 id=&#34;why-this-occurs&#34;&gt;Why this occurs?&lt;/h1&gt;&#xA;&lt;p&gt;I don&amp;rsquo;t whether it&amp;rsquo;s happening to everyone, but whenever I try to install docker I always end up facing an issue, which won&amp;rsquo;t let me use docker unless I use &lt;code&gt;sudo&lt;/code&gt; while executing the &lt;code&gt;docker&lt;/code&gt; commands. Why it&amp;rsquo;s occurs? Well, it&amp;rsquo;s because the permission denied when you are trying to connect with the &lt;code&gt;docker daemon socket&lt;/code&gt; at unix://var/run/docker.sock. (you will also see an error similar to this.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Monthy Report: Jan 2025</title>
       <link>https://iamyaash.github.io/blog/posts/m1-2025/</link>
