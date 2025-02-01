@@ -1,8 +1,9 @@
 +++
-date = '2025-01-31T20:32:26+05:30'
+date = '2025-01-27T20:32:26+05:30'
 draft = false
 title = 'Switch to NVIDIA GPU on Linux'
 +++
+
 > `Note`: Make sure to **Disable Secure Boot**, else whatever you do it won't work :)
 # Install & Switch to NVIDIA
 **1\. Install the required dependencies**
