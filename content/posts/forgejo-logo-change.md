@@ -26,3 +26,12 @@ The above command will generate the respective files into **`public/assets/img`*
 - `public/assets/img/favicon.png` - Used as fallback for browsers that don’t support SVG favicons
 
 In simple terms, we don't have to manually add the images into `public/assets/img` and everything will be generated using that command.
+
+
+# Changing the colors of the theme:
+
+For now, I just changed the colors of each theme manually, this directory consists of sources for changing the themes.
+```sh
+web_src/css/themes/
+```
+Making changes can be done here, I still havet to explore though!
