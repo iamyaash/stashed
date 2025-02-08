@@ -6,8 +6,15 @@
     <description>Recent content in Posts on blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 Feb 2025 16:01:19 +0530</lastBuildDate>
+    <lastBuildDate>Sat, 08 Feb 2025 21:06:31 +0530</lastBuildDate>
     <atom:link href="https://iamyaash.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DNS Change &amp; Troubleshoot (common)</title>
+      <link>https://iamyaash.github.io/blog/posts/dns-initial/</link>
+      <pubDate>Sat, 08 Feb 2025 21:06:31 +0530</pubDate>
+      <guid>https://iamyaash.github.io/blog/posts/dns-initial/</guid>
+      <description>&lt;h1 id=&#34;changing-dns-settings&#34;&gt;Changing DNS Settings&lt;/h1&gt;&#xA;&lt;p&gt;In order to change the DNS settings, we can choose two ways&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Hard way (&lt;em&gt;using CLI, actually that&amp;rsquo;s easy&lt;/em&gt;)&lt;/li&gt;&#xA;&lt;li&gt;Easy way (&lt;em&gt;using GUI, kind of lame XD&lt;/em&gt;)&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;But let&amp;rsquo;s do it the hard way, which is more rewarding than using GUI. I particularly don&amp;rsquo;t have any steps to mention but let&amp;rsquo;s do it with a scenario which can be easy to understand.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;You just installed a new operating system and you have to change the DNS settings.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Docker fix for accessing without sudo</title>
       <link>https://iamyaash.github.io/blog/posts/docker-sudo-fix/</link>
