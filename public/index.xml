@@ -6,8 +6,22 @@
     <description>Recent content on blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 08 Feb 2025 21:06:31 +0530</lastBuildDate>
+    <lastBuildDate>Fri, 14 Feb 2025 23:31:30 +0530</lastBuildDate>
     <atom:link href="https://iamyaash.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Universal Android De-Bloater</title>
+      <link>https://iamyaash.github.io/blog/posts/de-bloater/</link>
+      <pubDate>Fri, 14 Feb 2025 23:31:30 +0530</pubDate>
+      <guid>https://iamyaash.github.io/blog/posts/de-bloater/</guid>
+      <description>&lt;h1 id=&#34;key-features&#34;&gt;Key features&lt;/h1&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;No root required to remove the bloatware.&lt;/li&gt;&#xA;&lt;li&gt;Cross platform, meaning it&amp;rsquo;s accessible on almost all the platforms.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h1 id=&#34;getting-started&#34;&gt;Getting Started:&lt;/h1&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Download the &lt;a href=&#34;https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation&#34;&gt;Universal Android De-bloater (UADNG)&lt;/a&gt; from the &lt;a href=&#34;https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation/releases/tag/v1.1.0&#34;&gt;github release&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Extract the Files in your custom location.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Install the dependencies&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo dnf install adb&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;&#xA;&lt;p&gt;This would be enought to run the tool, now let&amp;rsquo;s see how to use it!&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h1 id=&#34;usage&#34;&gt;Usage:&lt;/h1&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Enable USB Debugging in your android phone. (mandatory)&lt;/li&gt;&#xA;&lt;li&gt;Connect the device with the computer you are running the tool.&lt;/li&gt;&#xA;&lt;li&gt;Run the Universal Android De-Bloater.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Well, this would be my goto page whenever I need to remove the bloatware from my device.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Monthly Report: Feb 2025</title>
+      <link>https://iamyaash.github.io/blog/posts/m2-2025/</link>
+      <pubDate>Mon, 10 Feb 2025 20:21:33 +0530</pubDate>
+      <guid>https://iamyaash.github.io/blog/posts/m2-2025/</guid>
+      <description>&lt;h1 id=&#34;monthly-report---m2&#34;&gt;Monthly Report - &lt;code&gt;m2&lt;/code&gt;:&lt;/h1&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Got my onboarding ticket closed at &lt;a href=&#34;https://pagure.io/fedora-join/WelcomeToFedora/issue/2&#34;&gt;WelcomeToFedora/issue/2&lt;/a&gt; and I&amp;rsquo;m finally one of the Fedora people.&lt;/li&gt;&#xA;&lt;li&gt;Progression on Forgejo&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Sent mail to &lt;strong&gt;&lt;a href=&#34;mailto:logo@fedoraproject.org&#34;&gt;logo@fedoraproject.org&lt;/a&gt;&lt;/strong&gt; requesting Fedora Logo &amp;amp; received it couple of days after. Changed the Logo &amp;amp; Favicon successfuly in Forgejo build of Fedora.&lt;/li&gt;&#xA;&lt;li&gt;Changing theme is manually done and but I still think there&amp;rsquo;s a work around for doing this, let&amp;rsquo;s see.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
     <item>
       <title>DNS Change &amp; Troubleshoot (common)</title>
       <link>https://iamyaash.github.io/blog/posts/dns-initial/</link>
