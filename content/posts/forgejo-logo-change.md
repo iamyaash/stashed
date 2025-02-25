@@ -28,10 +28,22 @@ The above command will generate the respective files into **`public/assets/img`*
 In simple terms, we don't have to manually add the images into `public/assets/img` and everything will be generated using that command.
 
 
-# Changing the colors of the theme:
+# Customizing the colors of the theme:
 
 For now, I just changed the colors of each theme manually, this directory consists of sources for changing the themes.
 ```sh
-web_src/css/themes/
+web_src/css/themes/*
 ```
-Making changes can be done here, I still havet to explore though!
+**Filenames of the theme files**:
+```sh
+theme-fedora-auto.css
+theme-fedora-dark.css
+theme-fedora-light.css
+```
+
+## Changing the UI elements of the theme list:
+Changed the UI element by modifying the element in `modules/settings/ui.go`. Make sure the theme name & the file names are the same:
+
+```go
+Themes: []string{`fedora-auto`, `fedora-light`, `fedora-dark`},
+```
