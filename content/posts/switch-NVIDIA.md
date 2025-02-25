@@ -1,7 +1,7 @@
 +++
 date = '2025-01-27T20:32:26+05:30'
 draft = false
-title = 'Switch to NVIDIA GPU on Linux'
+title = 'Doc: Switch to NVIDIA GPU on Linux'
 +++
 
 > `Note`: Make sure to **Disable Secure Boot**, else whatever you do it won't work :)

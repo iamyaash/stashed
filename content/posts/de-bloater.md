@@ -1,7 +1,7 @@
 +++
 date = '2025-02-14T23:31:30+05:30'
 draft = false
-title = 'Universal Android De-Bloater'
+title = 'Doc: Universal Android De-Bloater'
 +++
 # Key features
 - No root required to remove the bloatware.

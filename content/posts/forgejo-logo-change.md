@@ -18,12 +18,12 @@ make generate-images
 ```
 
 The above command will generate the respective files into **`public/assets/img`**, that is:
-- `public/assets/img/logo.svg` - Used for site icon, app icon
-- `public/assets/img/logo.png` - Used for Open Graph
-- `public/assets/img/avatar_default.png` - Used as the default avatar image
-- `public/assets/img/apple-touch-icon.png` - Used on iOS devices for bookmarks
-- `public/assets/img/favicon.svg` - Used for favicon
-- `public/assets/img/favicon.png` - Used as fallback for browsers that don’t support SVG favicons
+  - `public/assets/img/logo.svg` - Used for site icon, app icon
+  - `public/assets/img/logo.png` - Used for Open Graph
+  - `public/assets/img/avatar_default.png` - Used as the default avatar image
+  - `public/assets/img/apple-touch-icon.png` - Used on iOS devices for bookmarks
+  - `public/assets/img/favicon.svg` - Used for favicon
+  - `public/assets/img/favicon.png` - Used as fallback for browsers that don’t support SVG favicons
 
 In simple terms, we don't have to manually add the images into `public/assets/img` and everything will be generated using that command.
 

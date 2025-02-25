@@ -1,7 +1,7 @@
 +++
 date = '2025-02-08T21:06:31+05:30'
 draft = false
-title = 'DNS Change & Troubleshoot (common)'
+title = 'Doc: DNS Change & Troubleshoot (common)'
 +++
 
 # Changing DNS Settings

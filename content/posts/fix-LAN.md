@@ -1,7 +1,7 @@
 +++
 date = '2025-01-30T20:58:55+05:30'
 draft = false
-title = 'Fix Wired-LAN Connection; when physically connected but no endpoint'
+title = 'Doc: Fix Wired-LAN Connection; when physically connected but no endpoint'
 +++
 
 # Fixing Wired LAN
