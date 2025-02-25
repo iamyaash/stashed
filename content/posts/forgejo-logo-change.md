@@ -1,6 +1,6 @@
 +++
 date = '2025-02-05T15:47:35+05:30'
-draft = true
+draft = false
 title = 'Forgejo Logo Change'
 +++
 

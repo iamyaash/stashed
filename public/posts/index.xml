@@ -44,6 +44,13 @@
       <description>Changing DNS Settings In order to change the DNS settings, we can choose two ways&#xA;Hard way (using CLI, actually that&amp;rsquo;s easy) Easy way (using GUI, kind of lame XD) But let&amp;rsquo;s do it the hard way, which is more rewarding than using GUI. I particularly don&amp;rsquo;t have any steps to mention but let&amp;rsquo;s do it with a scenario which can be easy to understand.&#xA;You just installed a new operating system and you have to change the DNS settings.</description>
     </item>
     <item>
+      <title>Forgejo Logo Change</title>
+      <link>https://iamyaash.github.io/blog/posts/forgejo-logo-change/</link>
+      <pubDate>Wed, 05 Feb 2025 15:47:35 +0530</pubDate>
+      <guid>https://iamyaash.github.io/blog/posts/forgejo-logo-change/</guid>
+      <description>Customizing Logo in Forgejo Customizing the logo and favicon in Forgejo is quite simple and we just need an .svg file that needs to replaced with the current Forgejo icons.&#xA;Read the docs for changing the logo&#xA;Let&amp;rsquo;s use fedora.svg as an example for this:&#xA;Head inside the parent directory of forgejo. Copy the fedora.svg into assets/. Change the name of fedora.svg into favicon.svg &amp;amp; logo.svg (making it two files). From the parent directory of forgejo, run this command: make generate-images The above command will generate the respective files into public/assets/img, that is:</description>
+    </item>
+    <item>
       <title>Fix: Access `docker` without sudo</title>
       <link>https://iamyaash.github.io/blog/posts/docker-sudo-fix/</link>
       <pubDate>Sat, 01 Feb 2025 16:01:19 +0530</pubDate>
