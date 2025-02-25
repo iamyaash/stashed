@@ -1,7 +1,7 @@
 +++
 date = '2025-02-05T15:47:35+05:30'
 draft = false
-title = 'Forgejo Logo Change'
+title = 'Doc: Forgejo Logo Change'
 +++
 
 # Customizing Logo in Forgejo
