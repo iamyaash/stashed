@@ -1,7 +1,7 @@
 +++
 date = '2025-02-01T16:01:19+05:30'
 draft = false
-title = 'Docker fix for accessing without sudo'
+title = 'Fix: Access `docker` without sudo'
 +++
 
 # Why this occurs?
@@ -12,7 +12,7 @@ The simple fix would be adding docker into a group which will let you use it wit
 # Let's fix it!
 1. Verify Docker group exists:
 ```sh
-getend gropu | grep docker
+getent group | grep docker
 ```
 >  If not, create a group called `docker` then.
 2. Assign the `docker` group to the user:
@@ -30,7 +30,7 @@ sudo systemctl restart docker.service
 ```
 5. Let's verify the group memebership:
 ```sh
-getend group | grep docker
+getent group | grep docker
 ```
 
 ## Alternative method, which requires simple fixes!
