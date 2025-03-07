@@ -1,4 +1,4 @@
-baseURL = 'https://iamyaash.github.io/blog'
+baseURL = 'https://iamyaash.github.io/'
 languageCode = 'en-us'
 title = 'stash'
 theme = 'holy'

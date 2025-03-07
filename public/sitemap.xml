@@ -2,47 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/blog/posts/m2-2025/</loc>
+    <loc>https://iamyaash.github.io/posts/instant-page-deploy-hugo/</loc>
+    <lastmod>2025-03-07T21:45:47+05:30</lastmod>
+  </url><url>
+    <loc>https://iamyaash.github.io/posts/</loc>
+    <lastmod>2025-03-07T21:45:47+05:30</lastmod>
+  </url><url>
+    <loc>https://iamyaash.github.io/</loc>
+    <lastmod>2025-03-07T21:45:47+05:30</lastmod>
+  </url><url>
+    <loc>https://iamyaash.github.io/posts/m2-2025/</loc>
     <lastmod>2025-02-28T20:21:33+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/posts/</loc>
-    <lastmod>2025-02-28T20:21:33+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/blog/</loc>
-    <lastmod>2025-02-28T20:21:33+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/blog/posts/nmcli/</loc>
+    <loc>https://iamyaash.github.io/posts/nmcli/</loc>
     <lastmod>2025-02-23T18:16:08+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/posts/goto-apps-android/</loc>
+    <loc>https://iamyaash.github.io/posts/goto-apps-android/</loc>
     <lastmod>2025-02-17T23:22:02+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/posts/de-bloater/</loc>
+    <loc>https://iamyaash.github.io/posts/de-bloater/</loc>
     <lastmod>2025-02-14T23:31:30+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/posts/dns-initial/</loc>
+    <loc>https://iamyaash.github.io/posts/dns-initial/</loc>
     <lastmod>2025-02-08T21:06:31+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/posts/forgejo-logo-change/</loc>
+    <loc>https://iamyaash.github.io/posts/forgejo-logo-change/</loc>
     <lastmod>2025-02-05T15:47:35+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/posts/docker-sudo-fix/</loc>
+    <loc>https://iamyaash.github.io/posts/docker-sudo-fix/</loc>
     <lastmod>2025-02-01T16:01:19+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/posts/m1-2025/</loc>
+    <loc>https://iamyaash.github.io/posts/m1-2025/</loc>
     <lastmod>2025-01-31T19:22:06+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/posts/doom-cmd-fix/</loc>
+    <loc>https://iamyaash.github.io/posts/doom-cmd-fix/</loc>
     <lastmod>2025-01-31T18:44:50+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/posts/fix-lan/</loc>
+    <loc>https://iamyaash.github.io/posts/fix-lan/</loc>
     <lastmod>2025-01-30T20:58:55+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/posts/switch-nvidia/</loc>
+    <loc>https://iamyaash.github.io/posts/switch-nvidia/</loc>
     <lastmod>2025-01-27T20:32:26+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/categories/</loc>
+    <loc>https://iamyaash.github.io/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/blog/tags/</loc>
+    <loc>https://iamyaash.github.io/tags/</loc>
   </url>
 </urlset>

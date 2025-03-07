@@ -2,87 +2,94 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on stash</title>
-    <link>http://localhost:1313/blog/posts/</link>
+    <link>https://iamyaash.github.io/posts/</link>
     <description>Recent content in Posts on stash</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 28 Feb 2025 20:21:33 +0530</lastBuildDate>
-    <atom:link href="http://localhost:1313/blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 07 Mar 2025 21:45:47 +0530</lastBuildDate>
+    <atom:link href="https://iamyaash.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Instant Page Deploy Hugo</title>
+      <link>https://iamyaash.github.io/posts/instant-page-deploy-hugo/</link>
+      <pubDate>Fri, 07 Mar 2025 21:45:47 +0530</pubDate>
+      <guid>https://iamyaash.github.io/posts/instant-page-deploy-hugo/</guid>
+      <description>I noticed that I&amp;rsquo;m keep deploying many pages on Github and still looking at the documentation. So I decided to make a short documentation how to do it fast (keeping me from looking at the documentation)&#xA;Create a hugo site in a specific directory you want: hugo new site sitename Replace the sitename with the actual sitename you want to create.&#xA;Head inside the directory(hugo site) cd sitename git init Download a theme (we&amp;rsquo;re using holy theme here) git submodule add https://github.</description>
+    </item>
     <item>
       <title>m2: Monthly Report: Feb 2025</title>
-      <link>http://localhost:1313/blog/posts/m2-2025/</link>
+      <link>https://iamyaash.github.io/posts/m2-2025/</link>
       <pubDate>Fri, 28 Feb 2025 20:21:33 +0530</pubDate>
-      <guid>http://localhost:1313/blog/posts/m2-2025/</guid>
+      <guid>https://iamyaash.github.io/posts/m2-2025/</guid>
       <description>Monthly Report - m2: Got my onboarding ticket closed at WelcomeToFedora/issue/2 and I&amp;rsquo;m finally one of the Fedora people. Progression on Forgejo Sent mail to logo@fedoraproject.org requesting Fedora Logo &amp;amp; received it couple of days after. Changed the Logo &amp;amp; Favicon successfuly in Forgejo build of Fedora. Changed the color of theme by tweaking the css elements of theme files in web_src/css/themes/*. Changed the UI element by modifying the element in modules/settings/ui.</description>
     </item>
     <item>
       <title>Usage: `nmcli`</title>
-      <link>http://localhost:1313/blog/posts/nmcli/</link>
+      <link>https://iamyaash.github.io/posts/nmcli/</link>
       <pubDate>Sun, 23 Feb 2025 18:16:08 +0530</pubDate>
-      <guid>http://localhost:1313/blog/posts/nmcli/</guid>
+      <guid>https://iamyaash.github.io/posts/nmcli/</guid>
       <description>What is nmcli? The nmcli means NetworkManager Command Line Interface. It&amp;rsquo;s command-line utility tool used for controlling NetworkManager and reporting network status.&#xA;In simple terms, we use that to interact with network related devices.&#xA;How to use it? I don&amp;rsquo;t have proper way to explain, but let&amp;rsquo;s learn it with a case-scenario:&#xA;Connect to a wifi network: Turn on the wifi module: sudo nmcli radio wifi on List the available networks: sudo nmcli device wifi list In case, it didn&amp;rsquo;t display any network, please rescan the available network and list it:</description>
     </item>
     <item>
       <title>Goto: Open Source Android Applications to Use</title>
-      <link>http://localhost:1313/blog/posts/goto-apps-android/</link>
+      <link>https://iamyaash.github.io/posts/goto-apps-android/</link>
       <pubDate>Mon, 17 Feb 2025 23:22:02 +0530</pubDate>
-      <guid>http://localhost:1313/blog/posts/goto-apps-android/</guid>
+      <guid>https://iamyaash.github.io/posts/goto-apps-android/</guid>
       <description>Why Open Source? Well, why not?&#xA;I like open source applications and I prefer using them over monopolized, propreitary or closed-source applications. I want to break the cyle and inspire people to use alternative and support FOSS in every possible way.&#xA;besides I&amp;rsquo;m an open-source/FOSS enthusiast + a nerd (hehe)&#xA;1. droid-ify - F-Droid client with Material UI This is like a play-store for Open-Source applications. Finding the applications is a breeze!</description>
     </item>
     <item>
       <title>Doc: Universal Android De-Bloater</title>
-      <link>http://localhost:1313/blog/posts/de-bloater/</link>
+      <link>https://iamyaash.github.io/posts/de-bloater/</link>
       <pubDate>Fri, 14 Feb 2025 23:31:30 +0530</pubDate>
-      <guid>http://localhost:1313/blog/posts/de-bloater/</guid>
+      <guid>https://iamyaash.github.io/posts/de-bloater/</guid>
       <description>Key features No root required to remove the bloatware. Cross platform, meaning it&amp;rsquo;s accessible on almost all the platforms. Getting Started: Download the Universal Android De-bloater (UADNG) from the github release.&#xA;Extract the Files in your custom location.&#xA;Install the dependencies&#xA;sudo dnf install adb This would be enought to run the tool, now let&amp;rsquo;s see how to use it!&#xA;Usage: Enable USB Debugging in your android phone. (mandatory) Connect the device with the computer you are running the tool.</description>
     </item>
     <item>
       <title>Doc: DNS Change &amp; Troubleshoot (common)</title>
-      <link>http://localhost:1313/blog/posts/dns-initial/</link>
+      <link>https://iamyaash.github.io/posts/dns-initial/</link>
       <pubDate>Sat, 08 Feb 2025 21:06:31 +0530</pubDate>
-      <guid>http://localhost:1313/blog/posts/dns-initial/</guid>
+      <guid>https://iamyaash.github.io/posts/dns-initial/</guid>
       <description>Changing DNS Settings In order to change the DNS settings, we can choose two ways&#xA;Hard way (using CLI, actually that&amp;rsquo;s easy) Easy way (using GUI, kind of lame XD) But let&amp;rsquo;s do it the hard way, which is more rewarding than using GUI. I particularly don&amp;rsquo;t have any steps to mention but let&amp;rsquo;s do it with a scenario which can be easy to understand.&#xA;You just installed a new operating system and you have to change the DNS settings.</description>
     </item>
     <item>
       <title>Doc: Forgejo Logo Change</title>
-      <link>http://localhost:1313/blog/posts/forgejo-logo-change/</link>
+      <link>https://iamyaash.github.io/posts/forgejo-logo-change/</link>
       <pubDate>Wed, 05 Feb 2025 15:47:35 +0530</pubDate>
-      <guid>http://localhost:1313/blog/posts/forgejo-logo-change/</guid>
+      <guid>https://iamyaash.github.io/posts/forgejo-logo-change/</guid>
       <description>Customizing Logo in Forgejo Customizing the logo and favicon in Forgejo is quite simple and we just need an .svg file that needs to replaced with the current Forgejo icons.&#xA;Read the docs for changing the logo&#xA;Let&amp;rsquo;s use fedora.svg as an example for this:&#xA;Head inside the parent directory of forgejo. Copy the fedora.svg into assets/. Change the name of fedora.svg into favicon.svg &amp;amp; logo.svg (making it two files). From the parent directory of forgejo, run this command: make generate-images The above command will generate the respective files into public/assets/img, that is:</description>
     </item>
     <item>
       <title>Fix: Access `docker` without sudo</title>
-      <link>http://localhost:1313/blog/posts/docker-sudo-fix/</link>
+      <link>https://iamyaash.github.io/posts/docker-sudo-fix/</link>
       <pubDate>Sat, 01 Feb 2025 16:01:19 +0530</pubDate>
-      <guid>http://localhost:1313/blog/posts/docker-sudo-fix/</guid>
+      <guid>https://iamyaash.github.io/posts/docker-sudo-fix/</guid>
       <description>Why this occurs? I don&amp;rsquo;t whether it&amp;rsquo;s happening to everyone, but whenever I try to install docker I always end up facing an issue, which won&amp;rsquo;t let me use docker unless I use sudo while executing the docker commands. Why it&amp;rsquo;s occurs? Well, it&amp;rsquo;s because the permission denied when you are trying to connect with the docker daemon socket at unix://var/run/docker.sock. (you will also see an error similar to this.</description>
     </item>
     <item>
       <title>m1: Monthy Report: Jan 2025</title>
-      <link>http://localhost:1313/blog/posts/m1-2025/</link>
+      <link>https://iamyaash.github.io/posts/m1-2025/</link>
       <pubDate>Fri, 31 Jan 2025 19:22:06 +0530</pubDate>
-      <guid>http://localhost:1313/blog/posts/m1-2025/</guid>
+      <guid>https://iamyaash.github.io/posts/m1-2025/</guid>
       <description>Monthly Report -m1: Started using jrnl cmd tool for taking notes &amp;amp; using it sort of like a journal. Merged PR 2418. Migrating essential Information from infra/hosts to infra/ansible. Manually copied the notes variable from each hosts on infra/hosts. In which the name of the hostname shouldn&amp;rsquo;t be phx2 and the same hostname should present in infra/ansible as well. I was supposed to do it using a script, but I didn&amp;rsquo;t have that much experience using scripts on remote servers.</description>
     </item>
     <item>
       <title>Doc : `doom` Installation &amp; Unrecognized Command Fix</title>
-      <link>http://localhost:1313/blog/posts/doom-cmd-fix/</link>
+      <link>https://iamyaash.github.io/posts/doom-cmd-fix/</link>
       <pubDate>Fri, 31 Jan 2025 18:44:50 +0530</pubDate>
-      <guid>http://localhost:1313/blog/posts/doom-cmd-fix/</guid>
+      <guid>https://iamyaash.github.io/posts/doom-cmd-fix/</guid>
       <description>Install Doom Emacs Head over to this repository and execute the scripts.&#xA;git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs ~/.config/emacs/bin/doom install doom command not recognized Whenever I install doom emacs, I always face this problem and now we&amp;rsquo;re going to put an end to this error.(!panic)&#xA;The error would look something like mentioned below:&#xA;Error: file-missing (&amp;#34;Cannot open load file&amp;#34; &amp;#34;No such file or directory&amp;#34; &amp;#34;/usr/early-init.el&amp;#34;) mapbacktrace(#f(compiled-function (evald func args flags) #&amp;lt;bytecode -0x1a9589d6c510f34&amp;gt;)) debug-early-backtrace() debug-early(error (file-missing &amp;#34;Cannot open load file&amp;#34; &amp;#34;No such file or directory&amp;#34; &amp;#34;/usr/early-init.</description>
     </item>
     <item>
       <title>Doc: Fix Wired-LAN Connection; when physically connected but no endpoint</title>
-      <link>http://localhost:1313/blog/posts/fix-lan/</link>
+      <link>https://iamyaash.github.io/posts/fix-lan/</link>
       <pubDate>Thu, 30 Jan 2025 20:58:55 +0530</pubDate>
-      <guid>http://localhost:1313/blog/posts/fix-lan/</guid>
+      <guid>https://iamyaash.github.io/posts/fix-lan/</guid>
       <description>Fixing Wired LAN The scenario is very hard to explain, so I&amp;rsquo;ll write down what happened and we&amp;rsquo;ll relate them according to the situation. (*Yaash shrugs).&#xA;Connection between my m1 and m2 has been severed. No matter what I do, it can&amp;rsquo;t establish the connection with the m2 from m1. So, I deleted the network from my machine. When entering nmcli con show, it won&amp;rsquo;t display the wired LAN. Now, the cable is connected from both sides, meaning the devices are connected physically but the ipv4.</description>
     </item>
     <item>
       <title>Doc: Switch to NVIDIA GPU on Linux</title>
-      <link>http://localhost:1313/blog/posts/switch-nvidia/</link>
+      <link>https://iamyaash.github.io/posts/switch-nvidia/</link>
       <pubDate>Mon, 27 Jan 2025 20:32:26 +0530</pubDate>
-      <guid>http://localhost:1313/blog/posts/switch-nvidia/</guid>
+      <guid>https://iamyaash.github.io/posts/switch-nvidia/</guid>
       <description>Note: Make sure to Disable Secure Boot, else whatever you do it won&amp;rsquo;t work :)&#xA;Install &amp;amp; Switch to NVIDIA 1. Install the required dependencies&#xA;sudo dnf install akmod-nvidia xorg-x11-drv-nvidia xorg-x11-drv-nvidia-cuda 2. Edit the environment configuration file for your shell&#xA;sudo nano /etc/environment 3. Add the following lines to enable the GPU&#xA;__GLX_VENDOR_LIBRARY_NAME=nvidia __NV_PRIME_RENDER_OFFLOAD=1 __VK_LAYER_NV_optimus=NVIDIA_only 4. Restart the system&#xA;sudo reboot 5. Check the status of the currently selected GPU</description>
     </item>
   </channel>
