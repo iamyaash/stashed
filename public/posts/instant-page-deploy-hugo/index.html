@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Instant Page Deploy Hugo | stashed</title>
+<meta name="keywords" content="">
+<meta name="description" content="I noticed that I&rsquo;m keep deploying many pages on Github and still looking at the documentation. So I decided to make a short documentation how to do it fast (keeping me from looking at the documentation)
+Create a hugo site in a specific directory you want: hugo new site sitename Replace the sitename with the actual sitename you want to create.
+Head inside the directory(hugo site) cd sitename git init Download a theme (we&rsquo;re using holy theme here) git submodule add https://github.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/instant-page-deploy-hugo/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/instant-page-deploy-hugo/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="stashed (Alt + H)">stashed</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Instant Page Deploy Hugo
+    </h1>
+    <div class="post-meta"><span title='2025-03-07 21:45:47 +0530 IST'>March 7, 2025</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>I noticed that I&rsquo;m keep deploying many pages on Github and still looking at the documentation. So I decided to make a short documentation how to do it fast (keeping me from looking at the documentation)</p>
+<ol>
+<li><strong>Create a <code>hugo</code> site in a specific directory you want</strong>:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>hugo new site sitename
+</span></span></code></pre></div><blockquote>
+<p>Replace the <code>sitename</code> with the actual sitename you want to create.</p>
+</blockquote>
+<ul>
+<li>Head inside the directory(<em><code>hugo site</code></em>)</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>cd sitename
+</span></span><span style="display:flex;"><span>git init
+</span></span></code></pre></div><ul>
+<li>Download a theme (<em>we&rsquo;re using <code>holy</code> theme here</em>)</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>git submodule add https://github.com/serkodev/holy.git themes/holy
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;theme = &#39;holy&#39;&#34;</span> &gt;&gt; hugo.toml
+</span></span></code></pre></div><ul>
+<li>Let&rsquo;s test it locally!</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>hugo server
+</span></span></code></pre></div><ol start="2">
+<li><a href="https://github.com/new"><strong>Create a GitHub Repository</strong></a></li>
+<li><strong>Head inside the Repository on GitHub</strong>
+<ul>
+<li>Goto <code>Settings &gt; Pages</code></li>
+<li>Change the <em><code>Source</code></em> settings to &ldquo;<strong><code>GitHub Actions</code></strong>&rdquo;</li>
+</ul>
+</li>
+<li>Create a file named <code>hugo.yaml</code> inside <code>.github/workflows</code></li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>mkdir -p .github/workflows
+</span></span><span style="display:flex;"><span>touch .github/workflows/hugo.yaml
+</span></span></code></pre></div><ol start="5">
+<li>Copy and paste the text into <code>YAML</code> file</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#75715e"># Sample workflow for building and deploying a Hugo site to GitHub Pages</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">Deploy Hugo site to Pages</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">on</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Runs on pushes targeting the default branch</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">push</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">branches</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">main</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Allows you to run this workflow manually from the Actions tab</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">workflow_dispatch</span>:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">permissions</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">contents</span>: <span style="color:#ae81ff">read</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">pages</span>: <span style="color:#ae81ff">write</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">id-token</span>: <span style="color:#ae81ff">write</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">concurrency</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">group</span>: <span style="color:#e6db74">&#34;pages&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">cancel-in-progress</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Default to bash</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">defaults</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">run</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">shell</span>: <span style="color:#ae81ff">bash</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">jobs</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Build job</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">build</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-latest</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">env</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">HUGO_VERSION</span>: <span style="color:#ae81ff">0.144.2</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">steps</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Install Hugo CLI</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">run</span>: |<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          &amp;&amp; sudo dpkg -i ${{ runner.temp }}/hugo.deb</span>          
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Install Dart Sass</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">run</span>: <span style="color:#ae81ff">sudo snap install dart-sass</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Checkout</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v4</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">submodules</span>: <span style="color:#ae81ff">recursive</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">fetch-depth</span>: <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Setup Pages</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">id</span>: <span style="color:#ae81ff">pages</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/configure-pages@v5</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Install Node.js dependencies</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">run</span>: <span style="color:#e6db74">&#34;[[ -f package-lock.json || -f npm-shrinkwrap.json ]] &amp;&amp; npm ci || true&#34;</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Build with Hugo</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">env</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">HUGO_CACHEDIR</span>: <span style="color:#ae81ff">${{ runner.temp }}/hugo_cache</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">HUGO_ENVIRONMENT</span>: <span style="color:#ae81ff">production</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">TZ</span>: <span style="color:#ae81ff">America/Los_Angeles</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">run</span>: |<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          hugo \
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            --gc \
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            --minify \
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            --baseURL &#34;${{ steps.pages.outputs.base_url }}/&#34;</span>          
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Upload artifact</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/upload-pages-artifact@v3</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">path</span>: <span style="color:#ae81ff">./public</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Deployment job</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">deploy</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">environment</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">name</span>: <span style="color:#ae81ff">github-pages</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">url</span>: <span style="color:#ae81ff">${{ steps.deployment.outputs.page_url }}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-latest</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">needs</span>: <span style="color:#ae81ff">build</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">steps</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Deploy to GitHub Pages</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">id</span>: <span style="color:#ae81ff">deployment</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/deploy-pages@v4</span>
+</span></span></code></pre></div><ol start="6">
+<li>Head inside the root directory of your <code>sitename</code></li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>hugo
+</span></span><span style="display:flex;"><span>git add -A
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;deploying the sitename&#34;</span>
+</span></span><span style="display:flex;"><span>git push origin main
+</span></span></code></pre></div>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">stashed</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

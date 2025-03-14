@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Setup: A beginner `pi-hole` setup (Manual DNS Allocation for Each Device) | stashed</title>
+<meta name="keywords" content="">
+<meta name="description" content="I don&rsquo;t have enough knowledge about this when writing the documenation for setting up the pi-hole. I&rsquo;m running this on a container in Raspberry Pi 5 8GB device (I know it&rsquo;s an overkill but it&rsquo;s for learning).
+Let&rsquo;s use docker compose to run the pi-hole container Create directory for storing pi-hole configurations mkdir pihole-config cd pihole-config Create a file named docker-compose.yml touch docker-compose.yml Copy &amp; paste this YAML configuration into docker-compose.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/pi-hole-setup-beginner/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/pi-hole-setup-beginner/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="stashed (Alt + H)">stashed</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Setup: A beginner `pi-hole` setup (Manual DNS Allocation for Each Device)
+    </h1>
+    <div class="post-meta"><span title='2025-03-08 17:00:31 +0530 IST'>March 8, 2025</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>I don&rsquo;t have enough knowledge about this when writing the documenation for setting up the <code>pi-hole</code>. I&rsquo;m running this on a
+container in <strong>Raspberry Pi 5 8GB</strong> device (I know it&rsquo;s an overkill but it&rsquo;s for learning).</p>
+<h1 id="lets-use-docker-compose-to-run-the-pi-hole-container">Let&rsquo;s use <code>docker compose</code> to run the <code>pi-hole</code> container<a hidden class="anchor" aria-hidden="true" href="#lets-use-docker-compose-to-run-the-pi-hole-container">#</a></h1>
+<ul>
+<li>Create directory for storing <code>pi-hole</code> configurations</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>mkdir pihole-config
+</span></span><span style="display:flex;"><span>cd pihole-config
+</span></span></code></pre></div><ul>
+<li>Create a file named <code>docker-compose.yml</code></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>touch docker-compose.yml
+</span></span></code></pre></div><ul>
+<li>Copy &amp; paste this <code>YAML</code> configuration into <code>docker-compose.yml</code></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#f92672">services</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">pihole</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">pihole</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">pihole/pihole:latest</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">ports</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;53:53/tcp&#34;</span> <span style="color:#75715e"># DNS Ports</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;53:53/udp&#34;</span> <span style="color:#75715e"># DNS Ports</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;80:80/tcp&#34;</span> <span style="color:#75715e"># Default HTTP Port</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;443:443/tcp&#34;</span> <span style="color:#75715e"># Default HTTPs Port</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;67:67/udp&#34;</span> <span style="color:#75715e"># using Pi-hole as your DHCP server</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">environment</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">TZ</span>: <span style="color:#e6db74">&#39;Asia/Kolkata&#39;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># Not setting one will result in a random password being assigned</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">FTLCONF_webserver_api_password</span>: <span style="color:#e6db74">&#39;pass&#39;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># If using Docker&#39;s default `bridge` network setting the dns listening mode should be set to &#39;all&#39;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">FTLCONF_dns_listeningMode</span>: <span style="color:#e6db74">&#39;all&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">volumes</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># Pi-hole&#39;s databases and common configuration file</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#39;./etc-pihole:/etc/pihole&#39;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># Uncomment the below if you have custom dnsmasq config files that you want to persist. Not needed for most starting fresh with Pi-hole v6. If you&#39;re upgrading from v5 you and have used this directory before, you should keep it enabled for the first v6 container start to allow for a complete migration. It can be removed afterwards. Needs environment variable FTLCONF_misc_etc_dnsmasq_d: &#39;true&#39;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e">#- &#39;./etc-dnsmasq.d:/etc/dnsmasq.d&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">cap_add</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># See https://github.com/pi-hole/docker-pi-hole#note-on-capabilities</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># Required if you are using Pi-hole as your DHCP server, else not needed</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">NET_ADMIN</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># Required if you are using Pi-hole as your NTP client to be able to set the host&#39;s system time</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">SYS_TIME</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># Optional, if Pi-hole should get some more processing time</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">SYS_NICE</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">restart</span>: <span style="color:#ae81ff">unless-stopped</span>
+</span></span></code></pre></div><ul>
+<li>Run the <code>docker compose</code></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>docker compose up -d
+</span></span></code></pre></div><ul>
+<li>Head inside the weblogin. i.e, http://localhost:80/admin (<strong>Note</strong>: Make sure the URL ends with <code>/admin</code>)</li>
+</ul>
+<h1 id="lets-setup-the-dns-address-and-connect-other-devices-to-use-pi-hole">Let&rsquo;s setup the DNS address and connect other devices to use <code>pi-hole</code><a hidden class="anchor" aria-hidden="true" href="#lets-setup-the-dns-address-and-connect-other-devices-to-use-pi-hole">#</a></h1>
+<ul>
+<li>Login into the <code>pi-hole</code> web login</li>
+<li>Goto <strong>Settings</strong> &raquo; <strong>DNS</strong> &gt; Click the DNS of your liking in <em>IPV4</em>(I chose Open DNS)</li>
+</ul>
+<h1 id="lets-connect-from-a-device">Let&rsquo;s Connect from a Device<a hidden class="anchor" aria-hidden="true" href="#lets-connect-from-a-device">#</a></h1>
+<ol>
+<li><code>pi-hole</code> installed in <code>192.168.31.102</code>, so make sure to point the devices to this IP address.</li>
+<li>Change the DNS manually on a specific connection.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo nmcli connection modify device-name ipv4.dns <span style="color:#e6db74">&#34;192.168.31.102&#34;</span>
+</span></span><span style="display:flex;"><span>sudo nmcli connection reload
+</span></span><span style="display:flex;"><span>sudo nmcli connection up device-name
+</span></span></code></pre></div><p>Check whether it&rsquo;s actually allocated to the device</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo nmcli connection show device-name | grep DNS
+</span></span></code></pre></div><ul>
+<li>When the specified DNS is allocated, let&rsquo;s check the <code>resolv.conf</code> as well</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>cat /etc/resolv.conf
+</span></span></code></pre></div><ul>
+<li>Manually change the configuration, when the specified DNS address is not reflected here</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>nameserver 192.168.31.102
+</span></span></code></pre></div><h1 id="one-step-installation-with-docker-installed-in-linux">One-Step Installation (with <code>docker</code> installed in linux)<a hidden class="anchor" aria-hidden="true" href="#one-step-installation-with-docker-installed-in-linux">#</a></h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>mkdir pihole-config
+</span></span><span style="display:flex;"><span>cd pihole-config
+</span></span><span style="display:flex;"><span>touch docker-compose.yml
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;services:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  pihole:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    container_name: pihole
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    image: pihole/pihole:latest
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    ports:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      - &#34;</span>53:53/tcp<span style="color:#e6db74">&#34; # DNS Ports
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      - &#34;</span>53:53/udp<span style="color:#e6db74">&#34; # DNS Ports
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      - &#34;</span>80:80/tcp<span style="color:#e6db74">&#34; # Default HTTP Port
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      - &#34;</span>443:443/tcp<span style="color:#e6db74">&#34; # Default HTTPs Port
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      - &#34;</span>67:67/udp<span style="color:#e6db74">&#34; # using Pi-hole as your DHCP server
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    environment:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      TZ: &#39;Asia/Kolkata&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      # Not setting one will result in a random password being assigned
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      FTLCONF_webserver_api_password: &#39;pass&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      # If using Docker&#39;s default `bridge` network setting the dns listening mode should be set to &#39;all&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      FTLCONF_dns_listeningMode: &#39;all&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    volumes:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      # Pi-hole&#39;s databases and common configuration file
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      - &#39;./etc-pihole:/etc/pihole&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      # Uncomment the below if you have custom dnsmasq config files that you want to persist. Not needed for most starting fresh with Pi-hole v6. If you&#39;re upgrading from v5 you and have used this directory before, you should keep it enabled for the first v6 container start to allow for a complete migration. It can be removed afterwards. Needs environment variable FTLCONF_misc_etc_dnsmasq_d: &#39;true&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      #- &#39;./etc-dnsmasq.d:/etc/dnsmasq.d&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    cap_add:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      # See https://github.com/pi-hole/docker-pi-hole#note-on-capabilities
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      # Required if you are using Pi-hole as your DHCP server, else not needed
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      - NET_ADMIN
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      # Required if you are using Pi-hole as your NTP client to be able to set the host&#39;s system time
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      - SYS_TIME
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      # Optional, if Pi-hole should get some more processing time
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      - SYS_NICE
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    restart: unless-stopped&#34;</span> &gt;&gt; docker-compose.yml
+</span></span><span style="display:flex;"><span>docker compose up -d
+</span></span></code></pre></div>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">stashed</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

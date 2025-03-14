@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head>
+	<meta name="generator" content="Hugo 0.126.2"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>stashed</title>
+
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/index.xml">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="stashed (Alt + H)">stashed</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<article class="first-entry home-info">
+    <header class="entry-header">
+        <h1>I store my documents and reports here!</h1>
+    </header>
+    <div class="entry-content">
+        It consists of docs, fixes, reports, tips and so on&hellip; Moslty the stuffs that I feel like to make note of it for future reference!
+    </div>
+    <footer class="entry-footer">
+        <div class="social-icons" >
+</div>
+
+    </footer>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Doc: Installing Pihole in Raspberry Pi Zero 2W
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>I just got my hands on “Raspberry Pi Zero 2W” today, let’s setup the Pi!
+Setup the Pi Make sure to use pi-imager for writing the OS into the microSD. Also use a router as well for easy-setup.
+Choose “Raspberry Pi OS 32-bit with no desktop environment” for the OS. Make sure to edit the username &amp; password, SSID configurations, enable SSH using authentication, additonally note-down the hostname for ssh connection....</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-03-13 21:43:22 +0530 IST'>March 13, 2025</span></footer>
+  <a class="entry-link" aria-label="post link to Doc: Installing Pihole in Raspberry Pi Zero 2W" href="http://localhost:1313/posts/pihole-pizero-2w/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Doc: Definition of Static IP Address &amp; Dynamic IP Address
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>What is a static IP address? A static IP address is a fixed Internet Protocol (IP) address assigned to a device, which does not change over time. It serves as a unique identifier within a network, enabling it connect &amp; communicate effectively.
+It is recommended to assign a static IP address to a device, which is always stationary &amp; connected to the same network. Assigning static IP address on a frequently moving device will result in conflicts and blocks from either connecting to a router or accessing internet....</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-03-09 21:37:51 +0530 IST'>March 9, 2025</span></footer>
+  <a class="entry-link" aria-label="post link to Doc: Definition of Static IP Address &amp; Dynamic IP Address" href="http://localhost:1313/posts/static-dynamic-ip/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Setup: A beginner `pi-hole` setup (Manual DNS Allocation for Each Device)
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>I don’t have enough knowledge about this when writing the documenation for setting up the pi-hole. I’m running this on a container in Raspberry Pi 5 8GB device (I know it’s an overkill but it’s for learning).
+Let’s use docker compose to run the pi-hole container Create directory for storing pi-hole configurations mkdir pihole-config cd pihole-config Create a file named docker-compose.yml touch docker-compose.yml Copy &amp; paste this YAML configuration into docker-compose....</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-03-08 17:00:31 +0530 IST'>March 8, 2025</span></footer>
+  <a class="entry-link" aria-label="post link to Setup: A beginner `pi-hole` setup (Manual DNS Allocation for Each Device)" href="http://localhost:1313/posts/pi-hole-setup-beginner/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Instant Page Deploy Hugo
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>I noticed that I’m keep deploying many pages on Github and still looking at the documentation. So I decided to make a short documentation how to do it fast (keeping me from looking at the documentation)
+Create a hugo site in a specific directory you want: hugo new site sitename Replace the sitename with the actual sitename you want to create.
+Head inside the directory(hugo site) cd sitename git init Download a theme (we’re using holy theme here) git submodule add https://github....</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-03-07 21:45:47 +0530 IST'>March 7, 2025</span></footer>
+  <a class="entry-link" aria-label="post link to Instant Page Deploy Hugo" href="http://localhost:1313/posts/instant-page-deploy-hugo/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Usage: `nmcli`
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>What is nmcli? The nmcli means NetworkManager Command Line Interface. It’s command-line utility tool used for controlling NetworkManager and reporting network status.
+In simple terms, we use that to interact with network related devices.
+How to use it? I don’t have proper way to explain, but let’s learn it with a case-scenario:
+Connect to a wifi network: Turn on the wifi module: sudo nmcli radio wifi on List the available networks: sudo nmcli device wifi list In case, it didn’t display any network, please rescan the available network and list it:...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-02-23 18:16:08 +0530 IST'>February 23, 2025</span></footer>
+  <a class="entry-link" aria-label="post link to Usage: `nmcli`" href="http://localhost:1313/posts/nmcli/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Goto: Open Source Android Applications to Use
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Why Open Source? Well, why not?
+I like open source applications and I prefer using them over monopolized, propreitary or closed-source applications. I want to break the cyle and inspire people to use alternative and support FOSS in every possible way.
+besides I’m an open-source/FOSS enthusiast &#43; a nerd (hehe)
+1. droid-ify - F-Droid client with Material UI This is like a play-store for Open-Source applications. Finding the applications is a breeze!...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-02-17 23:22:02 +0530 IST'>February 17, 2025</span></footer>
+  <a class="entry-link" aria-label="post link to Goto: Open Source Android Applications to Use" href="http://localhost:1313/posts/goto-apps-android/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Doc: Universal Android De-Bloater
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Key features No root required to remove the bloatware. Cross platform, meaning it’s accessible on almost all the platforms. Getting Started: Download the Universal Android De-bloater (UADNG) from the github release.
+Extract the Files in your custom location.
+Install the dependencies
+sudo dnf install adb This would be enought to run the tool, now let’s see how to use it!
+Usage: Enable USB Debugging in your android phone. (mandatory) Connect the device with the computer you are running the tool....</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-02-14 23:31:30 +0530 IST'>February 14, 2025</span></footer>
+  <a class="entry-link" aria-label="post link to Doc: Universal Android De-Bloater" href="http://localhost:1313/posts/de-bloater/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Doc: DNS Change &amp; Troubleshoot (common)
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Changing DNS Settings In order to change the DNS settings, we can choose two ways
+Hard way (using CLI, actually that’s easy) Easy way (using GUI, kind of lame XD) But let’s do it the hard way, which is more rewarding than using GUI. I particularly don’t have any steps to mention but let’s do it with a scenario which can be easy to understand.
+You just installed a new operating system and you have to change the DNS settings....</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-02-08 21:06:31 +0530 IST'>February 8, 2025</span></footer>
+  <a class="entry-link" aria-label="post link to Doc: DNS Change &amp; Troubleshoot (common)" href="http://localhost:1313/posts/dns-initial/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Doc: Forgejo Logo Change
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Customizing Logo in Forgejo Customizing the logo and favicon in Forgejo is quite simple and we just need an .svg file that needs to replaced with the current Forgejo icons.
+Read the docs for changing the logo
+Let’s use fedora.svg as an example for this:
+Head inside the parent directory of forgejo. Copy the fedora.svg into assets/. Change the name of fedora.svg into favicon.svg &amp; logo.svg (making it two files). From the parent directory of forgejo, run this command: make generate-images The above command will generate the respective files into public/assets/img, that is:...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-02-05 15:47:35 +0530 IST'>February 5, 2025</span></footer>
+  <a class="entry-link" aria-label="post link to Doc: Forgejo Logo Change" href="http://localhost:1313/posts/forgejo-logo-change/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Fix: Access `docker` without sudo
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Why this occurs? I don’t whether it’s happening to everyone, but whenever I try to install docker I always end up facing an issue, which won’t let me use docker unless I use sudo while executing the docker commands. Why it’s occurs? Well, it’s because the permission denied when you are trying to connect with the docker daemon socket at unix://var/run/docker.sock. (you will also see an error similar to this....</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-02-01 16:01:19 +0530 IST'>February 1, 2025</span></footer>
+  <a class="entry-link" aria-label="post link to Fix: Access `docker` without sudo" href="http://localhost:1313/posts/docker-sudo-fix/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="next" href="http://localhost:1313/page/2/">Next&nbsp;&nbsp;»
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">stashed</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
