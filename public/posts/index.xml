@@ -6,8 +6,15 @@
     <description>Recent content in Posts on stashed</description>
     <generator>Hugo -- 0.126.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 13 Mar 2025 21:43:22 +0530</lastBuildDate>
+    <lastBuildDate>Sat, 15 Mar 2025 05:51:27 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Doc: Definition of DHCP &amp; Practical Explanations</title>
+      <link>http://localhost:1313/posts/dhcp/dhcp/</link>
+      <pubDate>Sat, 15 Mar 2025 05:51:27 +0000</pubDate>
+      <guid>http://localhost:1313/posts/dhcp/dhcp/</guid>
+      <description>What is DHCP? DHCP (Dynamic Host Configuration Protocol) is a network management protol that automates the assignment of IP address to the devices that connects to a network and it also handles other network configuration parameters to devices on network.</description>
+    </item>
     <item>
       <title>Doc: Installing Pihole in Raspberry Pi Zero 2W</title>
       <link>http://localhost:1313/posts/pihole-pizero-2w/</link>
