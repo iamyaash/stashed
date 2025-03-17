@@ -2,6 +2,7 @@
 title = "Doc: Definition of DHCP & Practical Explanations"
 date = "2025-03-15T05:51:27.000Z"
 draft = false
+tags = [ "docs", "explanation", "pizero" ]
 
 [cover]
 image = "posts/dhcp/pihole-settings-dhcp.png"

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Doc: Setting Up Raspberry Pi 5 | stashed</title>
+<meta name="keywords" content="docs, setup, raspberry">
+<meta name="description" content="I got my hands on the Raspberry Pi 5 few weeks ago, but I wasn&rsquo;t able to use it for any purpose (more like I&rsquo;m out of ideas). I mostly wanted to test the pihole in my network, but using Pi 5 just for that would be an overkill!
+So I got a Raspberry Pi Zero 2 W and installed Pihole natively. I wrote a post about it, feel free check-out.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/pi5/pi5-setup/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/pi5/pi5-setup/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="stashed (Alt + H)">stashed</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Doc: Setting Up Raspberry Pi 5
+    </h1>
+    <div class="post-meta"><span title='2025-03-17 19:22:47 +0530 IST'>March 17, 2025</span>
+
+</div>
+  </header> 
+<figure class="entry-cover">
+        <img loading="eager" src="http://localhost:1313/posts/pi5/pi5-box.png" alt="pi5-box">
+        
+</figure>
+  <div class="post-content"><p>I got my hands on the <strong>Raspberry Pi 5</strong> few weeks ago, but I wasn&rsquo;t able to use it for any purpose (more like I&rsquo;m out of ideas). I mostly wanted to test the <strong><code>pihole</code></strong> in my network, but using <strong>Pi 5</strong> just for that would be an overkill!</p>
+<blockquote>
+<p>So I got a <strong>Raspberry Pi Zero 2 W</strong> and installed <strong><code>Pihole</code></strong> natively. <a href="https://iamyaash.github.io/stashed/posts/pihole-pizero-2w/">I wrote a post about it, feel free check-out</a>. Also, when I ordered for the <strong>Raspberry Pi Zero 2 W</strong>, I forgot to order for a microSD, so I used the one in the <strong>Pi 5</strong> which is a <strong>64GB</strong> microSD card (<em>I know it&rsquo;s an overkill!</em>). The entire <strong>Pi Zero</strong> is running just the <strong><code>Pihole</code></strong> with a 64GB microSD.</p>
+</blockquote>
+<blockquote>
+<ul>
+<li><em>Keep it mind that we&rsquo;re using the <strong>Pi 5</strong> as an headless machine!</em></li>
+<li><em>I&rsquo;m using the Fedora Linux for setting up <strong>Raspberry Pi 5</strong></em>.</li>
+</ul>
+</blockquote>
+<h1 id="lets-install-raspberry-pi-os">Let&rsquo;s Install <code>Raspberry Pi OS</code><a hidden class="anchor" aria-hidden="true" href="#lets-install-raspberry-pi-os">#</a></h1>
+<ol>
+<li>
+<p>Insert the microSD into a card reader and plug it into the computer.</p>
+<ul>
+<li>Choose the device that you want to install as:
+<ul>
+<li><code>Raspberry Pi 5 - Raspberry Pi 5, 500 and Computing Module 5</code></li>
+</ul>
+</li>
+<li>Choose the Operating System as Raspberry Pi OS (other):
+<ul>
+<li><code>Raspberry Pi OS Lite (64-bit) - A port of Debian Bookworm with no desktop environment</code></li>
+</ul>
+</li>
+<li>Choose the Storage as the one that you plugged. (and click &ldquo;Next&rdquo;&hellip;)</li>
+</ul>
+</li>
+<li>
+<p>It would show a prompt, make sure to edit them by clicking the &ldquo;Edit Settings&rdquo; button:</p>
+<ul>
+<li>Set a custom <strong><code>hostname</code></strong>, <strong><code>username</code></strong> and <strong><code>password</code></strong> (<em>don&rsquo;t forget!</em>).</li>
+<li>Configure the wireless network (<em>since you are going to be using a headless machine, make sure that it can automatically <code>ssh</code> into the network, else you won&rsquo;t be able to access it unless you connect a <em>keyboard &amp; display</em></em>).</li>
+<li>Change the timezone and keyboard layout (<em>optional!</em>)</li>
+<li>Head into <strong>SERVICES</strong> &gt; Click &ldquo;<strong>Enable SSH - Use Password Authentication</strong>&rdquo;</li>
+<li>Feel free to check other settings (if you completed the above mentioned steps, then you are done!)</li>
+</ul>
+</li>
+<li>
+<p>Finally, click install it would download and install the OS in ~30 minutes.</p>
+</li>
+</ol>
+<h1 id="lets-ssh-into-the-pi-5">Let&rsquo;s <code>ssh</code> into the Pi 5<a hidden class="anchor" aria-hidden="true" href="#lets-ssh-into-the-pi-5">#</a></h1>
+<ol>
+<li>Login to your router and copy the IP address allocated the hostname <code>pi-master</code>.</li>
+<li>Then, <code>ssh</code> into the <strong>Pi 5</strong>:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>ssh username@192.168.1.x
+</span></span></code></pre></div><blockquote>
+<p>Replace <code>username</code> &amp; <code>192.168.1.x</code> with the your credentials.</p>
+</blockquote>
+<ol start="3">
+<li>Update the packages</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo apt update <span style="color:#f92672">&amp;&amp;</span> sudo apt upgrade
+</span></span></code></pre></div><p>By now, you would have a stable OS running in the Pi without any problems!</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/docs/">Docs</a></li>
+      <li><a href="http://localhost:1313/tags/setup/">Setup</a></li>
+      <li><a href="http://localhost:1313/tags/raspberry/">Raspberry</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">stashed</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
