@@ -16,5 +16,13 @@
       <description>I got my hands on the Raspberry Pi 5 few weeks ago, but I wasn&amp;rsquo;t able to use it for any purpose (more like I&amp;rsquo;m out of ideas). I mostly wanted to test the pihole in my network, but using Pi 5 just for that would be an overkill!
 So I got a Raspberry Pi Zero 2 W and installed Pihole natively. I wrote a post about it, feel free check-out.</description>
     </item>
+    <item>
+      <title>Doc: Definition of DHCP &amp; Practical Explanations</title>
+      <link>http://localhost:1313/posts/dhcp/dhcp/</link>
+      <pubDate>Sat, 15 Mar 2025 05:51:27 +0000</pubDate>
+      <guid>http://localhost:1313/posts/dhcp/dhcp/</guid>
+      <description>What is DHCP? DHCP (Dynamic Host Configuration Protocol) is a network management protol that automates the assignment of IP address to the devices that connect to a network and it also handles other network configuration parameters such as subnet mask, default gateway and DNS settings.
+Why do we need IP address anyway? Let&amp;rsquo;s take an example, You visit a coffee shop and connect to it&amp;rsquo;s Wi-Fi network. In doing so, you are essentially connecting to the shop&amp;rsquo;s router, which provides the internet connection.</description>
+    </item>
   </channel>
 </rss>
