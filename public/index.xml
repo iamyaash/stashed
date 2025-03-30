@@ -2,74 +2,81 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>stashed</title>
-    <link>http://localhost:1313/</link>
+    <link>https://iamyaash.github.io/</link>
     <description>Recent content on stashed</description>
     <generator>Hugo -- 0.126.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 29 Mar 2025 19:37:21 +0530</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 30 Mar 2025 19:41:36 +0530</lastBuildDate>
+    <atom:link href="https://iamyaash.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux Directories</title>
+      <link>https://iamyaash.github.io/posts/linux-dir/linux-directories/</link>
+      <pubDate>Sun, 30 Mar 2025 19:41:36 +0530</pubDate>
+      <guid>https://iamyaash.github.io/posts/linux-dir/linux-directories/</guid>
+      <description>Let&amp;rsquo;s move into the / (root) direcory: iamyaash@fedora:/$ ll total 20 dr-xr-xr-x. 1 root root 0 Jul 17 2024 afs lrwxrwxrwx. 1 root root 7 Jul 17 2024 bin -&amp;gt; usr/bin dr-xr-xr-x. 6 root root 4096 Mar 26 02:33 boot drwxr-xr-x. 21 root root 4400 Mar 30 14:23 dev drwxr-xr-x. 1 root root 4870 Mar 28 21:04 etc drwxr-xr-x. 1 root root 16 Feb 23 23:19 home lrwxrwxrwx. 1 root root 7 Jul 17 2024 lib -&amp;gt; usr/lib lrwxrwxrwx.</description>
+    </item>
     <item>
       <title>Usage: git cli</title>
-      <link>http://localhost:1313/posts/git/howtousegit/</link>
+      <link>https://iamyaash.github.io/posts/git/howtousegit/</link>
       <pubDate>Sat, 29 Mar 2025 19:37:21 +0530</pubDate>
-      <guid>http://localhost:1313/posts/git/howtousegit/</guid>
+      <guid>https://iamyaash.github.io/posts/git/howtousegit/</guid>
       <description>Setting up git in your device git config --global user.name &amp;lt;your-username&amp;gt; git config --global user.email &amp;lt;your-email&amp;gt; git config --global user.signingKey &amp;lt;keyID&amp;gt; --global: The configuration applies to all repositories for the current user. --local: The configuration applies only to the current repository. --system: The configuration applies to all users on the system. user.name &amp;amp; user.email define the author&amp;rsquo;s identity for commits. user.signingKey specifies the GPG key ID used for signing commits and tags.</description>
     </item>
     <item>
       <title>Doc: Setting Up Raspberry Pi 5</title>
-      <link>http://localhost:1313/posts/pi5/pi5-setup/</link>
+      <link>https://iamyaash.github.io/posts/pi5/pi5-setup/</link>
       <pubDate>Mon, 17 Mar 2025 19:22:47 +0530</pubDate>
-      <guid>http://localhost:1313/posts/pi5/pi5-setup/</guid>
+      <guid>https://iamyaash.github.io/posts/pi5/pi5-setup/</guid>
       <description>I got my hands on the Raspberry Pi 5 few weeks ago, but I wasn&amp;rsquo;t able to use it for any purpose (more like I&amp;rsquo;m out of ideas). I mostly wanted to test the pihole in my network, but using Pi 5 just for that would be an overkill!
 So I got a Raspberry Pi Zero 2 W and installed Pihole natively. I wrote a post about it, feel free check-out.</description>
     </item>
     <item>
       <title>Doc: Definition of DHCP &amp; Practical Explanations</title>
-      <link>http://localhost:1313/posts/dhcp/dhcp/</link>
+      <link>https://iamyaash.github.io/posts/dhcp/dhcp/</link>
       <pubDate>Sat, 15 Mar 2025 05:51:27 +0000</pubDate>
-      <guid>http://localhost:1313/posts/dhcp/dhcp/</guid>
+      <guid>https://iamyaash.github.io/posts/dhcp/dhcp/</guid>
       <description>What is DHCP? DHCP (Dynamic Host Configuration Protocol) is a network management protol that automates the assignment of IP address to the devices that connect to a network and it also handles other network configuration parameters such as subnet mask, default gateway and DNS settings.
 Why do we need IP address anyway? Let&amp;rsquo;s take an example, You visit a coffee shop and connect to it&amp;rsquo;s Wi-Fi network. In doing so, you are essentially connecting to the shop&amp;rsquo;s router, which provides the internet connection.</description>
     </item>
     <item>
       <title>Doc: Installing Pihole in Raspberry Pi Zero 2W</title>
-      <link>http://localhost:1313/posts/pihole-pizero-2w/</link>
+      <link>https://iamyaash.github.io/posts/pihole-pizero-2w/</link>
       <pubDate>Thu, 13 Mar 2025 21:43:22 +0530</pubDate>
-      <guid>http://localhost:1313/posts/pihole-pizero-2w/</guid>
+      <guid>https://iamyaash.github.io/posts/pihole-pizero-2w/</guid>
       <description>I just got my hands on &amp;ldquo;Raspberry Pi Zero 2W&amp;rdquo; today, let&amp;rsquo;s setup the Pi!
 Setup the Pi Make sure to use pi-imager for writing the OS into the microSD. Also use a router as well for easy-setup.
 Choose &amp;ldquo;Raspberry Pi OS 32-bit with no desktop environment&amp;rdquo; for the OS. Make sure to edit the username &amp;amp; password, SSID configurations, enable SSH using authentication, additonally note-down the hostname for ssh connection.</description>
     </item>
     <item>
       <title>Doc: Definition of Static IP Address &amp; Dynamic IP Address</title>
-      <link>http://localhost:1313/posts/static-dynamic-ip/</link>
+      <link>https://iamyaash.github.io/posts/static-dynamic-ip/</link>
       <pubDate>Sun, 09 Mar 2025 21:37:51 +0530</pubDate>
-      <guid>http://localhost:1313/posts/static-dynamic-ip/</guid>
+      <guid>https://iamyaash.github.io/posts/static-dynamic-ip/</guid>
       <description>What is a static IP address? A static IP address is a fixed Internet Protocol (IP) address assigned to a device, which does not change over time. It serves as a unique identifier within a network, enabling it connect &amp;amp; communicate effectively.
 It is recommended to assign a static IP address to a device, which is always stationary &amp;amp; connected to the same network. Assigning static IP address on a frequently moving device will result in conflicts and blocks from either connecting to a router or accessing internet.</description>
     </item>
     <item>
       <title>Setup: A beginner `pi-hole` setup (Manual DNS Allocation for Each Device)</title>
-      <link>http://localhost:1313/posts/pi-hole-setup-beginner/</link>
+      <link>https://iamyaash.github.io/posts/pi-hole-setup-beginner/</link>
       <pubDate>Sat, 08 Mar 2025 17:00:31 +0530</pubDate>
-      <guid>http://localhost:1313/posts/pi-hole-setup-beginner/</guid>
+      <guid>https://iamyaash.github.io/posts/pi-hole-setup-beginner/</guid>
       <description>I don&amp;rsquo;t have enough knowledge about this when writing the documenation for setting up the pi-hole. I&amp;rsquo;m running this on a container in Raspberry Pi 5 8GB device (I know it&amp;rsquo;s an overkill but it&amp;rsquo;s for learning).
 Let&amp;rsquo;s use docker compose to run the pi-hole container Create directory for storing pi-hole configurations mkdir pihole-config cd pihole-config Create a file named docker-compose.yml touch docker-compose.yml Copy &amp;amp; paste this YAML configuration into docker-compose.</description>
     </item>
     <item>
       <title>Instant Page Deploy Hugo</title>
-      <link>http://localhost:1313/posts/instant-page-deploy-hugo/</link>
+      <link>https://iamyaash.github.io/posts/instant-page-deploy-hugo/</link>
       <pubDate>Fri, 07 Mar 2025 21:45:47 +0530</pubDate>
-      <guid>http://localhost:1313/posts/instant-page-deploy-hugo/</guid>
+      <guid>https://iamyaash.github.io/posts/instant-page-deploy-hugo/</guid>
       <description>I noticed that I&amp;rsquo;m keep deploying many pages on Github and still looking at the documentation. So I decided to make a short documentation how to do it fast (keeping me from looking at the documentation)
 Create a hugo site in a specific directory you want: hugo new site sitename Replace the sitename with the actual sitename you want to create.
 Head inside the directory(hugo site) cd sitename git init Download a theme (we&amp;rsquo;re using holy theme here) git submodule add https://github.</description>
     </item>
     <item>
       <title>Usage: `nmcli`</title>
-      <link>http://localhost:1313/posts/nmcli/</link>
+      <link>https://iamyaash.github.io/posts/nmcli/</link>
       <pubDate>Sun, 23 Feb 2025 18:16:08 +0530</pubDate>
-      <guid>http://localhost:1313/posts/nmcli/</guid>
+      <guid>https://iamyaash.github.io/posts/nmcli/</guid>
       <description>What is nmcli? The nmcli means NetworkManager Command Line Interface. It&amp;rsquo;s command-line utility tool used for controlling NetworkManager and reporting network status.
 In simple terms, we use that to interact with network related devices.
 How to use it? I don&amp;rsquo;t have proper way to explain, but let&amp;rsquo;s learn it with a case-scenario:
@@ -77,9 +84,9 @@ Connect to a wifi network: Turn on the wifi module: sudo nmcli radio wifi on Lis
     </item>
     <item>
       <title>Goto: Open Source Android Applications to Use</title>
-      <link>http://localhost:1313/posts/goto-apps-android/</link>
+      <link>https://iamyaash.github.io/posts/goto-apps-android/</link>
       <pubDate>Mon, 17 Feb 2025 23:22:02 +0530</pubDate>
-      <guid>http://localhost:1313/posts/goto-apps-android/</guid>
+      <guid>https://iamyaash.github.io/posts/goto-apps-android/</guid>
       <description>Why Open Source? Well, why not?
 I like open source applications and I prefer using them over monopolized, propreitary or closed-source applications. I want to break the cyle and inspire people to use alternative and support FOSS in every possible way.
 besides I&amp;rsquo;m an open-source/FOSS enthusiast + a nerd (hehe)
@@ -87,9 +94,9 @@ besides I&amp;rsquo;m an open-source/FOSS enthusiast + a nerd (hehe)
     </item>
     <item>
       <title>Doc: Universal Android De-Bloater</title>
-      <link>http://localhost:1313/posts/de-bloater/</link>
+      <link>https://iamyaash.github.io/posts/de-bloater/</link>
       <pubDate>Fri, 14 Feb 2025 23:31:30 +0530</pubDate>
-      <guid>http://localhost:1313/posts/de-bloater/</guid>
+      <guid>https://iamyaash.github.io/posts/de-bloater/</guid>
       <description>Key features No root required to remove the bloatware. Cross platform, meaning it&amp;rsquo;s accessible on almost all the platforms. Getting Started: Download the Universal Android De-bloater (UADNG) from the github release.
 Extract the Files in your custom location.
 Install the dependencies
@@ -98,18 +105,18 @@ Usage: Enable USB Debugging in your android phone. (mandatory) Connect the devic
     </item>
     <item>
       <title>Doc: DNS Change &amp; Troubleshoot (common)</title>
-      <link>http://localhost:1313/posts/dns-initial/</link>
+      <link>https://iamyaash.github.io/posts/dns-initial/</link>
       <pubDate>Sat, 08 Feb 2025 21:06:31 +0530</pubDate>
-      <guid>http://localhost:1313/posts/dns-initial/</guid>
+      <guid>https://iamyaash.github.io/posts/dns-initial/</guid>
       <description>Changing DNS Settings In order to change the DNS settings, we can choose two ways
 Hard way (using CLI, actually that&amp;rsquo;s easy) Easy way (using GUI, kind of lame XD) But let&amp;rsquo;s do it the hard way, which is more rewarding than using GUI. I particularly don&amp;rsquo;t have any steps to mention but let&amp;rsquo;s do it with a scenario which can be easy to understand.
 You just installed a new operating system and you have to change the DNS settings.</description>
     </item>
     <item>
       <title>Doc: Forgejo Logo Change</title>
-      <link>http://localhost:1313/posts/forgejo-logo-change/</link>
+      <link>https://iamyaash.github.io/posts/forgejo-logo-change/</link>
       <pubDate>Wed, 05 Feb 2025 15:47:35 +0530</pubDate>
-      <guid>http://localhost:1313/posts/forgejo-logo-change/</guid>
+      <guid>https://iamyaash.github.io/posts/forgejo-logo-change/</guid>
       <description>Customizing Logo in Forgejo Customizing the logo and favicon in Forgejo is quite simple and we just need an .svg file that needs to replaced with the current Forgejo icons.
 Read the docs for changing the logo
 Let&amp;rsquo;s use fedora.svg as an example for this:
@@ -117,16 +124,16 @@ Head inside the parent directory of forgejo. Copy the fedora.svg into assets/. C
     </item>
     <item>
       <title>Fix: Access `docker` without sudo</title>
-      <link>http://localhost:1313/posts/docker-sudo-fix/</link>
+      <link>https://iamyaash.github.io/posts/docker-sudo-fix/</link>
       <pubDate>Sat, 01 Feb 2025 16:01:19 +0530</pubDate>
-      <guid>http://localhost:1313/posts/docker-sudo-fix/</guid>
+      <guid>https://iamyaash.github.io/posts/docker-sudo-fix/</guid>
       <description>Why this occurs? I don&amp;rsquo;t whether it&amp;rsquo;s happening to everyone, but whenever I try to install docker I always end up facing an issue, which won&amp;rsquo;t let me use docker unless I use sudo while executing the docker commands. Why it&amp;rsquo;s occurs? Well, it&amp;rsquo;s because the permission denied when you are trying to connect with the docker daemon socket at unix://var/run/docker.sock. (you will also see an error similar to this.</description>
     </item>
     <item>
       <title>Doc : `doom` Installation &amp; Unrecognized Command Fix</title>
-      <link>http://localhost:1313/posts/doom-cmd-fix/</link>
+      <link>https://iamyaash.github.io/posts/doom-cmd-fix/</link>
       <pubDate>Fri, 31 Jan 2025 18:44:50 +0530</pubDate>
-      <guid>http://localhost:1313/posts/doom-cmd-fix/</guid>
+      <guid>https://iamyaash.github.io/posts/doom-cmd-fix/</guid>
       <description>Install Doom Emacs Head over to this repository and execute the scripts.
 git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs ~/.config/emacs/bin/doom install doom command not recognized Whenever I install doom emacs, I always face this problem and now we&amp;rsquo;re going to put an end to this error.(!panic)
 The error would look something like mentioned below:
@@ -134,17 +141,17 @@ Error: file-missing (&amp;#34;Cannot open load file&amp;#34; &amp;#34;No such fi
     </item>
     <item>
       <title>Doc: Fix Wired-LAN Connection; when physically connected but no endpoint</title>
-      <link>http://localhost:1313/posts/fix-lan/</link>
+      <link>https://iamyaash.github.io/posts/fix-lan/</link>
       <pubDate>Thu, 30 Jan 2025 20:58:55 +0530</pubDate>
-      <guid>http://localhost:1313/posts/fix-lan/</guid>
+      <guid>https://iamyaash.github.io/posts/fix-lan/</guid>
       <description>Fixing Wired LAN The scenario is very hard to explain, so I&amp;rsquo;ll write down what happened and we&amp;rsquo;ll relate them according to the situation. (*Yaash shrugs).
 Connection between my m1 and m2 has been severed. No matter what I do, it can&amp;rsquo;t establish the connection with the m2 from m1. So, I deleted the network from my machine. When entering nmcli con show, it won&amp;rsquo;t display the wired LAN. Now, the cable is connected from both sides, meaning the devices are connected physically but the ipv4.</description>
     </item>
     <item>
       <title>Doc: Switch to NVIDIA GPU on Linux</title>
-      <link>http://localhost:1313/posts/switch-nvidia/</link>
+      <link>https://iamyaash.github.io/posts/switch-nvidia/</link>
       <pubDate>Mon, 27 Jan 2025 20:32:26 +0530</pubDate>
-      <guid>http://localhost:1313/posts/switch-nvidia/</guid>
+      <guid>https://iamyaash.github.io/posts/switch-nvidia/</guid>
       <description>Note: Make sure to Disable Secure Boot, else whatever you do it won&amp;rsquo;t work :)
 Install &amp;amp; Switch to NVIDIA 1. Install the required dependencies
 sudo dnf install akmod-nvidia xorg-x11-drv-nvidia xorg-x11-drv-nvidia-cuda 2. Edit the environment configuration file for your shell

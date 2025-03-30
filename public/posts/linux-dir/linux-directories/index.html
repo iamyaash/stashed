@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Linux Directories | stashed</title>
+<meta name="keywords" content="">
+<meta name="description" content="Let&rsquo;s move into the / (root) direcory: iamyaash@fedora:/$ ll total 20 dr-xr-xr-x. 1 root root 0 Jul 17 2024 afs lrwxrwxrwx. 1 root root 7 Jul 17 2024 bin -&gt; usr/bin dr-xr-xr-x. 6 root root 4096 Mar 26 02:33 boot drwxr-xr-x. 21 root root 4400 Mar 30 14:23 dev drwxr-xr-x. 1 root root 4870 Mar 28 21:04 etc drwxr-xr-x. 1 root root 16 Feb 23 23:19 home lrwxrwxrwx. 1 root root 7 Jul 17 2024 lib -&gt; usr/lib lrwxrwxrwx.">
+<meta name="author" content="">
+<link rel="canonical" href="https://iamyaash.github.io/posts/linux-dir/linux-directories/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://iamyaash.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://iamyaash.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://iamyaash.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://iamyaash.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://iamyaash.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://iamyaash.github.io/posts/linux-dir/linux-directories/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+  
+
+<meta property="og:url" content="https://iamyaash.github.io/posts/linux-dir/linux-directories/">
+  <meta property="og:site_name" content="stashed">
+  <meta property="og:title" content="Linux Directories">
+  <meta property="og:description" content="Let’s move into the / (root) direcory: iamyaash@fedora:/$ ll total 20 dr-xr-xr-x. 1 root root 0 Jul 17 2024 afs lrwxrwxrwx. 1 root root 7 Jul 17 2024 bin -&gt; usr/bin dr-xr-xr-x. 6 root root 4096 Mar 26 02:33 boot drwxr-xr-x. 21 root root 4400 Mar 30 14:23 dev drwxr-xr-x. 1 root root 4870 Mar 28 21:04 etc drwxr-xr-x. 1 root root 16 Feb 23 23:19 home lrwxrwxrwx. 1 root root 7 Jul 17 2024 lib -&gt; usr/lib lrwxrwxrwx.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-03-30T19:41:36+05:30">
+    <meta property="article:modified_time" content="2025-03-30T19:41:36+05:30">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Linux Directories">
+<meta name="twitter:description" content="Let&rsquo;s move into the / (root) direcory: iamyaash@fedora:/$ ll total 20 dr-xr-xr-x. 1 root root 0 Jul 17 2024 afs lrwxrwxrwx. 1 root root 7 Jul 17 2024 bin -&gt; usr/bin dr-xr-xr-x. 6 root root 4096 Mar 26 02:33 boot drwxr-xr-x. 21 root root 4400 Mar 30 14:23 dev drwxr-xr-x. 1 root root 4870 Mar 28 21:04 etc drwxr-xr-x. 1 root root 16 Feb 23 23:19 home lrwxrwxrwx. 1 root root 7 Jul 17 2024 lib -&gt; usr/lib lrwxrwxrwx.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://iamyaash.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Linux Directories",
+      "item": "https://iamyaash.github.io/posts/linux-dir/linux-directories/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Linux Directories",
+  "name": "Linux Directories",
+  "description": "Let\u0026rsquo;s move into the / (root) direcory: iamyaash@fedora:/$ ll total 20 dr-xr-xr-x. 1 root root 0 Jul 17 2024 afs lrwxrwxrwx. 1 root root 7 Jul 17 2024 bin -\u0026gt; usr/bin dr-xr-xr-x. 6 root root 4096 Mar 26 02:33 boot drwxr-xr-x. 21 root root 4400 Mar 30 14:23 dev drwxr-xr-x. 1 root root 4870 Mar 28 21:04 etc drwxr-xr-x. 1 root root 16 Feb 23 23:19 home lrwxrwxrwx. 1 root root 7 Jul 17 2024 lib -\u0026gt; usr/lib lrwxrwxrwx.",
+  "keywords": [
+    
+  ],
+  "articleBody": "Let’s move into the / (root) direcory: iamyaash@fedora:/$ ll total 20 dr-xr-xr-x. 1 root root 0 Jul 17 2024 afs lrwxrwxrwx. 1 root root 7 Jul 17 2024 bin -\u003e usr/bin dr-xr-xr-x. 6 root root 4096 Mar 26 02:33 boot drwxr-xr-x. 21 root root 4400 Mar 30 14:23 dev drwxr-xr-x. 1 root root 4870 Mar 28 21:04 etc drwxr-xr-x. 1 root root 16 Feb 23 23:19 home lrwxrwxrwx. 1 root root 7 Jul 17 2024 lib -\u003e usr/lib lrwxrwxrwx. 1 root root 9 Jul 17 2024 lib64 -\u003e usr/lib64 drwx------. 1 root root 0 Oct 24 20:17 lost+found drwxr-xr-x. 1 root root 0 Jul 17 2024 media drwxr-xr-x. 1 root root 0 Jul 17 2024 mnt drwxr-xr-x. 1 root root 48 Feb 23 18:34 opt dr-xr-xr-x. 576 root root 0 Mar 30 2025 proc dr-xr-x---. 1 root root 168 Mar 19 13:11 root drwxr-xr-x. 58 root root 1500 Mar 30 17:30 run lrwxrwxrwx. 1 root root 8 Jul 17 2024 sbin -\u003e usr/sbin drwxr-xr-x. 1 root root 0 Jul 17 2024 srv dr-xr-xr-x. 13 root root 0 Mar 30 14:22 sys drwxrwxrwt. 28 root root 720 Mar 30 19:43 tmp drwxr-xr-x. 1 root root 168 Oct 24 20:19 usr drwxr-xr-x. 1 root root 200 Oct 24 20:27 var 1. /bin\nThis directory contains the essential binaries (executables) required for the operating system to function properly. (e.g: ls, pwd, cat, ln, vim, nano). binaries can be accessed anywhere in the device. In simple terms, it holds crucial applications that can be accessed from anywhere on the system. (no user is blocked from using this binaries) 2. /sbin\nThis contains system binaries, which means that it can only be used in either the sudo mode or logged in as a root user. (e.g: mount, deluser, adduser) 3. /lib\nMany of the above mentioned directories, may share the command libraries. Which are stored inside in the /lib directory. iamyaash@fedora:/$ ll lib lrwxrwxrwx. 1 root root 7 Jul 17 2024 lib -\u003e usr/lib (In modern Linux distributions, /lib is often a symbolic link to /usr/lib.)\n4. /usr\n/usr/bin - This directory contains non-essential binaries, meaning the programs stored here are not required for the system to boot or run in single-user mode. These binaries are typically used by regular users rather than the system itself.\nThe /usr/bin directory holds most of the user-space applications and utilities that are not essential for basic system operation. These include text editors (nano, vim), compilers (gcc), package management tools (dnf or apt), and various system utilities. Unlike /bin, which contains critical system binaries needed for booting and recovery, /usr/bin is meant for general-purpose applications. In many modern distributions, the distinction between /bin and /usr/bin is blurred due to the /usr merge, where /bin is often a symbolic link to /usr/bin. /usr/loca/bin - This directory contains binaries that are compiled and installed locally by the user, ensuring they do not conflict with software installed by the system package manager.\nIn simple terms, it provides a safer place to store locally compiled binaries, preventing conflicts with executables installed via a package manager. Example: Suppose you download and compile a newer version of htop from source instead of installing it via dnf or apt. If you install it to /usr/local/bin, it will not overwrite the system-managed version in /usr/bin. Note: which command shows the current binary it uses for the command. $ which curl /usr/bin/curl 5. $PATH\nThe $PATH variable defines directories where the system looks for executable binaries. This allows us to run programs from any directory without specifying their full path. 6. /etc\netc stands for Editable Text Config. Most of the filenames ends with .conf and typically consists of text based files that can be modified using any text editor with sudo. These files primarily control system and software behavior. (e.g., /etc/resolv.conf stores network-related configurations.) 7. /home\nThis directory contains user-specific data, including personal files, configuration settings, and user-installed software. Each user has their own subdirectory (/home/username), which they own and control. To access another user’s home directory, you must either log in as that user or have appropriate read permissions. 8. /boot - This is literally the kernal itself. (It contains the data for booting the system)\n9. /dev - We can use this directory to interface with hardware or drivers as if there were regular files.\n10. /opt - Contains optional or add-on sofware that we rarely interact with.\n11. /var - Contains variabl files that will change as the operating system is being used. (eg. system_logs)\n12. /tmp - Consist of temporary files that won’t persisted between reboots.\n13. /proc - It contains special files that show real-time information about the system, processes, and hardware. Unlike normal files, these are virtual files that update dynamically.\nproc/cpuinfo → Shows details about your CPU (like speed, cores, model). /proc/meminfo → Shows memory (RAM) usage. /proc/uptime → Tells how long your system has been running. /proc/1234/ → A folder for process ID 1234, containing details about that ",
+  "wordCount" : "829",
+  "inLanguage": "en",
+  "datePublished": "2025-03-30T19:41:36+05:30",
+  "dateModified": "2025-03-30T19:41:36+05:30",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://iamyaash.github.io/posts/linux-dir/linux-directories/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "stashed",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://iamyaash.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://iamyaash.github.io/" accesskey="h" title="stashed (Alt + H)">stashed</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Linux Directories
+    </h1>
+    <div class="post-meta"><span title='2025-03-30 19:41:36 +0530 IST'>March 30, 2025</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h1 id="lets-move-into-the--_root_-direcory">Let&rsquo;s move into the <code>/</code> (<em>root</em>) direcory:<a hidden class="anchor" aria-hidden="true" href="#lets-move-into-the--_root_-direcory">#</a></h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>iamyaash@fedora:/$ ll
+</span></span><span style="display:flex;"><span>total <span style="color:#ae81ff">20</span>
+</span></span><span style="display:flex;"><span>dr-xr-xr-x.   <span style="color:#ae81ff">1</span> root root    <span style="color:#ae81ff">0</span> Jul <span style="color:#ae81ff">17</span>  <span style="color:#ae81ff">2024</span> afs
+</span></span><span style="display:flex;"><span>lrwxrwxrwx.   <span style="color:#ae81ff">1</span> root root    <span style="color:#ae81ff">7</span> Jul <span style="color:#ae81ff">17</span>  <span style="color:#ae81ff">2024</span> bin -&gt; usr/bin
+</span></span><span style="display:flex;"><span>dr-xr-xr-x.   <span style="color:#ae81ff">6</span> root root <span style="color:#ae81ff">4096</span> Mar <span style="color:#ae81ff">26</span> 02:33 boot
+</span></span><span style="display:flex;"><span>drwxr-xr-x.  <span style="color:#ae81ff">21</span> root root <span style="color:#ae81ff">4400</span> Mar <span style="color:#ae81ff">30</span> 14:23 dev
+</span></span><span style="display:flex;"><span>drwxr-xr-x.   <span style="color:#ae81ff">1</span> root root <span style="color:#ae81ff">4870</span> Mar <span style="color:#ae81ff">28</span> 21:04 etc
+</span></span><span style="display:flex;"><span>drwxr-xr-x.   <span style="color:#ae81ff">1</span> root root   <span style="color:#ae81ff">16</span> Feb <span style="color:#ae81ff">23</span> 23:19 home
+</span></span><span style="display:flex;"><span>lrwxrwxrwx.   <span style="color:#ae81ff">1</span> root root    <span style="color:#ae81ff">7</span> Jul <span style="color:#ae81ff">17</span>  <span style="color:#ae81ff">2024</span> lib -&gt; usr/lib
+</span></span><span style="display:flex;"><span>lrwxrwxrwx.   <span style="color:#ae81ff">1</span> root root    <span style="color:#ae81ff">9</span> Jul <span style="color:#ae81ff">17</span>  <span style="color:#ae81ff">2024</span> lib64 -&gt; usr/lib64
+</span></span><span style="display:flex;"><span>drwx------.   <span style="color:#ae81ff">1</span> root root    <span style="color:#ae81ff">0</span> Oct <span style="color:#ae81ff">24</span> 20:17 lost+found
+</span></span><span style="display:flex;"><span>drwxr-xr-x.   <span style="color:#ae81ff">1</span> root root    <span style="color:#ae81ff">0</span> Jul <span style="color:#ae81ff">17</span>  <span style="color:#ae81ff">2024</span> media
+</span></span><span style="display:flex;"><span>drwxr-xr-x.   <span style="color:#ae81ff">1</span> root root    <span style="color:#ae81ff">0</span> Jul <span style="color:#ae81ff">17</span>  <span style="color:#ae81ff">2024</span> mnt
+</span></span><span style="display:flex;"><span>drwxr-xr-x.   <span style="color:#ae81ff">1</span> root root   <span style="color:#ae81ff">48</span> Feb <span style="color:#ae81ff">23</span> 18:34 opt
+</span></span><span style="display:flex;"><span>dr-xr-xr-x. <span style="color:#ae81ff">576</span> root root    <span style="color:#ae81ff">0</span> Mar <span style="color:#ae81ff">30</span>  <span style="color:#ae81ff">2025</span> proc
+</span></span><span style="display:flex;"><span>dr-xr-x---.   <span style="color:#ae81ff">1</span> root root  <span style="color:#ae81ff">168</span> Mar <span style="color:#ae81ff">19</span> 13:11 root
+</span></span><span style="display:flex;"><span>drwxr-xr-x.  <span style="color:#ae81ff">58</span> root root <span style="color:#ae81ff">1500</span> Mar <span style="color:#ae81ff">30</span> 17:30 run
+</span></span><span style="display:flex;"><span>lrwxrwxrwx.   <span style="color:#ae81ff">1</span> root root    <span style="color:#ae81ff">8</span> Jul <span style="color:#ae81ff">17</span>  <span style="color:#ae81ff">2024</span> sbin -&gt; usr/sbin
+</span></span><span style="display:flex;"><span>drwxr-xr-x.   <span style="color:#ae81ff">1</span> root root    <span style="color:#ae81ff">0</span> Jul <span style="color:#ae81ff">17</span>  <span style="color:#ae81ff">2024</span> srv
+</span></span><span style="display:flex;"><span>dr-xr-xr-x.  <span style="color:#ae81ff">13</span> root root    <span style="color:#ae81ff">0</span> Mar <span style="color:#ae81ff">30</span> 14:22 sys
+</span></span><span style="display:flex;"><span>drwxrwxrwt.  <span style="color:#ae81ff">28</span> root root  <span style="color:#ae81ff">720</span> Mar <span style="color:#ae81ff">30</span> 19:43 tmp
+</span></span><span style="display:flex;"><span>drwxr-xr-x.   <span style="color:#ae81ff">1</span> root root  <span style="color:#ae81ff">168</span> Oct <span style="color:#ae81ff">24</span> 20:19 usr
+</span></span><span style="display:flex;"><span>drwxr-xr-x.   <span style="color:#ae81ff">1</span> root root  <span style="color:#ae81ff">200</span> Oct <span style="color:#ae81ff">24</span> 20:27 var
+</span></span></code></pre></div><p><strong>1. <code>/bin</code></strong></p>
+<ul>
+<li>This directory contains the essential binaries (executables) required for the operating  system to function properly. (<em>e.g: <code>ls</code>, <code>pwd</code>, <code>cat</code>, <code>ln</code>, <code>vim</code>, <code>nano</code></em>).
+binaries can be accessed anywhere in the device.</li>
+<li>In simple terms, it holds crucial applications that can be accessed from anywhere on the system. (<em>no <code>user</code> is blocked from using this binaries</em>)</li>
+</ul>
+<p><strong>2. <code>/sbin</code></strong></p>
+<ul>
+<li>This contains system binaries, which means that it can only be used in either the <code>sudo</code> mode or logged in as a <code>root</code> user. (<em>e.g: <code>mount</code>, <code>deluser</code>, <code>adduser</code></em>)</li>
+</ul>
+<p><strong>3. <code>/lib</code></strong></p>
+<ul>
+<li>Many of the above mentioned directories, may share the command libraries. Which are stored inside in the <code>/lib</code> directory.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>iamyaash@fedora:/$ ll lib
+</span></span><span style="display:flex;"><span>lrwxrwxrwx. <span style="color:#ae81ff">1</span> root root <span style="color:#ae81ff">7</span> Jul <span style="color:#ae81ff">17</span>  <span style="color:#ae81ff">2024</span> lib -&gt; usr/lib
+</span></span></code></pre></div><blockquote>
+<p>(<em>In modern Linux distributions, /lib is often a symbolic link to /usr/lib.</em>)</p>
+</blockquote>
+<p><strong>4. <code>/usr</code></strong></p>
+<ul>
+<li>
+<p><strong><code>/usr/bin</code></strong> - This directory contains non-essential binaries, meaning the programs stored here are not required for the system to boot or run in single-user mode. These binaries are typically used by regular users rather than the system itself.</p>
+<ul>
+<li>The <code>/usr/bin</code> directory holds most of the user-space applications and utilities that are not essential for basic system operation. These include text editors (<code>nano</code>, <code>vim</code>), compilers (<code>gcc</code>), package management tools (<code>dnf</code> or <code>apt</code>), and various system utilities.</li>
+<li>Unlike <code>/bin</code>, which contains critical system binaries needed for booting and recovery, <code>/usr/bin</code> is meant for general-purpose applications. In many modern distributions, the distinction between <code>/bin</code> and <code>/usr/bin</code> is blurred due to the <code>/usr</code> merge, where <code>/bin</code> is often a symbolic link to <code>/usr/bin</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong><code>/usr/loca/bin</code></strong> - This directory contains binaries that are compiled and installed locally by the user, ensuring they do not conflict with software installed by the system package manager.</p>
+<ul>
+<li>In simple terms, it provides a safer place to store locally compiled binaries, preventing conflicts with executables installed via a package manager.</li>
+<li><strong>Example</strong>: <em>Suppose you download and compile a newer version of <code>htop</code> from source instead of installing it via <code>dnf</code> or <code>apt</code>. If you install it to <code>/usr/local/bin</code>, it will not overwrite the system-managed version in <code>/usr/bin</code></em>.</li>
+<li><strong>Note</strong>: <code>which</code> command shows the current binary it uses for the command.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ which curl
+</span></span><span style="display:flex;"><span>/usr/bin/curl
+</span></span></code></pre></div></li>
+</ul>
+<p><strong>5. <code>$PATH</code></strong></p>
+<ul>
+<li>The <code>$PATH</code> variable defines directories where the system looks for executable binaries.</li>
+<li>This allows us to run programs from any directory without specifying their full path.</li>
+</ul>
+<p><strong>6. <code>/etc</code></strong></p>
+<ul>
+<li><code>etc</code> stands for <strong>E</strong>ditable <strong>T</strong>ext <strong>C</strong>onfig.</li>
+<li>Most of the filenames ends with <code>.conf</code> and typically consists of text based files that can be modified using any text editor with <code>sudo</code>.</li>
+<li>These files primarily control system and software behavior. (<em>e.g., <code>/etc/resolv.conf</code> stores network-related configurations.</em>)</li>
+</ul>
+<p><strong>7. <code>/home</code></strong></p>
+<ul>
+<li>This directory contains user-specific data, including personal files, configuration settings, and user-installed software.</li>
+<li>Each user has their own subdirectory (<code>/home/username</code>), which they own and control.</li>
+<li>To access another user&rsquo;s home directory, you must either log in as that user or have appropriate read permissions.</li>
+</ul>
+<p><strong>8. <code>/boot</code></strong> - This is literally the kernal itself. (<em>It contains the data for booting the system</em>)</p>
+<p><strong>9. <code>/dev</code></strong> - We can use this directory to interface with hardware or drivers as if there were regular files.</p>
+<p><strong>10. <code>/opt</code></strong> - Contains optional or add-on sofware that we rarely interact with.</p>
+<p><strong>11. <code>/var</code></strong> - Contains variabl files that will change as the operating system is being used. (eg. <code>system_logs</code>)</p>
+<p><strong>12. <code>/tmp</code></strong> - Consist of temporary files that won&rsquo;t persisted between reboots.</p>
+<p><strong>13. <code>/proc</code></strong> - It contains special files that show real-time information about the system, processes, and hardware. Unlike normal files, these are virtual files that update dynamically.</p>
+<ul>
+<li>proc/cpuinfo → Shows details about your CPU (like speed, cores, model).</li>
+<li>/proc/meminfo → Shows memory (RAM) usage.</li>
+<li>/proc/uptime → Tells how long your system has been running.</li>
+<li>/proc/1234/ → A folder for process ID 1234, containing details about that</li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://iamyaash.github.io/">stashed</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
