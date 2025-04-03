@@ -2,6 +2,7 @@
 title = 'Linux Directories'
 date = 2025-03-30T19:41:36+05:30
 draft = false
+summary = 'A table summarizing Linux directories for a quick reference.'
 +++
 
 # Let's move into the `/` (_root_) direcory:
@@ -32,6 +33,24 @@ drwxr-xr-x.   1 root root  168 Oct 24 20:19 usr
 drwxr-xr-x.   1 root root  200 Oct 24 20:27 var
 ```
 
+| **Directory**  | **Description** |
+|---------------|---------------|
+| **`/bin`**   | Contains essential binaries (e.g., `ls`, `pwd`, `cat`, `vim`) that can be accessed by all users. These are required for system operation. |
+| **`/sbin`**  | Stores system binaries (e.g., `mount`, `adduser`, `deluser`) that can only be executed by `root` or with `sudo`. |
+| **`/lib`**   | Contains shared libraries required by `/bin` and `/sbin`. Often a symbolic link to `/usr/lib`. |
+| **`/usr`**   | Holds user-related programs and utilities. |
+| **`/usr/bin`** | Contains non-essential binaries for user applications (e.g., `nano`, `vim`, `gcc`, `dnf`). |
+| **`/usr/local/bin`** | Stores user-installed binaries to avoid conflicts with system package manager installations. |
+| **`$PATH`**  | Environment variable that defines directories where executables are searched when running commands. |
+| **`/etc`**   | Stores system-wide configuration files (e.g., `/etc/resolv.conf`, `/etc/hostname`). Most are editable text files ending in `.conf`. |
+| **`/home`**  | Contains personal files, settings, and user-specific directories (`/home/username`). |
+| **`/boot`**  | Contains files required for booting the system, including the Linux kernel. |
+| **`/dev`**   | Provides access to hardware devices as if they were files (e.g., `/dev/sda`, `/dev/null`). |
+| **`/opt`**   | Stores optional or third-party software packages that are not part of the default system. |
+| **`/var`**   | Contains variable data such as logs (`/var/log`), spool files, and caches. |
+| **`/tmp`**   | Stores temporary files that are deleted on reboot. |
+| **`/proc`**  | Virtual directory containing real-time system information, such as `/proc/cpuinfo` (CPU details) and `/proc/meminfo` (memory usage). |
+<!-- 
 **1. `/bin`** 
   - This directory contains the essential binaries (executables) required for the operating  system to function properly. (_e.g: `ls`, `pwd`, `cat`, `ln`, `vim`, `nano`_).
 binaries can be accessed anywhere in the device.
@@ -91,4 +110,4 @@ lrwxrwxrwx. 1 root root 7 Jul 17  2024 lib -> usr/lib
   - proc/cpuinfo → Shows details about your CPU (like speed, cores, model).
   - /proc/meminfo → Shows memory (RAM) usage.
   - /proc/uptime → Tells how long your system has been running.
-  - /proc/1234/ → A folder for process ID 1234, containing details about that
+  - /proc/1234/ → A folder for process ID 1234, containing details about that -->

@@ -13,7 +13,7 @@
       <link>https://iamyaash.github.io/posts/linux-dir/linux-directories/</link>
       <pubDate>Sun, 30 Mar 2025 19:41:36 +0530</pubDate>
       <guid>https://iamyaash.github.io/posts/linux-dir/linux-directories/</guid>
-      <description>Let&amp;rsquo;s move into the / (root) direcory: iamyaash@fedora:/$ ll total 20 dr-xr-xr-x. 1 root root 0 Jul 17 2024 afs lrwxrwxrwx. 1 root root 7 Jul 17 2024 bin -&amp;gt; usr/bin dr-xr-xr-x. 6 root root 4096 Mar 26 02:33 boot drwxr-xr-x. 21 root root 4400 Mar 30 14:23 dev drwxr-xr-x. 1 root root 4870 Mar 28 21:04 etc drwxr-xr-x. 1 root root 16 Feb 23 23:19 home lrwxrwxrwx. 1 root root 7 Jul 17 2024 lib -&amp;gt; usr/lib lrwxrwxrwx.</description>
+      <description>A table summarizing Linux directories for a quick reference.</description>
     </item>
     <item>
       <title>Usage: git cli</title>
