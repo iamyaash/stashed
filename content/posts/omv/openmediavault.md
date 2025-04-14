@@ -1,7 +1,7 @@
 +++
 title = 'Open Media Vault (OMV) in R-Pi'
 date = 2025-04-14T11:28:49+05:30
-draft = true
+draft = false
 summary = 'How to install & troubleshoot errors' 
 +++
 
