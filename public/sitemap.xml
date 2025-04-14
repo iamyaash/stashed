@@ -2,13 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://iamyaash.github.io/posts/linux-dir/linux-directories/</loc>
-    <lastmod>2025-03-30T19:41:36+05:30</lastmod>
-  </url><url>
     <loc>https://iamyaash.github.io/posts/</loc>
-    <lastmod>2025-03-30T19:41:36+05:30</lastmod>
+    <lastmod>2025-04-14T11:28:49+05:30</lastmod>
   </url><url>
     <loc>https://iamyaash.github.io/</loc>
+    <lastmod>2025-04-14T11:28:49+05:30</lastmod>
+  </url><url>
+    <loc>https://iamyaash.github.io/posts/linux-dir/linux-directories/</loc>
     <lastmod>2025-03-30T19:41:36+05:30</lastmod>
   </url><url>
     <loc>https://iamyaash.github.io/posts/git/howtousegit/</loc>
