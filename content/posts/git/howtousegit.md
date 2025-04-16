@@ -2,6 +2,10 @@
 title = 'Usage: git cli'
 date = 2025-03-29T19:37:21+05:30
 draft = false
+
+[cover]
+image = "posts/git/git.png"
+alt = "git-screenshot"
 +++
 
 ## Setting up **`git`** in your device
