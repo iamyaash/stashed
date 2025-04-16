@@ -3,6 +3,10 @@ title = 'Open Media Vault (OMV) in R-Pi'
 date = 2025-04-14T11:28:49+05:30
 draft = false
 summary = 'How to install & troubleshoot errors' 
+
+[cover]
+image = "posts/omv/omv.png"
+alt = "OpenMediaVault-screenshot"
 +++
 
 Note: This is a per
