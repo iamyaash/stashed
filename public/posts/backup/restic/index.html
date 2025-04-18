@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Usage: Restic, On How to Backup Efficiently | stashed</title>
+<meta name="keywords" content="">
+<meta name="description" content="This is a really interesting backup application to use, it kinda reminds me of git the version controlling tool. I mean restic is not gonna &ldquo;version control&rdquo; but it uses the same technology in a way that enables us to backup things without duplication. I&rsquo;m using restic to backup the files in a sftp server. So this post is gonna cover the sftp aspects.
+However, I&rsquo;m using a mobile phone as an ftp server, and I&rsquo;m going to be using a weird directory name.">
+<meta name="author" content="">
+<link rel="canonical" href="https://iamyaash.github.io/posts/backup/restic/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://iamyaash.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://iamyaash.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://iamyaash.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://iamyaash.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://iamyaash.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://iamyaash.github.io/posts/backup/restic/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+  
+
+<meta property="og:url" content="https://iamyaash.github.io/posts/backup/restic/">
+  <meta property="og:site_name" content="stashed">
+  <meta property="og:title" content="Usage: Restic, On How to Backup Efficiently">
+  <meta property="og:description" content="This is a really interesting backup application to use, it kinda reminds me of git the version controlling tool. I mean restic is not gonna “version control” but it uses the same technology in a way that enables us to backup things without duplication. I’m using restic to backup the files in a sftp server. So this post is gonna cover the sftp aspects.
+However, I’m using a mobile phone as an ftp server, and I’m going to be using a weird directory name.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-04-18T20:48:28+05:30">
+    <meta property="article:modified_time" content="2025-04-18T20:48:28+05:30">
+    <meta property="og:image" content="https://iamyaash.github.io/posts/backup/restic.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://iamyaash.github.io/posts/backup/restic.png">
+<meta name="twitter:title" content="Usage: Restic, On How to Backup Efficiently">
+<meta name="twitter:description" content="This is a really interesting backup application to use, it kinda reminds me of git the version controlling tool. I mean restic is not gonna &ldquo;version control&rdquo; but it uses the same technology in a way that enables us to backup things without duplication. I&rsquo;m using restic to backup the files in a sftp server. So this post is gonna cover the sftp aspects.
+However, I&rsquo;m using a mobile phone as an ftp server, and I&rsquo;m going to be using a weird directory name.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://iamyaash.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Usage: Restic, On How to Backup Efficiently",
+      "item": "https://iamyaash.github.io/posts/backup/restic/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Usage: Restic, On How to Backup Efficiently",
+  "name": "Usage: Restic, On How to Backup Efficiently",
+  "description": "This is a really interesting backup application to use, it kinda reminds me of git the version controlling tool. I mean restic is not gonna \u0026ldquo;version control\u0026rdquo; but it uses the same technology in a way that enables us to backup things without duplication. I\u0026rsquo;m using restic to backup the files in a sftp server. So this post is gonna cover the sftp aspects.\nHowever, I\u0026rsquo;m using a mobile phone as an ftp server, and I\u0026rsquo;m going to be using a weird directory name.",
+  "keywords": [
+    
+  ],
+  "articleBody": "This is a really interesting backup application to use, it kinda reminds me of git the version controlling tool. I mean restic is not gonna “version control” but it uses the same technology in a way that enables us to backup things without duplication. I’m using restic to backup the files in a sftp server. So this post is gonna cover the sftp aspects.\nHowever, I’m using a mobile phone as an ftp server, and I’m going to be using a weird directory name.\nLet’s Initialize the Repository in the sftp server. Note: Make sure to establish a connection between the sftp server and your device.\nLet’s establish a connection your mobile FTP server by noting down the IP address \u0026 it’s port address. Go to your “Network” folder in file explorer in your Operating System and enter the same address to establish a connection.\nAfter making a successful connection, ssh into the FTP server directory or just “Open a Console” under the directory to get access into server without explicitly mentioning ssh. Use pwd to display the storage address and note it down, because it will be used for specifying the init location of backup.\nrestic init --repo \"/run/user/1000/gvfs/ftp:host=192.168.31.177,port=2221/Server If the backup is being performed in an actual sftp server, then replace the --repo with sftp:user@host:\nHow to Backup \u0026 Display the Snapshots All the backups will be stored in snapshots, hence everytime the backup is initiated, it compares the existing file to prevent duplication and only backups the modified or newly created files.\nrestic -r \"/run/user/1000/gvfs/ftp:host=192.168.31.177,port=2221/Server\" backup --verbose ~/Documents/ ~/Pictures To Display the Snapshots\nrestic -r \"/run/user/1000/gvfs/ftp:host=192.168.31.177,port=2221/Server\" snapshots This will display the available snapshots.\nrestic -r \"/run/user/1000/gvfs/ftp:host=192.168.31.177,port=2221/Server\" snapshots enter password for repository: repository 45b26599 opened (version 2, compression level auto) ID Time Host Tags Paths Size -------------------------------------------------------------------------------------------- 7b6bb481 2025-04-16 23:42:27 fedora /home/iamyaash/.ssh 48.436 KiB c18b4633 2025-04-16 23:42:50 fedora /home/iamyaash/.gnupg 67.951 KiB a925118b 2025-04-16 23:53:43 fedora /home/iamyaash/.task 704.182 KiB /home/iamyaash/.taskrc 980cd67a 2025-04-17 00:06:29 fedora /home/iamyaash/Documents 204.987 MiB 85d5bb7c 2025-04-17 00:12:08 fedora /home/iamyaash/Pictures 127.424 MiB 3452ec11 2025-04-18 19:09:18 fedora /home/iamyaash/Downloads 198.870 MiB -------------------------------------------------------------------------------------------- 6 snapshots How to Restory the Backups Restoring the backup or snapshots is really as easy as it sounds, just use the following the commands to restore the contents of the latest snapshot\nrestic -r \"/run/user/1000/gvfs/ftp:host=192.168.31.177,port=2221/Server\" restore a925118b --target /home/iamyaash restic -r \"/run/user/1000/gvfs/ftp:host=192.168.31.177,port=2221/Server\" restore latest a925118b --target /home/iamyaash restore latest will restore the latest backup of the selected snapshot.\nLet’s Cover the Other Features --dry-run: Will let you perform backup to see what would happend without actually making backups or modifying the repository.\nrestic -r \"/run/user/1000/gvfs/ftp:host=192.168.31.177,port=2221/Server\" --dry-run --verbose | grep added diff: To compare two existing snapshots in the repository. restic -r \"/run/user/1000/gvfs/ftp:host=192.168.31.177,port=2221/Server\" diff 980cd67a 85d5bb7c mount: This is an interesting method where we’ll mount the snapshot directory instead of extracting the backup. mkdir /mnt/restic #if the directory doesn't exist restic -r \"/run/user/1000/gvfs/ftp:host=192.168.31.177,port=2221/Server\" mount /mnt/restic ",
+  "wordCount" : "479",
+  "inLanguage": "en",
+  "image":"https://iamyaash.github.io/posts/backup/restic.png","datePublished": "2025-04-18T20:48:28+05:30",
+  "dateModified": "2025-04-18T20:48:28+05:30",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://iamyaash.github.io/posts/backup/restic/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "stashed",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://iamyaash.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://iamyaash.github.io/" accesskey="h" title="stashed (Alt + H)">stashed</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Usage: Restic, On How to Backup Efficiently
+    </h1>
+    <div class="post-meta"><span title='2025-04-18 20:48:28 +0530 IST'>April 18, 2025</span>
+
+</div>
+  </header> 
+<figure class="entry-cover">
+        <img loading="eager" src="https://iamyaash.github.io/posts/backup/restic.png" alt="restic-screenshot">
+        
+</figure>
+  <div class="post-content"><p>This is a really interesting backup application to use, it kinda reminds me of <code>git</code> the version controlling tool. I mean <code>restic</code> is not gonna &ldquo;version control&rdquo; but it uses the same technology in a way that enables us to backup things without duplication. I&rsquo;m using <code>restic</code> to backup the files in a <code>sftp</code> server. So this post is gonna cover the <code>sftp</code> aspects.</p>
+<p>However, I&rsquo;m using a mobile phone as an <code>ftp</code> server, and I&rsquo;m going to be using a weird directory name.</p>
+<h1 id="lets-initialize-the-repository-in-the-sftp-server">Let&rsquo;s Initialize the Repository in the <code>sftp</code> server.<a hidden class="anchor" aria-hidden="true" href="#lets-initialize-the-repository-in-the-sftp-server">#</a></h1>
+<blockquote>
+<p><strong>Note</strong>: Make sure to establish a connection between the <code>sftp</code> server and your device.</p>
+</blockquote>
+<p>Let&rsquo;s establish a connection your mobile FTP server by noting down the IP address &amp; it&rsquo;s port address. Go to your &ldquo;Network&rdquo; folder in file explorer in your Operating System and enter the same address to establish a connection.</p>
+<p>After making a successful connection, ssh into the FTP server directory or just &ldquo;Open a Console&rdquo; under the directory to get access into server without explicitly mentioning <code>ssh</code>. Use <code>pwd</code> to display the storage address and note it down, because it will be used for specifying the <code>init</code> location of backup.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>restic init --repo <span style="color:#e6db74">&#34;/run/user/1000/gvfs/ftp:host=192.168.31.177,port=2221/Server
+</span></span></span></code></pre></div><p>If the backup is being performed in an actual <code>sftp </code> server, then replace the <code>--repo &lt;address&gt;</code> with <code>sftp:user@host:&lt;directory-location&gt;</code></p>
+<h1 id="how-to-backup--display-the-snapshots">How to Backup &amp; Display the Snapshots<a hidden class="anchor" aria-hidden="true" href="#how-to-backup--display-the-snapshots">#</a></h1>
+<p>All the backups will be stored in snapshots, hence everytime the backup is initiated, it compares the existing file to prevent duplication and only backups the modified or newly created files.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>restic -r <span style="color:#e6db74">&#34;/run/user/1000/gvfs/ftp:host=192.168.31.177,port=2221/Server&#34;</span> backup --verbose ~/Documents/ ~/Pictures
+</span></span></code></pre></div><p><strong>To Display the Snapshots</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>restic -r <span style="color:#e6db74">&#34;/run/user/1000/gvfs/ftp:host=192.168.31.177,port=2221/Server&#34;</span> snapshots
+</span></span></code></pre></div><p>This will display the available snapshots.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>restic -r <span style="color:#e6db74">&#34;/run/user/1000/gvfs/ftp:host=192.168.31.177,port=2221/Server&#34;</span> snapshots 
+</span></span><span style="display:flex;"><span>enter password <span style="color:#66d9ef">for</span> repository: 
+</span></span><span style="display:flex;"><span>repository 45b26599 opened <span style="color:#f92672">(</span>version 2, compression level auto<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>ID        Time                 Host        Tags        Paths                     Size
+</span></span><span style="display:flex;"><span>--------------------------------------------------------------------------------------------
+</span></span><span style="display:flex;"><span>7b6bb481  2025-04-16 23:42:27  fedora                  /home/iamyaash/.ssh       48.436 KiB
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>c18b4633  2025-04-16 23:42:50  fedora                  /home/iamyaash/.gnupg     67.951 KiB
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>a925118b  2025-04-16 23:53:43  fedora                  /home/iamyaash/.task      704.182 KiB
+</span></span><span style="display:flex;"><span>                                                       /home/iamyaash/.taskrc
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>980cd67a  2025-04-17 00:06:29  fedora                  /home/iamyaash/Documents  204.987 MiB
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>85d5bb7c  2025-04-17 00:12:08  fedora                  /home/iamyaash/Pictures   127.424 MiB
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>3452ec11  2025-04-18 19:09:18  fedora                  /home/iamyaash/Downloads  198.870 MiB
+</span></span><span style="display:flex;"><span>--------------------------------------------------------------------------------------------
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">6</span> snapshots
+</span></span></code></pre></div><h1 id="how-to-restory-the-backups">How to Restory the Backups<a hidden class="anchor" aria-hidden="true" href="#how-to-restory-the-backups">#</a></h1>
+<p>Restoring the backup or snapshots is really as easy as it sounds, just use the following the commands to restore the contents of the latest <code>snapshot</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>restic -r <span style="color:#e6db74">&#34;/run/user/1000/gvfs/ftp:host=192.168.31.177,port=2221/Server&#34;</span> restore a925118b --target /home/iamyaash
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>restic -r <span style="color:#e6db74">&#34;/run/user/1000/gvfs/ftp:host=192.168.31.177,port=2221/Server&#34;</span> restore latest a925118b --target /home/iamyaash
+</span></span></code></pre></div><blockquote>
+<p><code>restore latest</code> will restore the latest backup of the selected snapshot.</p>
+</blockquote>
+<h1 id="lets-cover-the-other-features">Let&rsquo;s Cover the Other Features<a hidden class="anchor" aria-hidden="true" href="#lets-cover-the-other-features">#</a></h1>
+<ol>
+<li><strong><code>--dry-run</code></strong>:</li>
+</ol>
+<p>Will let you perform backup to see what would happend without actually making backups or modifying the repository.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>restic -r <span style="color:#e6db74">&#34;/run/user/1000/gvfs/ftp:host=192.168.31.177,port=2221/Server&#34;</span> --dry-run --verbose | grep added
+</span></span></code></pre></div><ol start="2">
+<li><strong><code>diff</code></strong>:
+To compare two existing snapshots in the repository.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>restic -r <span style="color:#e6db74">&#34;/run/user/1000/gvfs/ftp:host=192.168.31.177,port=2221/Server&#34;</span> diff 980cd67a 85d5bb7c
+</span></span></code></pre></div><ol start="3">
+<li><strong><code>mount</code></strong>:
+This is an interesting method where we&rsquo;ll mount the snapshot directory instead of extracting the backup.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>mkdir /mnt/restic <span style="color:#75715e">#if the directory doesn&#39;t exist</span>
+</span></span><span style="display:flex;"><span>restic -r <span style="color:#e6db74">&#34;/run/user/1000/gvfs/ftp:host=192.168.31.177,port=2221/Server&#34;</span> mount /mnt/restic
+</span></span></code></pre></div>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://iamyaash.github.io/">stashed</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
