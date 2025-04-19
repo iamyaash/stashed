@@ -1,7 +1,8 @@
 +++
 date = '2025-02-14T23:31:30+05:30'
 draft = false
-title = 'Doc: Universal Android De-Bloater'
+title = 'Universal Android De-Bloater'
+tags = [ "docs", "android" ]
 +++
 # Key features
 - No root required to remove the bloatware.
@@ -18,7 +19,7 @@ sudo dnf install adb
 
 > This would be enought to run the tool, now let's see how to use it!
 
-# Usage:
+# 
 1. Enable USB Debugging in your android phone. (mandatory)
 2. Connect the device with the computer you are running the tool.
 3. Run the Universal Android De-Bloater.

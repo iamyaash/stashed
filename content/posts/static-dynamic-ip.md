@@ -1,7 +1,9 @@
 +++
 date = '2025-03-09T21:37:51+05:30'
 draft = false
-title = 'Doc: Definition of Static IP Address & Dynamic IP Address'
+title = ' Definition of Static IP Address & Dynamic IP Address'
+tags = [ "docs" ]
+
 +++
 
 # What is a static IP address?

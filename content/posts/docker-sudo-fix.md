@@ -2,6 +2,8 @@
 date = '2025-02-01T16:01:19+05:30'
 draft = false
 title = 'Fix: Access `docker` without sudo'
+tags = [ "docs", "docker", "script" ]
+
 +++
 
 # Why this occurs?

@@ -1,5 +1,5 @@
 +++
-title = 'Doc: Setting Up Raspberry Pi 5'
+title = ' Setting Up Raspberry Pi 5'
 date = 2025-03-17T19:22:47+05:30
 draft = false
 tags = [ "docs", "setup", "raspberry" ]

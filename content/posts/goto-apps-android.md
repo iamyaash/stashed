@@ -2,6 +2,8 @@
 date = '2025-02-17T23:22:02+05:30'
 draft = false
 title = 'Goto: Open Source Android Applications to Use'
+tags = [ "setup", "android" ]
+
 +++
 
 # Why Open Source?

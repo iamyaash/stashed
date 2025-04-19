@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Usage on stashed</title>
+    <link>https://iamyaash.github.io/tags/usage/</link>
+    <description>Recent content in Usage on stashed</description>
+    <generator>Hugo -- 0.126.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 23 Feb 2025 18:16:08 +0530</lastBuildDate>
+    <atom:link href="https://iamyaash.github.io/tags/usage/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title> `nmcli`</title>
+      <link>https://iamyaash.github.io/posts/nmcli/</link>
+      <pubDate>Sun, 23 Feb 2025 18:16:08 +0530</pubDate>
+      <guid>https://iamyaash.github.io/posts/nmcli/</guid>
+      <description>What is nmcli? The nmcli means NetworkManager Command Line Interface. It&amp;rsquo;s command-line utility tool used for controlling NetworkManager and reporting network status.
+In simple terms, we use that to interact with network related devices.
+How to use it? I don&amp;rsquo;t have proper way to explain, but let&amp;rsquo;s learn it with a case-scenario:
+Connect to a wifi network: Turn on the wifi module: sudo nmcli radio wifi on List the available networks: sudo nmcli device wifi list In case, it didn&amp;rsquo;t display any network, please rescan the available network and list it:</description>
+    </item>
+  </channel>
+</rss>

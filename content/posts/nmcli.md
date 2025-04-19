@@ -1,7 +1,9 @@
 +++
 date = '2025-02-23T18:16:08+05:30'
 draft = false
-title = 'Usage: `nmcli`'
+title = ' `nmcli`'
+tags = [ "docs", "usage"]
+
 +++
 
 # What is `nmcli`?

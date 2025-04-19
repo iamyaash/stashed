@@ -1,7 +1,9 @@
 +++
-title = 'Usage: ssh'
+title = ' ssh'
 date = 2025-03-29T20:07:55+05:30
 draft = true
+tags = [ "docs" ]
+
 +++
 
 ## Adding  New `ssh` Key

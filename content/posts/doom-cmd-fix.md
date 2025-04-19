@@ -2,6 +2,8 @@
 date = '2025-01-31T18:44:50+05:30'
 draft = false
 title = 'Doc : `doom` Installation & Unrecognized Command Fix'
+tags = [ "docs", "troubleshoot", "script" ]
+
 +++
 
 # Install Doom Emacs 

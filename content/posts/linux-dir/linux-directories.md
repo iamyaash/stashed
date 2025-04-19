@@ -1,5 +1,5 @@
 +++
-title = 'Linux Directories'
+title = ' Linux Directories'
 date = 2025-03-30T19:41:36+05:30
 draft = false
 summary = 'A table summarizing Linux directories for a quick reference.'

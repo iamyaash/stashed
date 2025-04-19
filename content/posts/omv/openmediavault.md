@@ -1,8 +1,10 @@
 +++
-title = 'Open Media Vault (OMV) in R-Pi'
+title = ' Open Media Vault (OMV) in R-Pi'
 date = 2025-04-14T11:28:49+05:30
 draft = false
-summary = 'How to install & troubleshoot errors' 
+summary = 'How to install OpenMediaVault & troubleshoot errors after during installation  or setup' 
+tags = [ "docs", "setup", "server", "script"]
+
 
 [cover]
 image = "posts/omv/omv.png"
