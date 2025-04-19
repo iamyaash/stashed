@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>Doc : `doom` Installation &amp; Unrecognized Command Fix | stashed</title>
-<meta name="keywords" content="">
+<meta name="keywords" content="docs, troubleshoot, script">
 <meta name="description" content="Install Doom Emacs Head over to this repository and execute the scripts.
 git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs ~/.config/emacs/bin/doom install doom command not recognized Whenever I install doom emacs, I always face this problem and now we&rsquo;re going to put an end to this error.(!panic)
 The error would look something like mentioned below:
@@ -73,6 +73,9 @@ Error: file-missing (&#34;Cannot open load file&#34; &#34;No such file or direct
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2025-01-31T18:44:50+05:30">
     <meta property="article:modified_time" content="2025-01-31T18:44:50+05:30">
+    <meta property="article:tag" content="Docs">
+    <meta property="article:tag" content="Troubleshoot">
+    <meta property="article:tag" content="Script">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Doc : `doom` Installation &amp; Unrecognized Command Fix">
 <meta name="twitter:description" content="Install Doom Emacs Head over to this repository and execute the scripts.
@@ -109,7 +112,7 @@ Error: file-missing (&#34;Cannot open load file&#34; &#34;No such file or direct
   "name": "Doc : \u0060doom\u0060 Installation \u0026 Unrecognized Command Fix",
   "description": "Install Doom Emacs Head over to this repository and execute the scripts.\ngit clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs ~/.config/emacs/bin/doom install doom command not recognized Whenever I install doom emacs, I always face this problem and now we\u0026rsquo;re going to put an end to this error.(!panic)\nThe error would look something like mentioned below:\nError: file-missing (\u0026#34;Cannot open load file\u0026#34; \u0026#34;No such file or directory\u0026#34; \u0026#34;/usr/early-init.el\u0026#34;) mapbacktrace(#f(compiled-function (evald func args flags) #\u0026lt;bytecode -0x1a9589d6c510f34\u0026gt;)) debug-early-backtrace() debug-early(error (file-missing \u0026#34;Cannot open load file\u0026#34; \u0026#34;No such file or directory\u0026#34; \u0026#34;/usr/early-init.",
   "keywords": [
-    
+    "docs", "troubleshoot", "script"
   ],
   "articleBody": "Install Doom Emacs Head over to this repository and execute the scripts.\ngit clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs ~/.config/emacs/bin/doom install doom command not recognized Whenever I install doom emacs, I always face this problem and now we’re going to put an end to this error.(!panic)\nThe error would look something like mentioned below:\nError: file-missing (\"Cannot open load file\" \"No such file or directory\" \"/usr/early-init.el\") mapbacktrace(#f(compiled-function (evald func args flags) #)) debug-early-backtrace() debug-early(error (file-missing \"Cannot open load file\" \"No such file or directory\" \"/usr/early-init.el\")) load(\"/usr/early-init.el\" nil nomessage nosuffix) (and (load init-file nil 'nomessage 'nosuffix) (featurep 'doom)) (or (and (load init-file nil 'nomessage 'nosuffix) (featurep 'doom)) (user-error \"Failed to load Doom from %s\" init-file)) (let* ((bin-dir (file-name-directory (file-truename load-file-name))) (init-file (expand-file-name \"../early-init.el\" bin-dir))) (or (and (load init-file nil 'nomessage 'nosuffix) (featurep 'doom)) (user-error \"Failed to load Doom from %s\" init-file))) (condition-case e (let* ((bin-dir (file-name-directory (file-truename load-file-name))) (init-file (expand-file-name \"../early-init.el\" bin-dir))) (or (and (load init-file nil 'nomessage 'nosuffix) (featurep 'doom)) (user-error \"Failed to load Doom from %s\" init-file))) (user-error (message \"Error: %s\" (car (cdr e))) (kill-emacs 2))) load-with-code-conversion(\"/usr/bin/doom\" \"/usr/bin/doom\" nil t) command-line-1((\"--load\" \"/usr/bin/doom\" \"--\")) command-line() normal-top-level() Cannot open load file: No such file or directory, /usr/early-init.el Let’s fix it:\nFirst, we have verify that we have the required directory present in the respective location. ~/.config/emacs ~/.config/doom Basically, these directories are enough to get started! However, make sure there’s no directory named emacs.d in home directory of the user (~/.emacs.d). If there’s a directory present in this location(~/.emacs.d), then it will become error. Make sure to verify 1 \u0026 2 .\nThe error mainly is caused because of the 2, so make sure that directory is not present.\nAlternative: If that directory is needed, then we can directly point doom there instead of ~/.config/doom\nLet’s get fix it simple command!:\nOpen ~/.bashrc nano ~/.bashrc Add this line at the bottom: export PATH=\"$HOME/.config/emacs/bin:$PATH\" Update the changes: source ~/.bashrc ",
   "wordCount" : "316",
@@ -248,6 +251,9 @@ If that directory is needed, then we can directly point <code>doom</code> there 
 
   <footer class="post-footer">
     <ul class="post-tags">
+      <li><a href="https://iamyaash.github.io/tags/docs/">Docs</a></li>
+      <li><a href="https://iamyaash.github.io/tags/troubleshoot/">Troubleshoot</a></li>
+      <li><a href="https://iamyaash.github.io/tags/script/">Script</a></li>
     </ul>
   </footer>
 </article>

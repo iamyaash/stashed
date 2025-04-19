@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>Fix: Access `docker` without sudo | stashed</title>
-<meta name="keywords" content="">
+<meta name="keywords" content="docs, docker, script">
 <meta name="description" content="Why this occurs? I don&rsquo;t whether it&rsquo;s happening to everyone, but whenever I try to install docker I always end up facing an issue, which won&rsquo;t let me use docker unless I use sudo while executing the docker commands. Why it&rsquo;s occurs? Well, it&rsquo;s because the permission denied when you are trying to connect with the docker daemon socket at unix://var/run/docker.sock. (you will also see an error similar to this.">
 <meta name="author" content="">
 <link rel="canonical" href="https://iamyaash.github.io/posts/docker-sudo-fix/">
@@ -67,6 +67,9 @@
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2025-02-01T16:01:19+05:30">
     <meta property="article:modified_time" content="2025-02-01T16:01:19+05:30">
+    <meta property="article:tag" content="Docs">
+    <meta property="article:tag" content="Docker">
+    <meta property="article:tag" content="Script">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Fix: Access `docker` without sudo">
 <meta name="twitter:description" content="Why this occurs? I don&rsquo;t whether it&rsquo;s happening to everyone, but whenever I try to install docker I always end up facing an issue, which won&rsquo;t let me use docker unless I use sudo while executing the docker commands. Why it&rsquo;s occurs? Well, it&rsquo;s because the permission denied when you are trying to connect with the docker daemon socket at unix://var/run/docker.sock. (you will also see an error similar to this.">
@@ -100,7 +103,7 @@
   "name": "Fix: Access \u0060docker\u0060 without sudo",
   "description": "Why this occurs? I don\u0026rsquo;t whether it\u0026rsquo;s happening to everyone, but whenever I try to install docker I always end up facing an issue, which won\u0026rsquo;t let me use docker unless I use sudo while executing the docker commands. Why it\u0026rsquo;s occurs? Well, it\u0026rsquo;s because the permission denied when you are trying to connect with the docker daemon socket at unix://var/run/docker.sock. (you will also see an error similar to this.",
   "keywords": [
-    
+    "docs", "docker", "script"
   ],
   "articleBody": "Why this occurs? I don’t whether it’s happening to everyone, but whenever I try to install docker I always end up facing an issue, which won’t let me use docker unless I use sudo while executing the docker commands. Why it’s occurs? Well, it’s because the permission denied when you are trying to connect with the docker daemon socket at unix://var/run/docker.sock. (you will also see an error similar to this.\nThe simple fix would be adding docker into a group which will let you use it without using sudo command everytime.\nLet’s fix it! Verify Docker group exists: getent group | grep docker If not, create a group called docker then.\nAssign the docker group to the user: sudo usermod -aG docker $USER $USER defines the current user.\nApply group changes: newgrp docker Restart Docker Engine to make sure the changes takes effect globally: sudo systemctl restart docker.service Let’s verify the group memebership: getent group | grep docker Alternative method, which requires simple fixes! Sometimes, there’s no major problems will occurs but something so simple will need to be done to fix the problem, now let’s look at the common troubleshooting methods:\nCheck if the Docker is running: sudo systemctl status docker sudo systemctl enable docker sudo systemctl start docker Verify Docker Socket: Ensure the Docker is usng the correct socket file. The typical socket file for Docker is var/run/docker.sock. Let’s check: ls -la /var/run/docker.sock if not present or points to different location, you might need to adjust manually.\nUse the correct socket path: DOCKER_HOST=unix:///var/run/docker.sock docker images If this works, your Docker installation may be misconfigured, and you can update the Docker socket location in your environment variables or Docker settings.\nLet’s DOCKET_HOST to .bashrc or .bash_profile echo 'export DOCKER_HOST=unix:///var/run/docker.sock' \u003e\u003e ~/.bashrc source ~/.bashrc This will set the DOCKER_HOST environment variable automatically in all your terminal sessions.\n",
   "wordCount" : "307",
@@ -245,6 +248,9 @@ Ensure the Docker is usng the correct socket file. The typical socket file for D
 
   <footer class="post-footer">
     <ul class="post-tags">
+      <li><a href="https://iamyaash.github.io/tags/docs/">Docs</a></li>
+      <li><a href="https://iamyaash.github.io/tags/docker/">Docker</a></li>
+      <li><a href="https://iamyaash.github.io/tags/script/">Script</a></li>
     </ul>
   </footer>
 </article>

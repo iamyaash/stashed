@@ -2,16 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://iamyaash.github.io/posts/backup/restic/</loc>
+    <lastmod>2025-04-18T20:48:28+05:30</lastmod>
+  </url><url>
+    <loc>https://iamyaash.github.io/tags/backup/</loc>
+    <lastmod>2025-04-18T20:48:28+05:30</lastmod>
+  </url><url>
+    <loc>https://iamyaash.github.io/tags/docs/</loc>
+    <lastmod>2025-04-18T20:48:28+05:30</lastmod>
+  </url><url>
     <loc>https://iamyaash.github.io/posts/</loc>
+    <lastmod>2025-04-18T20:48:28+05:30</lastmod>
+  </url><url>
+    <loc>https://iamyaash.github.io/tags/setup/</loc>
     <lastmod>2025-04-18T20:48:28+05:30</lastmod>
   </url><url>
     <loc>https://iamyaash.github.io/</loc>
     <lastmod>2025-04-18T20:48:28+05:30</lastmod>
   </url><url>
-    <loc>https://iamyaash.github.io/posts/backup/restic/</loc>
+    <loc>https://iamyaash.github.io/tags/</loc>
     <lastmod>2025-04-18T20:48:28+05:30</lastmod>
   </url><url>
     <loc>https://iamyaash.github.io/posts/omv/openmediavault/</loc>
+    <lastmod>2025-04-14T11:28:49+05:30</lastmod>
+  </url><url>
+    <loc>https://iamyaash.github.io/tags/script/</loc>
+    <lastmod>2025-04-14T11:28:49+05:30</lastmod>
+  </url><url>
+    <loc>https://iamyaash.github.io/tags/server/</loc>
     <lastmod>2025-04-14T11:28:49+05:30</lastmod>
   </url><url>
     <loc>https://iamyaash.github.io/posts/linux-dir/linux-directories/</loc>
@@ -23,16 +41,7 @@
     <loc>https://iamyaash.github.io/posts/pi5/pi5-setup/</loc>
     <lastmod>2025-03-17T19:22:47+05:30</lastmod>
   </url><url>
-    <loc>https://iamyaash.github.io/tags/docs/</loc>
-    <lastmod>2025-03-17T19:22:47+05:30</lastmod>
-  </url><url>
     <loc>https://iamyaash.github.io/tags/raspberry/</loc>
-    <lastmod>2025-03-17T19:22:47+05:30</lastmod>
-  </url><url>
-    <loc>https://iamyaash.github.io/tags/setup/</loc>
-    <lastmod>2025-03-17T19:22:47+05:30</lastmod>
-  </url><url>
-    <loc>https://iamyaash.github.io/tags/</loc>
     <lastmod>2025-03-17T19:22:47+05:30</lastmod>
   </url><url>
     <loc>https://iamyaash.github.io/posts/dhcp/dhcp/</loc>
@@ -47,6 +56,9 @@
     <loc>https://iamyaash.github.io/posts/pihole-pizero-2w/</loc>
     <lastmod>2025-03-13T21:43:22+05:30</lastmod>
   </url><url>
+    <loc>https://iamyaash.github.io/tags/network/</loc>
+    <lastmod>2025-03-13T21:43:22+05:30</lastmod>
+  </url><url>
     <loc>https://iamyaash.github.io/posts/static-dynamic-ip/</loc>
     <lastmod>2025-03-09T21:37:51+05:30</lastmod>
   </url><url>
@@ -58,6 +70,12 @@
   </url><url>
     <loc>https://iamyaash.github.io/posts/nmcli/</loc>
     <lastmod>2025-02-23T18:16:08+05:30</lastmod>
+  </url><url>
+    <loc>https://iamyaash.github.io/tags/usage/</loc>
+    <lastmod>2025-02-23T18:16:08+05:30</lastmod>
+  </url><url>
+    <loc>https://iamyaash.github.io/tags/android/</loc>
+    <lastmod>2025-02-17T23:22:02+05:30</lastmod>
   </url><url>
     <loc>https://iamyaash.github.io/posts/goto-apps-android/</loc>
     <lastmod>2025-02-17T23:22:02+05:30</lastmod>
@@ -71,10 +89,16 @@
     <loc>https://iamyaash.github.io/posts/forgejo-logo-change/</loc>
     <lastmod>2025-02-05T15:47:35+05:30</lastmod>
   </url><url>
+    <loc>https://iamyaash.github.io/tags/docker/</loc>
+    <lastmod>2025-02-01T16:01:19+05:30</lastmod>
+  </url><url>
     <loc>https://iamyaash.github.io/posts/docker-sudo-fix/</loc>
     <lastmod>2025-02-01T16:01:19+05:30</lastmod>
   </url><url>
     <loc>https://iamyaash.github.io/posts/doom-cmd-fix/</loc>
+    <lastmod>2025-01-31T18:44:50+05:30</lastmod>
+  </url><url>
+    <loc>https://iamyaash.github.io/tags/troubleshoot/</loc>
     <lastmod>2025-01-31T18:44:50+05:30</lastmod>
   </url><url>
     <loc>https://iamyaash.github.io/posts/fix-lan/</loc>

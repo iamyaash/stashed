@@ -2,6 +2,8 @@
 date = '2025-03-08T17:00:31+05:30'
 draft = false
 title = 'Setup: A beginner `pi-hole` setup (Manual DNS Allocation for Each Device)'
+tags = [ "docs", "setup", "network"]
+
 +++
 
 I don't have enough knowledge about this when writing the documenation for setting up the `pi-hole`. I'm running this on a 

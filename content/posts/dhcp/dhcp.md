@@ -1,5 +1,5 @@
 +++
-title = "Doc: Definition of DHCP & Practical Explanations"
+title = " Definition of DHCP & Practical Explanations"
 date = "2025-03-15T05:51:27.000Z"
 draft = false
 tags = [ "docs", "explanation", "pizero" ]

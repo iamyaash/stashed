@@ -1,7 +1,8 @@
 +++
-title = 'Usage: Restic, On How to Backup Efficiently'
+title = ' Restic, On How to Backup Efficiently'
 date = 2025-04-18T20:48:28+05:30
 draft = false
+tags = [ "docs", "setup", "backup" ]
 
 [cover]
 image = "posts/backup/restic.png"

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Troubleshoot on stashed</title>
+    <link>https://iamyaash.github.io/tags/troubleshoot/</link>
+    <description>Recent content in Troubleshoot on stashed</description>
+    <generator>Hugo -- 0.126.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 31 Jan 2025 18:44:50 +0530</lastBuildDate>
+    <atom:link href="https://iamyaash.github.io/tags/troubleshoot/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Doc : `doom` Installation &amp; Unrecognized Command Fix</title>
+      <link>https://iamyaash.github.io/posts/doom-cmd-fix/</link>
+      <pubDate>Fri, 31 Jan 2025 18:44:50 +0530</pubDate>
+      <guid>https://iamyaash.github.io/posts/doom-cmd-fix/</guid>
+      <description>Install Doom Emacs Head over to this repository and execute the scripts.
+git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs ~/.config/emacs/bin/doom install doom command not recognized Whenever I install doom emacs, I always face this problem and now we&amp;rsquo;re going to put an end to this error.(!panic)
+The error would look something like mentioned below:
+Error: file-missing (&amp;#34;Cannot open load file&amp;#34; &amp;#34;No such file or directory&amp;#34; &amp;#34;/usr/early-init.el&amp;#34;) mapbacktrace(#f(compiled-function (evald func args flags) #&amp;lt;bytecode -0x1a9589d6c510f34&amp;gt;)) debug-early-backtrace() debug-early(error (file-missing &amp;#34;Cannot open load file&amp;#34; &amp;#34;No such file or directory&amp;#34; &amp;#34;/usr/early-init.</description>
+    </item>
+    <item>
+      <title> Fix Wired-LAN Connection; when physically connected but no endpoint</title>
+      <link>https://iamyaash.github.io/posts/fix-lan/</link>
+      <pubDate>Thu, 30 Jan 2025 20:58:55 +0530</pubDate>
+      <guid>https://iamyaash.github.io/posts/fix-lan/</guid>
+      <description>Fixing Wired LAN The scenario is very hard to explain, so I&amp;rsquo;ll write down what happened and we&amp;rsquo;ll relate them according to the situation. (*Yaash shrugs).
+Connection between my m1 and m2 has been severed. No matter what I do, it can&amp;rsquo;t establish the connection with the m2 from m1. So, I deleted the network from my machine. When entering nmcli con show, it won&amp;rsquo;t display the wired LAN. Now, the cable is connected from both sides, meaning the devices are connected physically but the ipv4.</description>
+    </item>
+  </channel>
+</rss>

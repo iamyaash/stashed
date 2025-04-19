@@ -9,7 +9,7 @@
     <lastBuildDate>Fri, 18 Apr 2025 20:48:28 +0530</lastBuildDate>
     <atom:link href="https://iamyaash.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Usage: Restic, On How to Backup Efficiently</title>
+      <title> Restic, On How to Backup Efficiently</title>
       <link>https://iamyaash.github.io/posts/backup/restic/</link>
       <pubDate>Fri, 18 Apr 2025 20:48:28 +0530</pubDate>
       <guid>https://iamyaash.github.io/posts/backup/restic/</guid>
@@ -17,28 +17,28 @@
 However, I&amp;rsquo;m using a mobile phone as an ftp server, and I&amp;rsquo;m going to be using a weird directory name.</description>
     </item>
     <item>
-      <title>Open Media Vault (OMV) in R-Pi</title>
+      <title> Open Media Vault (OMV) in R-Pi</title>
       <link>https://iamyaash.github.io/posts/omv/openmediavault/</link>
       <pubDate>Mon, 14 Apr 2025 11:28:49 +0530</pubDate>
       <guid>https://iamyaash.github.io/posts/omv/openmediavault/</guid>
-      <description>How to install &amp;amp; troubleshoot errors</description>
+      <description>How to install OpenMediaVault &amp;amp; troubleshoot errors after during installation  or setup</description>
     </item>
     <item>
-      <title>Linux Directories</title>
+      <title> Linux Directories</title>
       <link>https://iamyaash.github.io/posts/linux-dir/linux-directories/</link>
       <pubDate>Sun, 30 Mar 2025 19:41:36 +0530</pubDate>
       <guid>https://iamyaash.github.io/posts/linux-dir/linux-directories/</guid>
       <description>A table summarizing Linux directories for a quick reference.</description>
     </item>
     <item>
-      <title>Usage: git cli</title>
+      <title> git cli</title>
       <link>https://iamyaash.github.io/posts/git/howtousegit/</link>
       <pubDate>Sat, 29 Mar 2025 19:37:21 +0530</pubDate>
       <guid>https://iamyaash.github.io/posts/git/howtousegit/</guid>
       <description>Setting up git in your device git config --global user.name &amp;lt;your-username&amp;gt; git config --global user.email &amp;lt;your-email&amp;gt; git config --global user.signingKey &amp;lt;keyID&amp;gt; --global: The configuration applies to all repositories for the current user. --local: The configuration applies only to the current repository. --system: The configuration applies to all users on the system. user.name &amp;amp; user.email define the author&amp;rsquo;s identity for commits. user.signingKey specifies the GPG key ID used for signing commits and tags.</description>
     </item>
     <item>
-      <title>Doc: Setting Up Raspberry Pi 5</title>
+      <title> Setting Up Raspberry Pi 5</title>
       <link>https://iamyaash.github.io/posts/pi5/pi5-setup/</link>
       <pubDate>Mon, 17 Mar 2025 19:22:47 +0530</pubDate>
       <guid>https://iamyaash.github.io/posts/pi5/pi5-setup/</guid>
@@ -46,7 +46,7 @@ However, I&amp;rsquo;m using a mobile phone as an ftp server, and I&amp;rsquo;m 
 So I got a Raspberry Pi Zero 2 W and installed Pihole natively. I wrote a post about it, feel free check-out.</description>
     </item>
     <item>
-      <title>Doc: Definition of DHCP &amp; Practical Explanations</title>
+      <title> Definition of DHCP &amp; Practical Explanations</title>
       <link>https://iamyaash.github.io/posts/dhcp/dhcp/</link>
       <pubDate>Sat, 15 Mar 2025 05:51:27 +0000</pubDate>
       <guid>https://iamyaash.github.io/posts/dhcp/dhcp/</guid>
@@ -54,7 +54,7 @@ So I got a Raspberry Pi Zero 2 W and installed Pihole natively. I wrote a post a
 Why do we need IP address anyway? Let&amp;rsquo;s take an example, You visit a coffee shop and connect to it&amp;rsquo;s Wi-Fi network. In doing so, you are essentially connecting to the shop&amp;rsquo;s router, which provides the internet connection.</description>
     </item>
     <item>
-      <title>Doc: Installing Pihole in Raspberry Pi Zero 2W</title>
+      <title> Installing Pihole in Raspberry Pi Zero 2W</title>
       <link>https://iamyaash.github.io/posts/pihole-pizero-2w/</link>
       <pubDate>Thu, 13 Mar 2025 21:43:22 +0530</pubDate>
       <guid>https://iamyaash.github.io/posts/pihole-pizero-2w/</guid>
@@ -63,7 +63,7 @@ Setup the Pi Make sure to use pi-imager for writing the OS into the microSD. Als
 Choose &amp;ldquo;Raspberry Pi OS 32-bit with no desktop environment&amp;rdquo; for the OS. Make sure to edit the username &amp;amp; password, SSID configurations, enable SSH using authentication, additonally note-down the hostname for ssh connection.</description>
     </item>
     <item>
-      <title>Doc: Definition of Static IP Address &amp; Dynamic IP Address</title>
+      <title> Definition of Static IP Address &amp; Dynamic IP Address</title>
       <link>https://iamyaash.github.io/posts/static-dynamic-ip/</link>
       <pubDate>Sun, 09 Mar 2025 21:37:51 +0530</pubDate>
       <guid>https://iamyaash.github.io/posts/static-dynamic-ip/</guid>
@@ -88,7 +88,7 @@ Create a hugo site in a specific directory you want: hugo new site sitename Repl
 Head inside the directory(hugo site) cd sitename git init Download a theme (we&amp;rsquo;re using holy theme here) git submodule add https://github.</description>
     </item>
     <item>
-      <title>Usage: `nmcli`</title>
+      <title> `nmcli`</title>
       <link>https://iamyaash.github.io/posts/nmcli/</link>
       <pubDate>Sun, 23 Feb 2025 18:16:08 +0530</pubDate>
       <guid>https://iamyaash.github.io/posts/nmcli/</guid>
@@ -108,7 +108,7 @@ besides I&amp;rsquo;m an open-source/FOSS enthusiast + a nerd (hehe)
 1. droid-ify - F-Droid client with Material UI This is like a play-store for Open-Source applications. Finding the applications is a breeze!</description>
     </item>
     <item>
-      <title>Doc: Universal Android De-Bloater</title>
+      <title>Universal Android De-Bloater</title>
       <link>https://iamyaash.github.io/posts/de-bloater/</link>
       <pubDate>Fri, 14 Feb 2025 23:31:30 +0530</pubDate>
       <guid>https://iamyaash.github.io/posts/de-bloater/</guid>
@@ -116,10 +116,10 @@ besides I&amp;rsquo;m an open-source/FOSS enthusiast + a nerd (hehe)
 Extract the Files in your custom location.
 Install the dependencies
 sudo dnf install adb This would be enought to run the tool, now let&amp;rsquo;s see how to use it!
-Usage: Enable USB Debugging in your android phone. (mandatory) Connect the device with the computer you are running the tool.</description>
+Enable USB Debugging in your android phone. (mandatory) Connect the device with the computer you are running the tool.</description>
     </item>
     <item>
-      <title>Doc: DNS Change &amp; Troubleshoot (common)</title>
+      <title> DNS Change &amp; Troubleshoot (common)</title>
       <link>https://iamyaash.github.io/posts/dns-initial/</link>
       <pubDate>Sat, 08 Feb 2025 21:06:31 +0530</pubDate>
       <guid>https://iamyaash.github.io/posts/dns-initial/</guid>
@@ -128,7 +128,7 @@ Hard way (using CLI, actually that&amp;rsquo;s easy) Easy way (using GUI, kind o
 You just installed a new operating system and you have to change the DNS settings.</description>
     </item>
     <item>
-      <title>Doc: Forgejo Logo Change</title>
+      <title> Forgejo Logo Change</title>
       <link>https://iamyaash.github.io/posts/forgejo-logo-change/</link>
       <pubDate>Wed, 05 Feb 2025 15:47:35 +0530</pubDate>
       <guid>https://iamyaash.github.io/posts/forgejo-logo-change/</guid>
@@ -155,7 +155,7 @@ The error would look something like mentioned below:
 Error: file-missing (&amp;#34;Cannot open load file&amp;#34; &amp;#34;No such file or directory&amp;#34; &amp;#34;/usr/early-init.el&amp;#34;) mapbacktrace(#f(compiled-function (evald func args flags) #&amp;lt;bytecode -0x1a9589d6c510f34&amp;gt;)) debug-early-backtrace() debug-early(error (file-missing &amp;#34;Cannot open load file&amp;#34; &amp;#34;No such file or directory&amp;#34; &amp;#34;/usr/early-init.</description>
     </item>
     <item>
-      <title>Doc: Fix Wired-LAN Connection; when physically connected but no endpoint</title>
+      <title> Fix Wired-LAN Connection; when physically connected but no endpoint</title>
       <link>https://iamyaash.github.io/posts/fix-lan/</link>
       <pubDate>Thu, 30 Jan 2025 20:58:55 +0530</pubDate>
       <guid>https://iamyaash.github.io/posts/fix-lan/</guid>
@@ -163,7 +163,7 @@ Error: file-missing (&amp;#34;Cannot open load file&amp;#34; &amp;#34;No such fi
 Connection between my m1 and m2 has been severed. No matter what I do, it can&amp;rsquo;t establish the connection with the m2 from m1. So, I deleted the network from my machine. When entering nmcli con show, it won&amp;rsquo;t display the wired LAN. Now, the cable is connected from both sides, meaning the devices are connected physically but the ipv4.</description>
     </item>
     <item>
-      <title>Doc: Switch to NVIDIA GPU on Linux</title>
+      <title> Switch to NVIDIA GPU on Linux</title>
       <link>https://iamyaash.github.io/posts/switch-nvidia/</link>
       <pubDate>Mon, 27 Jan 2025 20:32:26 +0530</pubDate>
       <guid>https://iamyaash.github.io/posts/switch-nvidia/</guid>

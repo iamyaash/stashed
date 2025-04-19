@@ -5,8 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Doc: DNS Change &amp; Troubleshoot (common) | stashed</title>
-<meta name="keywords" content="">
+<title> DNS Change &amp; Troubleshoot (common) | stashed</title>
+<meta name="keywords" content="docs, network, script">
 <meta name="description" content="Changing DNS Settings In order to change the DNS settings, we can choose two ways
 Hard way (using CLI, actually that&rsquo;s easy) Easy way (using GUI, kind of lame XD) But let&rsquo;s do it the hard way, which is more rewarding than using GUI. I particularly don&rsquo;t have any steps to mention but let&rsquo;s do it with a scenario which can be easy to understand.
 You just installed a new operating system and you have to change the DNS settings.">
@@ -62,7 +62,7 @@ You just installed a new operating system and you have to change the DNS setting
 
 <meta property="og:url" content="https://iamyaash.github.io/posts/dns-initial/">
   <meta property="og:site_name" content="stashed">
-  <meta property="og:title" content="Doc: DNS Change &amp; Troubleshoot (common)">
+  <meta property="og:title" content=" DNS Change &amp; Troubleshoot (common)">
   <meta property="og:description" content="Changing DNS Settings In order to change the DNS settings, we can choose two ways
 Hard way (using CLI, actually that’s easy) Easy way (using GUI, kind of lame XD) But let’s do it the hard way, which is more rewarding than using GUI. I particularly don’t have any steps to mention but let’s do it with a scenario which can be easy to understand.
 You just installed a new operating system and you have to change the DNS settings.">
@@ -71,8 +71,11 @@ You just installed a new operating system and you have to change the DNS setting
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2025-02-08T21:06:31+05:30">
     <meta property="article:modified_time" content="2025-02-08T21:06:31+05:30">
+    <meta property="article:tag" content="Docs">
+    <meta property="article:tag" content="Network">
+    <meta property="article:tag" content="Script">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Doc: DNS Change &amp; Troubleshoot (common)">
+<meta name="twitter:title" content=" DNS Change &amp; Troubleshoot (common)">
 <meta name="twitter:description" content="Changing DNS Settings In order to change the DNS settings, we can choose two ways
 Hard way (using CLI, actually that&rsquo;s easy) Easy way (using GUI, kind of lame XD) But let&rsquo;s do it the hard way, which is more rewarding than using GUI. I particularly don&rsquo;t have any steps to mention but let&rsquo;s do it with a scenario which can be easy to understand.
 You just installed a new operating system and you have to change the DNS settings.">
@@ -92,7 +95,7 @@ You just installed a new operating system and you have to change the DNS setting
     {
       "@type": "ListItem",
       "position":  2 ,
-      "name": "Doc: DNS Change \u0026 Troubleshoot (common)",
+      "name": " DNS Change \u0026 Troubleshoot (common)",
       "item": "https://iamyaash.github.io/posts/dns-initial/"
     }
   ]
@@ -102,11 +105,11 @@ You just installed a new operating system and you have to change the DNS setting
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Doc: DNS Change \u0026 Troubleshoot (common)",
-  "name": "Doc: DNS Change \u0026 Troubleshoot (common)",
+  "headline": " DNS Change \u0026 Troubleshoot (common)",
+  "name": " DNS Change \u0026 Troubleshoot (common)",
   "description": "Changing DNS Settings In order to change the DNS settings, we can choose two ways\nHard way (using CLI, actually that\u0026rsquo;s easy) Easy way (using GUI, kind of lame XD) But let\u0026rsquo;s do it the hard way, which is more rewarding than using GUI. I particularly don\u0026rsquo;t have any steps to mention but let\u0026rsquo;s do it with a scenario which can be easy to understand.\nYou just installed a new operating system and you have to change the DNS settings.",
   "keywords": [
-    
+    "docs", "network", "script"
   ],
   "articleBody": "Changing DNS Settings In order to change the DNS settings, we can choose two ways\nHard way (using CLI, actually that’s easy) Easy way (using GUI, kind of lame XD) But let’s do it the hard way, which is more rewarding than using GUI. I particularly don’t have any steps to mention but let’s do it with a scenario which can be easy to understand.\nYou just installed a new operating system and you have to change the DNS settings.\nCheck the current DNS settings The DNS addresses are managed by nmcli and systemd-resolved, so be ready to see some errors when making changes using CLI. Let’s look at the current DNS settings,\ncat /etc/resolve.conf #output looks something similar like in the last few lines 127.0.0.27 #this is default DNS assigned by the OS Let’s change the DNS address We can use custom DNS addresses for each network that we connect. But let’s no do this and changes the DNS settings for the whole system.\nShow the available network connections sudo nmcli connection show NAME UUID TYPE DEVICE mobile-ethernet c6cc9a1a-958c-3e4e-81b6-a52c14534012 ethernet enp5s0f4u1 JioFi2_A62824 12ce6f07-a15d-40b0-b79c-e094746ea663 wifi wlp3s0 local-eth 4e0de5ff-2812-480f-b7fd-6aaaeef0eb95 ethernet enp2s0 lo f48ff59d-7039-4fce-9679-c84e4ee76aaa loopback lo docker0 323d8d63-8367-4119-ae4f-24598c0641c1 bridge docker0 SO-05K 4908ce9f-07dd-4ad1-a0aa-de7a1a9ad630 wifi -- Change the DNS address of the network you want use: sudo nmcli connection modify mobile-ethernet ipv4.addresses \"192.168.1.1,8.8.8.8,8.8.4.4\" This will change the DNS address of the network you modified now.\nLet’s reload the connection: Just to make sure everything is loaded and the changes are reflected sudo nmcli connection reload Run the network you just modified: sudo nmcli connection up mobile-ethernet Make sure the network device is assigned the DNS address you just modified: sudo nmcli connectio show mobile-ethernet | grep DNS Check the changes are reflected to resolve.conf cat /etc/resolve.conf Well, this should do it! If not, let’s debug it :)\nUse resolvectl status to check the status: resolvectl status Let’s remove and restart some stuffs: First let’s remove the /etc/resolve.conf sudo rm /etc/resolve.conf Let’s restart systemd-resolved sudo systemctl stop systemd-resolved sudo systemctl disable systemd-resolved sudo systemctl enable systemd-resolved sudo systemctl start systemd-resolved sudo systemctl restart NetworkManager One last check: cat /etc/resolve.conf Well this should definitely fix the DNS. Else, the problem might be different!\nNote: We are making the changes to reflected globally across the machine and not bound to the specific device.\n",
   "wordCount" : "386",
@@ -178,7 +181,7 @@ You just installed a new operating system and you have to change the DNS setting
   <header class="post-header">
     
     <h1 class="post-title entry-hint-parent">
-      Doc: DNS Change &amp; Troubleshoot (common)
+       DNS Change &amp; Troubleshoot (common)
     </h1>
     <div class="post-meta"><span title='2025-02-08 21:06:31 +0530 IST'>February 8, 2025</span>
 
@@ -270,6 +273,9 @@ If not, let&rsquo;s debug it :)</p>
 
   <footer class="post-footer">
     <ul class="post-tags">
+      <li><a href="https://iamyaash.github.io/tags/docs/">Docs</a></li>
+      <li><a href="https://iamyaash.github.io/tags/network/">Network</a></li>
+      <li><a href="https://iamyaash.github.io/tags/script/">Script</a></li>
     </ul>
   </footer>
 </article>

@@ -1,7 +1,9 @@
 +++
 date = '2025-03-13T21:43:22+05:30'
 draft = false
-title = 'Doc: Installing Pihole in Raspberry Pi Zero 2W'
+title = ' Installing Pihole in Raspberry Pi Zero 2W'
+tags = [ "docs", "setup", "network" ]
+
 +++
 
 I just got my hands on "Raspberry Pi Zero 2W" today, let's setup the Pi!

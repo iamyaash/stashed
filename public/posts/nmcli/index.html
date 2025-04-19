@@ -5,8 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Usage: `nmcli` | stashed</title>
-<meta name="keywords" content="">
+<title> `nmcli` | stashed</title>
+<meta name="keywords" content="docs, usage">
 <meta name="description" content="What is nmcli? The nmcli means NetworkManager Command Line Interface. It&rsquo;s command-line utility tool used for controlling NetworkManager and reporting network status.
 In simple terms, we use that to interact with network related devices.
 How to use it? I don&rsquo;t have proper way to explain, but let&rsquo;s learn it with a case-scenario:
@@ -63,7 +63,7 @@ Connect to a wifi network: Turn on the wifi module: sudo nmcli radio wifi on Lis
 
 <meta property="og:url" content="https://iamyaash.github.io/posts/nmcli/">
   <meta property="og:site_name" content="stashed">
-  <meta property="og:title" content="Usage: `nmcli`">
+  <meta property="og:title" content=" `nmcli`">
   <meta property="og:description" content="What is nmcli? The nmcli means NetworkManager Command Line Interface. It’s command-line utility tool used for controlling NetworkManager and reporting network status.
 In simple terms, we use that to interact with network related devices.
 How to use it? I don’t have proper way to explain, but let’s learn it with a case-scenario:
@@ -73,8 +73,10 @@ Connect to a wifi network: Turn on the wifi module: sudo nmcli radio wifi on Lis
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2025-02-23T18:16:08+05:30">
     <meta property="article:modified_time" content="2025-02-23T18:16:08+05:30">
+    <meta property="article:tag" content="Docs">
+    <meta property="article:tag" content="Usage">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Usage: `nmcli`">
+<meta name="twitter:title" content=" `nmcli`">
 <meta name="twitter:description" content="What is nmcli? The nmcli means NetworkManager Command Line Interface. It&rsquo;s command-line utility tool used for controlling NetworkManager and reporting network status.
 In simple terms, we use that to interact with network related devices.
 How to use it? I don&rsquo;t have proper way to explain, but let&rsquo;s learn it with a case-scenario:
@@ -95,7 +97,7 @@ Connect to a wifi network: Turn on the wifi module: sudo nmcli radio wifi on Lis
     {
       "@type": "ListItem",
       "position":  2 ,
-      "name": "Usage: `nmcli`",
+      "name": " `nmcli`",
       "item": "https://iamyaash.github.io/posts/nmcli/"
     }
   ]
@@ -105,11 +107,11 @@ Connect to a wifi network: Turn on the wifi module: sudo nmcli radio wifi on Lis
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Usage: `nmcli`",
-  "name": "Usage: \u0060nmcli\u0060",
+  "headline": " `nmcli`",
+  "name": " \u0060nmcli\u0060",
   "description": "What is nmcli? The nmcli means NetworkManager Command Line Interface. It\u0026rsquo;s command-line utility tool used for controlling NetworkManager and reporting network status.\nIn simple terms, we use that to interact with network related devices.\nHow to use it? I don\u0026rsquo;t have proper way to explain, but let\u0026rsquo;s learn it with a case-scenario:\nConnect to a wifi network: Turn on the wifi module: sudo nmcli radio wifi on List the available networks: sudo nmcli device wifi list In case, it didn\u0026rsquo;t display any network, please rescan the available network and list it:",
   "keywords": [
-    
+    "docs", "usage"
   ],
   "articleBody": "What is nmcli? The nmcli means NetworkManager Command Line Interface. It’s command-line utility tool used for controlling NetworkManager and reporting network status.\nIn simple terms, we use that to interact with network related devices.\nHow to use it? I don’t have proper way to explain, but let’s learn it with a case-scenario:\nConnect to a wifi network: Turn on the wifi module: sudo nmcli radio wifi on List the available networks: sudo nmcli device wifi list In case, it didn’t display any network, please rescan the available network and list it:\nsudo nmcli device wifi rescan sudo nmcli device wifi list Let’s connect to the device: Let’s take an example and connect to that device IN-USE BSSID SSID MODE CHAN RATE SIGNAL BARS SECURITY * C8:D7:79:A6:28:24 JioFi2_A62824 Infra 7 130 Mbit/s 86 ▂▄▆█ WPA2 sudo nmcli device wifi connect JioFi2_A62824 password \"enter your password here inside dquotes\" Modify the DNS Address of the Network List the available networks sudo nmcli connection show This will show the available networks connected to your device. Output:\nNAME UUID TYPE DEVICE Wired connection 1 82aadf2b-xxxx-xxxx-a3ec-xxxxxxxxxxxx ethernet enp2s0 lo e6b49b80-xxxx-xxxx-b8d7-xxxxxxxxxxxx loopback lo docker0 bfcf407f-xxxx-xxxx-bbfe-xxxxxxxxxxxx bridge docker0 Modify the Wired connection 1 network: sudo nmcli connection modify \"Wired connection 1\" ipv4.addresses 192.168.31.xx/24 ipv4.gateway 192.168.31.1 ipv4.dns \"8.8.8.8 8.8.4.4\" ipv4.method manual ipv4.addresses 192.168.31.xx/24 - defines the custom address we want to assign to the network. ipv4.gateway 192.168.31.1 - defines the default address of the router’s IP address. ipv4.dns \"8.8.8.8 8.8.4.4\" - Assigning the custom DNS addresses ipv4.method manual - Setting the method of IPV4 DNS address assinging manually. Restart the Connection Restart the connection after modifying it to apply the changes: sudo nmcli connection down \"Wired connection 1\" sudo nmcli connection up \"Wired connection 1\"` Verify the New IP Address Check if the IP has been assigned successfully: ip addr show wlan0 | grep inet Output: (Shows something like this)\ndocker0: mtu 1500 qdisc noqueue state DOWN group default link/ether 2a:fa:ba:87:b2:82 brd ff:ff:ff:ff:ff:ff inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0 valid_lft forever preferred_lft forever Disabling IPv6 If you don’t need IPv6, you can disable it for the specified connection:\nsudo nmcli connection modify ipv6.method ignore Modify the Name of the Network sudo nmcli connection modify connection.id connection.id - Responsible for changing the name of the connection. Troubleshoot (Reset to Original State) If you ever messed up modifying the connections manually, you can simply revert back to default state which will solve the errors.\nWhen the changes go wrong, it will raise conflicts between systemd-resolved \u0026 NetworkManager. At first, let’s disable \u0026 stop the systemd-resolved. sudo systemctl stop systemd-resolved sudo systemctl disable systemd-resolved Reset the resolv.conf and create a symlink as well.\nsudo rm /etc/resolv.conf sudo ln -s /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf Note: The symlink to stub-resolv.conf ensures system-default DNS resolution.\nNow that it resets, we can restart the DNS services which is managed is by NetworkManager. sudo systemctl enable systemd-resolved sudo systemctl start systemd-resolved sudo sytemctl restart NetworkManager Verify the DNS configuration using resolvectl resolvectl status This will display the logs and status of the Network.\nCheck whether the configuration is reflected in resolv.conf cat /etc/resolv.conf Summary: Basically, we first stop the services that manages the DNS, delete the file (resolv.conf) that holds the information for the DNS addresses and create the same file by symbolically linking it with /run/systemd/resolve/stub-resolv.conf (that’s how it usually originated from anyway). Then we restart the services once again from the beginning which will reads the file and writes the default address based what is being written in the connection’s configs.\n",
   "wordCount" : "590",
@@ -181,7 +183,7 @@ Connect to a wifi network: Turn on the wifi module: sudo nmcli radio wifi on Lis
   <header class="post-header">
     
     <h1 class="post-title entry-hint-parent">
-      Usage: `nmcli`
+       `nmcli`
     </h1>
     <div class="post-meta"><span title='2025-02-23 18:16:08 +0530 IST'>February 23, 2025</span>
 
@@ -294,6 +296,8 @@ Basically, we first stop the services that manages the DNS, delete the file (<co
 
   <footer class="post-footer">
     <ul class="post-tags">
+      <li><a href="https://iamyaash.github.io/tags/docs/">Docs</a></li>
+      <li><a href="https://iamyaash.github.io/tags/usage/">Usage</a></li>
     </ul>
   </footer>
 </article>

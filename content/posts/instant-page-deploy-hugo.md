@@ -2,6 +2,8 @@
 date = '2025-03-07T21:45:47+05:30'
 draft = false
 title = 'Instant Page Deploy Hugo'
+tags = [ "docs", "setup", "script" ]
+
 +++
 
 I noticed that I'm keep deploying many pages on Github and still looking at the documentation. So I decided to make a short documentation how to do it fast (keeping me from looking at the documentation)
