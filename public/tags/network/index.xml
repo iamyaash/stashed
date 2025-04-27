@@ -2,34 +2,34 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Network on stashed</title>
-    <link>https://iamyaash.github.io/tags/network/</link>
+    <link>http://localhost:1313/tags/network/</link>
     <description>Recent content in Network on stashed</description>
     <generator>Hugo -- 0.126.2</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 13 Mar 2025 21:43:22 +0530</lastBuildDate>
-    <atom:link href="https://iamyaash.github.io/tags/network/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/network/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title> Installing Pihole in Raspberry Pi Zero 2W</title>
-      <link>https://iamyaash.github.io/posts/pihole-pizero-2w/</link>
+      <link>http://localhost:1313/posts/pihole-pizero-2w/</link>
       <pubDate>Thu, 13 Mar 2025 21:43:22 +0530</pubDate>
-      <guid>https://iamyaash.github.io/posts/pihole-pizero-2w/</guid>
+      <guid>http://localhost:1313/posts/pihole-pizero-2w/</guid>
       <description>I just got my hands on &amp;ldquo;Raspberry Pi Zero 2W&amp;rdquo; today, let&amp;rsquo;s setup the Pi!
 Setup the Pi Make sure to use pi-imager for writing the OS into the microSD. Also use a router as well for easy-setup.
 Choose &amp;ldquo;Raspberry Pi OS 32-bit with no desktop environment&amp;rdquo; for the OS. Make sure to edit the username &amp;amp; password, SSID configurations, enable SSH using authentication, additonally note-down the hostname for ssh connection.</description>
     </item>
     <item>
       <title>Setup: A beginner `pi-hole` setup (Manual DNS Allocation for Each Device)</title>
-      <link>https://iamyaash.github.io/posts/pi-hole-setup-beginner/</link>
+      <link>http://localhost:1313/posts/pi-hole-setup-beginner/</link>
       <pubDate>Sat, 08 Mar 2025 17:00:31 +0530</pubDate>
-      <guid>https://iamyaash.github.io/posts/pi-hole-setup-beginner/</guid>
+      <guid>http://localhost:1313/posts/pi-hole-setup-beginner/</guid>
       <description>I don&amp;rsquo;t have enough knowledge about this when writing the documenation for setting up the pi-hole. I&amp;rsquo;m running this on a container in Raspberry Pi 5 8GB device (I know it&amp;rsquo;s an overkill but it&amp;rsquo;s for learning).
 Let&amp;rsquo;s use docker compose to run the pi-hole container Create directory for storing pi-hole configurations mkdir pihole-config cd pihole-config Create a file named docker-compose.yml touch docker-compose.yml Copy &amp;amp; paste this YAML configuration into docker-compose.</description>
     </item>
     <item>
       <title> DNS Change &amp; Troubleshoot (common)</title>
-      <link>https://iamyaash.github.io/posts/dns-initial/</link>
+      <link>http://localhost:1313/posts/dns-initial/</link>
       <pubDate>Sat, 08 Feb 2025 21:06:31 +0530</pubDate>
-      <guid>https://iamyaash.github.io/posts/dns-initial/</guid>
+      <guid>http://localhost:1313/posts/dns-initial/</guid>
       <description>Changing DNS Settings In order to change the DNS settings, we can choose two ways
 Hard way (using CLI, actually that&amp;rsquo;s easy) Easy way (using GUI, kind of lame XD) But let&amp;rsquo;s do it the hard way, which is more rewarding than using GUI. I particularly don&amp;rsquo;t have any steps to mention but let&amp;rsquo;s do it with a scenario which can be easy to understand.
 You just installed a new operating system and you have to change the DNS settings.</description>

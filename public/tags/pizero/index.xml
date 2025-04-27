@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Pizero on stashed</title>
-    <link>https://iamyaash.github.io/tags/pizero/</link>
+    <link>http://localhost:1313/tags/pizero/</link>
     <description>Recent content in Pizero on stashed</description>
     <generator>Hugo -- 0.126.2</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 15 Mar 2025 05:51:27 +0000</lastBuildDate>
-    <atom:link href="https://iamyaash.github.io/tags/pizero/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/pizero/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title> Definition of DHCP &amp; Practical Explanations</title>
-      <link>https://iamyaash.github.io/posts/dhcp/dhcp/</link>
+      <link>http://localhost:1313/posts/dhcp/dhcp/</link>
       <pubDate>Sat, 15 Mar 2025 05:51:27 +0000</pubDate>
-      <guid>https://iamyaash.github.io/posts/dhcp/dhcp/</guid>
+      <guid>http://localhost:1313/posts/dhcp/dhcp/</guid>
       <description>What is DHCP? DHCP (Dynamic Host Configuration Protocol) is a network management protol that automates the assignment of IP address to the devices that connect to a network and it also handles other network configuration parameters such as subnet mask, default gateway and DNS settings.
 Why do we need IP address anyway? Let&amp;rsquo;s take an example, You visit a coffee shop and connect to it&amp;rsquo;s Wi-Fi network. In doing so, you are essentially connecting to the shop&amp;rsquo;s router, which provides the internet connection.</description>
     </item>

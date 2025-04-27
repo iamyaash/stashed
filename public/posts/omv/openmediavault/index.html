@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title> Open Media Vault (OMV) in R-Pi | stashed</title>
 <meta name="keywords" content="docs, setup, server, script">
 <meta name="description" content="How to install OpenMediaVault &amp; troubleshoot errors after during installation  or setup">
 <meta name="author" content="">
-<link rel="canonical" href="https://iamyaash.github.io/posts/omv/openmediavault/">
+<link rel="canonical" href="http://localhost:1313/posts/omv/openmediavault/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://iamyaash.github.io/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://iamyaash.github.io/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://iamyaash.github.io/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://iamyaash.github.io/apple-touch-icon.png">
-<link rel="mask-icon" href="https://iamyaash.github.io/safari-pinned-tab.svg">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://iamyaash.github.io/posts/omv/openmediavault/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/omv/openmediavault/">
 <noscript>
     <style>
         #theme-toggle,
@@ -56,77 +56,6 @@
 
     </style>
 </noscript>
-  
-
-<meta property="og:url" content="https://iamyaash.github.io/posts/omv/openmediavault/">
-  <meta property="og:site_name" content="stashed">
-  <meta property="og:title" content=" Open Media Vault (OMV) in R-Pi">
-  <meta property="og:description" content="How to install OpenMediaVault &amp; troubleshoot errors after during installation  or setup">
-  <meta property="og:locale" content="en-us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-04-14T11:28:49+05:30">
-    <meta property="article:modified_time" content="2025-04-14T11:28:49+05:30">
-    <meta property="article:tag" content="Docs">
-    <meta property="article:tag" content="Setup">
-    <meta property="article:tag" content="Server">
-    <meta property="article:tag" content="Script">
-    <meta property="og:image" content="https://iamyaash.github.io/posts/omv/omv.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://iamyaash.github.io/posts/omv/omv.png">
-<meta name="twitter:title" content=" Open Media Vault (OMV) in R-Pi">
-<meta name="twitter:description" content="How to install OpenMediaVault &amp; troubleshoot errors after during installation  or setup">
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://iamyaash.github.io/posts/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": " Open Media Vault (OMV) in R-Pi",
-      "item": "https://iamyaash.github.io/posts/omv/openmediavault/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": " Open Media Vault (OMV) in R-Pi",
-  "name": " Open Media Vault (OMV) in R-Pi",
-  "description": "How to install OpenMediaVault \u0026amp; troubleshoot errors after during installation  or setup",
-  "keywords": [
-    "docs", "setup", "server", "script"
-  ],
-  "articleBody": "Note: This is a per\nPrerequisites Raspberry Pi Lite 64-bit Operating System installed on a Raspberry Pi. Wired R-Pi connection to network and connected with display and keyboard as well. (We’re not configuring it wirelessly) Let’s Install OMV After Setting Up The Operating System Make sure to update \u0026 upgrade the operating system, before installing openmediavault. (Installation Doc)\nsudo apt-get update \u0026\u0026 sudo apt-get upgrade -y Preinstall OpenMediaVault wget -O - https://github.com/OpenMediaVault-Plugin-Developers/installScript/raw/master/preinstall | sudo bash Reboot the device after finishing the pre-installation part sudo reboot Let’s do the Main Installation! wget -O - https://github.com/OpenMediaVault-Plugin-Developers/installScript/raw/master/install | sudo bash Note: It take some time to run omv, wait for 2-4 minutes and open the OMV.\nFirst Login Use the device’s IP address to login to OMV.\nUsername:\nadmin Password:\nopenmediavault Make sure to change password the after logging in,\nUser Settings (Top Right Icon) \u003e Change Password Setup the Storage Sharing Note: I’m only using a Flashdrive as the storage medium\nAdding Storage Device Storage \u003e File Systems \u003e Mount. (Click to Mount an Existing File System) Select the File System shown in the drop-down and click “Save”. Allowing Share Access to the Storage Device Storage \u003e Shared Folders \u003e Create. Enter the directory “Name” of your choice, select the file system which was Mounted before and click “Save”. Click upon the shared storage and click “Permissions” on top of navbar to change the permissions of access. Select whichever the permission work best for the user and click “Save”. Setup Docker System \u003e Plugins \u003e Search “docker” Install the plugins that are displayed in the search results. Services \u003e Compose \u003e Settings \u003e Select the “Shared Folder” for Compose Files \u0026 Backup and click “Save”. Click “Reinstall Docker” in bottom section. Let’s create a user for accessing docker. Users \u003e Users \u003e Create User \u003e username \u0026 password \u003e select groups docker, openmediavault-admin, openmediavault-config, sambashare, users Check whether the user changes are reflected in the device, by SSH‘ing into the OS:\nid admin id # This will return something like... uid=1003(docker-user) gid=100(users) groups=100(users),991(sambashare),990(openmediavault-config),988(openmediavault-admin),985(docker) Deploy an application using compose Services \u003e Compose \u003e Files \u003e Add Copy the docker-compose under the “File” textarea Make sure to match of your device’s configurations: PUID PGID Gathered from id docker-username outpur in terminal.\nTZ PORTS Volume Storage \u003e Shared Folders \u003e Copy Absolute Path\nOriginal:\nservices: heimdall: image: lscr.io/linuxserver/heimdall:latest container_name: heimdall environment: - PUID=1000 - PGID=1000 - TZ=Etc/UTC volumes: - /path/to/heimdall/config:/config ports: - 80:80 - 443:443 restart: unless-stopped Modified for OMV:\nservices: heimdall: image: lscr.io/linuxserver/heimdall:latest container_name: heimdall environment: - PUID=1003 - PGID=100 - TZ=Asia/Kolkata volumes: - /path/to/heimdall/config:/config ports: - 8080:80 # preferable to change - 443:443 restart: unless-stopped Start the application: Services \u003e Compose \u003e Files \u003e Click “Up” This will start the application and also display the ports to visit the running application. ",
-  "wordCount" : "469",
-  "inLanguage": "en",
-  "image":"https://iamyaash.github.io/posts/omv/omv.png","datePublished": "2025-04-14T11:28:49+05:30",
-  "dateModified": "2025-04-14T11:28:49+05:30",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://iamyaash.github.io/posts/omv/openmediavault/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "stashed",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://iamyaash.github.io/favicon.ico"
-    }
-  }
-}
-</script>
 </head>
 
 <body class="" id="top">
@@ -144,7 +73,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://iamyaash.github.io/" accesskey="h" title="stashed (Alt + H)">stashed</a>
+            <a href="http://localhost:1313/" accesskey="h" title="stashed (Alt + H)">stashed</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -185,7 +114,7 @@
 </div>
   </header> 
 <figure class="entry-cover">
-        <img loading="eager" src="https://iamyaash.github.io/posts/omv/omv.png" alt="OpenMediaVault-screenshot">
+        <img loading="eager" src="http://localhost:1313/posts/omv/omv.png" alt="OpenMediaVault-screenshot">
         
 </figure>
   <div class="post-content"><p>Note: This is a per</p>
@@ -316,17 +245,17 @@
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://iamyaash.github.io/tags/docs/">Docs</a></li>
-      <li><a href="https://iamyaash.github.io/tags/setup/">Setup</a></li>
-      <li><a href="https://iamyaash.github.io/tags/server/">Server</a></li>
-      <li><a href="https://iamyaash.github.io/tags/script/">Script</a></li>
+      <li><a href="http://localhost:1313/tags/docs/">Docs</a></li>
+      <li><a href="http://localhost:1313/tags/setup/">Setup</a></li>
+      <li><a href="http://localhost:1313/tags/server/">Server</a></li>
+      <li><a href="http://localhost:1313/tags/script/">Script</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="https://iamyaash.github.io/">stashed</a></span> · 
+        <span>&copy; 2025 <a href="http://localhost:1313/">stashed</a></span> · 
 
     <span>
         Powered by
