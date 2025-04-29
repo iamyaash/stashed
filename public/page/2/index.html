@@ -108,6 +108,19 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Setup: A beginner `pi-hole` setup (Manual DNS Allocation for Each Device)
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>I don’t have enough knowledge about this when writing the documenation for setting up the pi-hole. I’m running this on a container in Raspberry Pi 5 8GB device (I know it’s an overkill but it’s for learning).
+Let’s use docker compose to run the pi-hole container Create directory for storing pi-hole configurations mkdir pihole-config cd pihole-config Create a file named docker-compose.yml touch docker-compose.yml Copy &amp; paste this YAML configuration into docker-compose....</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-03-08 17:00:31 +0530 IST'>March 8, 2025</span></footer>
+  <a class="entry-link" aria-label="post link to Setup: A beginner `pi-hole` setup (Manual DNS Allocation for Each Device)" href="http://localhost:1313/posts/pi-hole-setup-beginner/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Instant Page Deploy Hugo
     </h2>
   </header>
@@ -234,27 +247,12 @@ Connection between my m1 and m2 has been severed. No matter what I do, it can’
   <footer class="entry-footer"><span title='2025-01-30 20:58:55 +0530 IST'>January 30, 2025</span></footer>
   <a class="entry-link" aria-label="post link to  Fix Wired-LAN Connection; when physically connected but no endpoint" href="http://localhost:1313/posts/fix-lan/"></a>
 </article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent"> Switch to NVIDIA GPU on Linux
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Note: Make sure to Disable Secure Boot, else whatever you do it won’t work :)
-Install &amp; Switch to NVIDIA 1. Install the required dependencies
-sudo dnf install akmod-nvidia xorg-x11-drv-nvidia xorg-x11-drv-nvidia-cuda 2. Edit the environment configuration file for your shell
-sudo nano /etc/environment 3. Add the following lines to enable the GPU
-__GLX_VENDOR_LIBRARY_NAME=nvidia __NV_PRIME_RENDER_OFFLOAD=1 __VK_LAYER_NV_optimus=NVIDIA_only 4. Restart the system
-sudo reboot 5. Check the status of the currently selected GPU...</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-01-27 20:32:26 +0530 IST'>January 27, 2025</span></footer>
-  <a class="entry-link" aria-label="post link to  Switch to NVIDIA GPU on Linux" href="http://localhost:1313/posts/switch-nvidia/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="prev" href="http://localhost:1313/">
       «&nbsp;Prev&nbsp;
+    </a>
+    <a class="next" href="http://localhost:1313/page/3/">Next&nbsp;&nbsp;»
     </a>
   </nav>
 </footer>

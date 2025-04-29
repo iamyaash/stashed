@@ -6,8 +6,16 @@
     <description>Recent content in Docs on stashed</description>
     <generator>Hugo -- 0.126.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 27 Apr 2025 18:28:54 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 29 Apr 2025 17:27:49 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/docs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How To Use Git Rebasing Effectively As A Beginner</title>
+      <link>http://localhost:1313/posts/git/rebasing-tips/</link>
+      <pubDate>Tue, 29 Apr 2025 17:27:49 +0530</pubDate>
+      <guid>http://localhost:1313/posts/git/rebasing-tips/</guid>
+      <description>You might feel the things you are doing are just repetive and functional (but old!), after you get familiar using git regularly. You will face a situation where you need to make some specific adjustements to the commits or something similar. It is doable but more manual, you&amp;rsquo;d wish if there&amp;rsquo;s a feature that can accomplish what you want to do now.
+Among all that you have wished, the rebase is one of them!</description>
+    </item>
     <item>
       <title>jrnl: The Smarter, Faster Way to Take Notes on the Go</title>
       <link>http://localhost:1313/posts/jrnl/jrnl/</link>
@@ -31,7 +39,7 @@ However, I&amp;rsquo;m using a mobile phone as an ftp server, and I&amp;rsquo;m 
       <description>How to install OpenMediaVault &amp;amp; troubleshoot errors after during installation  or setup</description>
     </item>
     <item>
-      <title> git cli</title>
+      <title>git cli</title>
       <link>http://localhost:1313/posts/git/howtousegit/</link>
       <pubDate>Sat, 29 Mar 2025 19:37:21 +0530</pubDate>
       <guid>http://localhost:1313/posts/git/howtousegit/</guid>

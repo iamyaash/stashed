@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Git on stashed</title>
+    <link>http://localhost:1313/tags/git/</link>
+    <description>Recent content in Git on stashed</description>
+    <generator>Hugo -- 0.126.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 29 Apr 2025 17:27:49 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How To Use Git Rebasing Effectively As A Beginner</title>
+      <link>http://localhost:1313/posts/git/rebasing-tips/</link>
+      <pubDate>Tue, 29 Apr 2025 17:27:49 +0530</pubDate>
+      <guid>http://localhost:1313/posts/git/rebasing-tips/</guid>
+      <description>You might feel the things you are doing are just repetive and functional (but old!), after you get familiar using git regularly. You will face a situation where you need to make some specific adjustements to the commits or something similar. It is doable but more manual, you&amp;rsquo;d wish if there&amp;rsquo;s a feature that can accomplish what you want to do now.
+Among all that you have wished, the rebase is one of them!</description>
+    </item>
+    <item>
+      <title>git cli</title>
+      <link>http://localhost:1313/posts/git/howtousegit/</link>
+      <pubDate>Sat, 29 Mar 2025 19:37:21 +0530</pubDate>
+      <guid>http://localhost:1313/posts/git/howtousegit/</guid>
+      <description>Setting up git in your device git config --global user.name &amp;lt;your-username&amp;gt; git config --global user.email &amp;lt;your-email&amp;gt; git config --global user.signingKey &amp;lt;keyID&amp;gt; --global: The configuration applies to all repositories for the current user. --local: The configuration applies only to the current repository. --system: The configuration applies to all users on the system. user.name &amp;amp; user.email define the author&amp;rsquo;s identity for commits. user.signingKey specifies the GPG key ID used for signing commits and tags.</description>
+    </item>
+  </channel>
+</rss>

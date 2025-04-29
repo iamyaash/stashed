@@ -1,8 +1,8 @@
 +++
-title = ' git cli'
+title = 'git cli'
 date = 2025-03-29T19:37:21+05:30
 draft = false
-tags = [ "docs", "setup", "script" ]
+tags = ["git", "script", "docs"]
 
 [cover]
 image = "posts/git/git.png"
