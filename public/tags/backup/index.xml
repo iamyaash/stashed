@@ -4,7 +4,7 @@
     <title>Backup on stashed</title>
     <link>http://localhost:1313/tags/backup/</link>
     <description>Recent content in Backup on stashed</description>
-    <generator>Hugo -- 0.126.2</generator>
+    <generator>Hugo -- 0.147.2</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 18 Apr 2025 20:48:28 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/backup/index.xml" rel="self" type="application/rss+xml" />
@@ -13,8 +13,8 @@
       <link>http://localhost:1313/posts/backup/restic/</link>
       <pubDate>Fri, 18 Apr 2025 20:48:28 +0530</pubDate>
       <guid>http://localhost:1313/posts/backup/restic/</guid>
-      <description>This is a really interesting backup application to use, it kinda reminds me of git the version controlling tool. I mean restic is not gonna &amp;ldquo;version control&amp;rdquo; but it uses the same technology in a way that enables us to backup things without duplication. I&amp;rsquo;m using restic to backup the files in a sftp server. So this post is gonna cover the sftp aspects.
-However, I&amp;rsquo;m using a mobile phone as an ftp server, and I&amp;rsquo;m going to be using a weird directory name.</description>
+      <description>&lt;p&gt;This is a really interesting backup application to use, it kinda reminds me of &lt;code&gt;git&lt;/code&gt; the version controlling tool. I mean &lt;code&gt;restic&lt;/code&gt; is not gonna &amp;ldquo;version control&amp;rdquo; but it uses the same technology in a way that enables us to backup things without duplication. I&amp;rsquo;m using &lt;code&gt;restic&lt;/code&gt; to backup the files in a &lt;code&gt;sftp&lt;/code&gt; server. So this post is gonna cover the &lt;code&gt;sftp&lt;/code&gt; aspects.&lt;/p&gt;
+&lt;p&gt;However, I&amp;rsquo;m using a mobile phone as an &lt;code&gt;ftp&lt;/code&gt; server, and I&amp;rsquo;m going to be using a weird directory name.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

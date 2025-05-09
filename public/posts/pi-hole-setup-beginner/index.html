@@ -7,8 +7,72 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Setup: A beginner `pi-hole` setup (Manual DNS Allocation for Each Device) | stashed</title>
 <meta name="keywords" content="docs, setup, network">
-<meta name="description" content="I don&rsquo;t have enough knowledge about this when writing the documenation for setting up the pi-hole. I&rsquo;m running this on a container in Raspberry Pi 5 8GB device (I know it&rsquo;s an overkill but it&rsquo;s for learning).
-Let&rsquo;s use docker compose to run the pi-hole container Create directory for storing pi-hole configurations mkdir pihole-config cd pihole-config Create a file named docker-compose.yml touch docker-compose.yml Copy &amp; paste this YAML configuration into docker-compose.">
+<meta name="description" content="I don&rsquo;t have enough knowledge about this when writing the documenation for setting up the pi-hole. I&rsquo;m running this on a
+container in Raspberry Pi 5 8GB device (I know it&rsquo;s an overkill but it&rsquo;s for learning).
+Let&rsquo;s use docker compose to run the pi-hole container
+
+Create directory for storing pi-hole configurations
+
+mkdir pihole-config
+cd pihole-config
+
+Create a file named docker-compose.yml
+
+touch docker-compose.yml
+
+Copy &amp; paste this YAML configuration into docker-compose.yml
+
+services:
+  pihole:
+    container_name: pihole
+    image: pihole/pihole:latest
+    ports:
+      - &#34;53:53/tcp&#34; # DNS Ports
+      - &#34;53:53/udp&#34; # DNS Ports
+      - &#34;80:80/tcp&#34; # Default HTTP Port
+      - &#34;443:443/tcp&#34; # Default HTTPs Port
+      - &#34;67:67/udp&#34; # using Pi-hole as your DHCP server
+    environment:
+      TZ: &#39;Asia/Kolkata&#39;
+      # Not setting one will result in a random password being assigned
+      FTLCONF_webserver_api_password: &#39;pass&#39;
+      # If using Docker&#39;s default `bridge` network setting the dns listening mode should be set to &#39;all&#39;
+      FTLCONF_dns_listeningMode: &#39;all&#39;
+    volumes:
+      # Pi-hole&#39;s databases and common configuration file
+      - &#39;./etc-pihole:/etc/pihole&#39;
+      # Uncomment the below if you have custom dnsmasq config files that you want to persist. Not needed for most starting fresh with Pi-hole v6. If you&#39;re upgrading from v5 you and have used this directory before, you should keep it enabled for the first v6 container start to allow for a complete migration. It can be removed afterwards. Needs environment variable FTLCONF_misc_etc_dnsmasq_d: &#39;true&#39;
+      #- &#39;./etc-dnsmasq.d:/etc/dnsmasq.d&#39;
+    cap_add:
+      # See https://github.com/pi-hole/docker-pi-hole#note-on-capabilities
+      # Required if you are using Pi-hole as your DHCP server, else not needed
+      - NET_ADMIN
+      # Required if you are using Pi-hole as your NTP client to be able to set the host&#39;s system time
+      - SYS_TIME
+      # Optional, if Pi-hole should get some more processing time
+      - SYS_NICE
+    restart: unless-stopped
+
+Run the docker compose
+
+docker compose up -d
+
+Head inside the weblogin. i.e, http://localhost:80/admin (Note: Make sure the URL ends with /admin)
+
+Let&rsquo;s setup the DNS address and connect other devices to use pi-hole
+
+Login into the pi-hole web login
+Goto Settings &raquo; DNS &gt; Click the DNS of your liking in IPV4(I chose Open DNS)
+
+Let&rsquo;s Connect from a Device
+
+pi-hole installed in 192.168.31.102, so make sure to point the devices to this IP address.
+Change the DNS manually on a specific connection.
+
+sudo nmcli connection modify device-name ipv4.dns &#34;192.168.31.102&#34;
+sudo nmcli connection reload
+sudo nmcli connection up device-name
+Check whether it&rsquo;s actually allocated to the device">
 <meta name="author" content="">
 <link rel="canonical" href="http://localhost:1313/posts/pi-hole-setup-beginner/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">

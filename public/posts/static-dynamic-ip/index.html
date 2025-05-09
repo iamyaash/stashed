@@ -7,7 +7,8 @@
 <meta name="robots" content="noindex, nofollow">
 <title> Definition of Static IP Address &amp; Dynamic IP Address | stashed</title>
 <meta name="keywords" content="docs">
-<meta name="description" content="What is a static IP address? A static IP address is a fixed Internet Protocol (IP) address assigned to a device, which does not change over time. It serves as a unique identifier within a network, enabling it connect &amp; communicate effectively.
+<meta name="description" content="What is a static IP address?
+A static IP address is a fixed Internet Protocol (IP) address assigned to a device, which does not change over time. It serves as a unique identifier within a network, enabling it connect &amp; communicate effectively.
 It is recommended to assign a static IP address to a device, which is always stationary &amp; connected to the same network. Assigning static IP address on a frequently moving device will result in conflicts and blocks from either connecting to a router or accessing internet.">
 <meta name="author" content="">
 <link rel="canonical" href="http://localhost:1313/posts/static-dynamic-ip/">
@@ -142,8 +143,7 @@ It is recommended to assign a static IP address to a device, which is always sta
 <p>A <strong>dynamic IP address is a temporary address</strong> allocated to the device you connect to a network. The temporary address is assigned to a device by DHCP server (Device Host Configuration Protocol) when it connects to a network. Unlike static IP addresses, which remain constant, dynamic IP&rsquo;s can change over time or when the device reconnects to the network.</p>
 <p>It is to use recommended dynamic IP address when a device is frequently moving a lot and connects to different networks. Since the IP allocation is done by the network&rsquo;s router DHCP, the IP address will change according to the router default gateway.</p>
 <blockquote>
-<p><strong>Note</strong>: Dynamic IP address is enabled by default in all other operating systems, it&rsquo;s only the static IP address allocation done manually.</p>
-</blockquote>
+<p><strong>Note</strong>: Dynamic IP address is enabled by default in all other operating systems, it&rsquo;s only the static IP address allocation done manually.</p></blockquote>
 <hr>
 <h1 id="how-to-assign-a-static-ip-address">How to Assign a Static IP Address:<a hidden class="anchor" aria-hidden="true" href="#how-to-assign-a-static-ip-address">#</a></h1>
 <p>I looked at many &ldquo;HowTo&rdquo; videos, but I always ends up facing errors and we&rsquo;re going to be manually assigning them with minimal <br>
@@ -192,8 +192,7 @@ Save and exit.</p>
 </ol>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo rm /etc/resolv.conf
 </span></span></code></pre></div><blockquote>
-<p>Typically, the <code>/etc/resolv.conf</code> is linked to systemd-resolved`.</p>
-</blockquote>
+<p>Typically, the <code>/etc/resolv.conf</code> is linked to systemd-resolved`.</p></blockquote>
 <ol start="3">
 <li><strong>Create a new <code>/etc/resolv.conf</code></strong> &amp; Manually Add the DNS Addresses:</li>
 </ol>
@@ -219,8 +218,7 @@ Save and exit.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo nmcli connection show
 </span></span></code></pre></div><blockquote>
 <p>This will show the available networks connected to your device.
-<strong>Output:</strong></p>
-</blockquote>
+<strong>Output:</strong></p></blockquote>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>NAME                UUID                                  TYPE      DEVICE  
 </span></span><span style="display:flex;"><span>Wired connection <span style="color:#ae81ff">1</span>  82aadf2b-xxxx-xxxx-a3ec-xxxxxxxxxxxx  ethernet  enp2s0  
 </span></span><span style="display:flex;"><span>lo                  e6b49b80-xxxx-xxxx-b8d7-xxxxxxxxxxxx  loopback  lo      

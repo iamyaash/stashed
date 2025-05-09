@@ -4,7 +4,7 @@
     <title>Raspberry on stashed</title>
     <link>http://localhost:1313/tags/raspberry/</link>
     <description>Recent content in Raspberry on stashed</description>
-    <generator>Hugo -- 0.126.2</generator>
+    <generator>Hugo -- 0.147.2</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 17 Mar 2025 19:22:47 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/raspberry/index.xml" rel="self" type="application/rss+xml" />
@@ -13,8 +13,9 @@
       <link>http://localhost:1313/posts/pi5/pi5-setup/</link>
       <pubDate>Mon, 17 Mar 2025 19:22:47 +0530</pubDate>
       <guid>http://localhost:1313/posts/pi5/pi5-setup/</guid>
-      <description>I got my hands on the Raspberry Pi 5 few weeks ago, but I wasn&amp;rsquo;t able to use it for any purpose (more like I&amp;rsquo;m out of ideas). I mostly wanted to test the pihole in my network, but using Pi 5 just for that would be an overkill!
-So I got a Raspberry Pi Zero 2 W and installed Pihole natively. I wrote a post about it, feel free check-out.</description>
+      <description>&lt;p&gt;I got my hands on the &lt;strong&gt;Raspberry Pi 5&lt;/strong&gt; few weeks ago, but I wasn&amp;rsquo;t able to use it for any purpose (more like I&amp;rsquo;m out of ideas). I mostly wanted to test the &lt;strong&gt;&lt;code&gt;pihole&lt;/code&gt;&lt;/strong&gt; in my network, but using &lt;strong&gt;Pi 5&lt;/strong&gt; just for that would be an overkill!&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;So I got a &lt;strong&gt;Raspberry Pi Zero 2 W&lt;/strong&gt; and installed &lt;strong&gt;&lt;code&gt;Pihole&lt;/code&gt;&lt;/strong&gt; natively. &lt;a href=&#34;https://iamyaash.github.io/stashed/posts/pihole-pizero-2w/&#34;&gt;I wrote a post about it, feel free check-out&lt;/a&gt;. Also, when I ordered for the &lt;strong&gt;Raspberry Pi Zero 2 W&lt;/strong&gt;, I forgot to order for a microSD, so I used the one in the &lt;strong&gt;Pi 5&lt;/strong&gt; which is a &lt;strong&gt;64GB&lt;/strong&gt; microSD card (&lt;em&gt;I know it&amp;rsquo;s an overkill!&lt;/em&gt;). The entire &lt;strong&gt;Pi Zero&lt;/strong&gt; is running just the &lt;strong&gt;&lt;code&gt;Pihole&lt;/code&gt;&lt;/strong&gt; with a 64GB microSD.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

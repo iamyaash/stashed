@@ -116,7 +116,8 @@
   </header>
   <div class="entry-content">
     <p>I don’t have enough knowledge about this when writing the documenation for setting up the pi-hole. I’m running this on a container in Raspberry Pi 5 8GB device (I know it’s an overkill but it’s for learning).
-Let’s use docker compose to run the pi-hole container Create directory for storing pi-hole configurations mkdir pihole-config cd pihole-config Create a file named docker-compose.yml touch docker-compose.yml Copy &amp; paste this YAML configuration into docker-compose....</p>
+Let’s use docker compose to run the pi-hole container Create directory for storing pi-hole configurations mkdir pihole-config cd pihole-config Create a file named docker-compose.yml touch docker-compose.yml Copy &amp; paste this YAML configuration into docker-compose.yml services: pihole: container_name: pihole image: pihole/pihole:latest ports: - &#34;53:53/tcp&#34; # DNS Ports - &#34;53:53/udp&#34; # DNS Ports - &#34;80:80/tcp&#34; # Default HTTP Port - &#34;443:443/tcp&#34; # Default HTTPs Port - &#34;67:67/udp&#34; # using Pi-hole as your DHCP server environment: TZ: &#39;Asia/Kolkata&#39; # Not setting one will result in a random password being assigned FTLCONF_webserver_api_password: &#39;pass&#39; # If using Docker&#39;s default `bridge` network setting the dns listening mode should be set to &#39;all&#39; FTLCONF_dns_listeningMode: &#39;all&#39; volumes: # Pi-hole&#39;s databases and common configuration file - &#39;./etc-pihole:/etc/pihole&#39; # Uncomment the below if you have custom dnsmasq config files that you want to persist. Not needed for most starting fresh with Pi-hole v6. If you&#39;re upgrading from v5 you and have used this directory before, you should keep it enabled for the first v6 container start to allow for a complete migration. It can be removed afterwards. Needs environment variable FTLCONF_misc_etc_dnsmasq_d: &#39;true&#39; #- &#39;./etc-dnsmasq.d:/etc/dnsmasq.d&#39; cap_add: # See https://github.com/pi-hole/docker-pi-hole#note-on-capabilities # Required if you are using Pi-hole as your DHCP server, else not needed - NET_ADMIN # Required if you are using Pi-hole as your NTP client to be able to set the host&#39;s system time - SYS_TIME # Optional, if Pi-hole should get some more processing time - SYS_NICE restart: unless-stopped Run the docker compose docker compose up -d Head inside the weblogin. i.e, http://localhost:80/admin (Note: Make sure the URL ends with /admin) Let’s setup the DNS address and connect other devices to use pi-hole Login into the pi-hole web login Goto Settings » DNS &gt; Click the DNS of your liking in IPV4(I chose Open DNS) Let’s Connect from a Device pi-hole installed in 192.168.31.102, so make sure to point the devices to this IP address. Change the DNS manually on a specific connection. sudo nmcli connection modify device-name ipv4.dns &#34;192.168.31.102&#34; sudo nmcli connection reload sudo nmcli connection up device-name Check whether it’s actually allocated to the device
+...</p>
   </div>
   <footer class="entry-footer"><span title='2025-03-08 17:00:31 +0530 IST'>March 8, 2025</span></footer>
   <a class="entry-link" aria-label="post link to Setup: A beginner `pi-hole` setup (Manual DNS Allocation for Each Device)" href="http://localhost:1313/posts/pi-hole-setup-beginner/"></a>
@@ -130,7 +131,7 @@ Let’s use docker compose to run the pi-hole container Create directory for sto
   <div class="entry-content">
     <p>I noticed that I’m keep deploying many pages on Github and still looking at the documentation. So I decided to make a short documentation how to do it fast (keeping me from looking at the documentation)
 Create a hugo site in a specific directory you want: hugo new site sitename Replace the sitename with the actual sitename you want to create.
-Head inside the directory(hugo site) cd sitename git init Download a theme (we’re using holy theme here) git submodule add https://github....</p>
+Head inside the directory(hugo site) cd sitename git init Download a theme (we’re using holy theme here) git submodule add https://github.com/serkodev/holy.git themes/holy echo &#34;theme = &#39;holy&#39;&#34; &gt;&gt; hugo.toml Let’s test it locally! hugo server Create a GitHub Repository Head inside the Repository on GitHub Goto Settings &gt; Pages Change the Source settings to “GitHub Actions” Create a file named hugo.yaml inside .github/workflows mkdir -p .github/workflows touch .github/workflows/hugo.yaml Copy and paste the text into YAML file # Sample workflow for building and deploying a Hugo site to GitHub Pages name: Deploy Hugo site to Pages on: # Runs on pushes targeting the default branch push: branches: - main # Allows you to run this workflow manually from the Actions tab workflow_dispatch: # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages permissions: contents: read pages: write id-token: write # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued. # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete. concurrency: group: &#34;pages&#34; cancel-in-progress: false # Default to bash defaults: run: shell: bash jobs: # Build job build: runs-on: ubuntu-latest env: HUGO_VERSION: 0.144.2 steps: - name: Install Hugo CLI run: | wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \ &amp;&amp; sudo dpkg -i ${{ runner.temp }}/hugo.deb - name: Install Dart Sass run: sudo snap install dart-sass - name: Checkout uses: actions/checkout@v4 with: submodules: recursive fetch-depth: 0 - name: Setup Pages id: pages uses: actions/configure-pages@v5 - name: Install Node.js dependencies run: &#34;[[ -f package-lock.json || -f npm-shrinkwrap.json ]] &amp;&amp; npm ci || true&#34; - name: Build with Hugo env: HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache HUGO_ENVIRONMENT: production TZ: America/Los_Angeles run: | hugo \ --gc \ --minify \ --baseURL &#34;${{ steps.pages.outputs.base_url }}/&#34; - name: Upload artifact uses: actions/upload-pages-artifact@v3 with: path: ./public # Deployment job deploy: environment: name: github-pages url: ${{ steps.deployment.outputs.page_url }} runs-on: ubuntu-latest needs: build steps: - name: Deploy to GitHub Pages id: deployment uses: actions/deploy-pages@v4 Head inside the root directory of your sitename hugo git add -A git commit -m &#34;deploying the sitename&#34; git push origin main </p>
   </div>
   <footer class="entry-footer"><span title='2025-03-07 21:45:47 +0530 IST'>March 7, 2025</span></footer>
   <a class="entry-link" aria-label="post link to Instant Page Deploy Hugo" href="http://localhost:1313/posts/instant-page-deploy-hugo/"></a>
@@ -145,7 +146,8 @@ Head inside the directory(hugo site) cd sitename git init Download a theme (we�
     <p>What is nmcli? The nmcli means NetworkManager Command Line Interface. It’s command-line utility tool used for controlling NetworkManager and reporting network status.
 In simple terms, we use that to interact with network related devices.
 How to use it? I don’t have proper way to explain, but let’s learn it with a case-scenario:
-Connect to a wifi network: Turn on the wifi module: sudo nmcli radio wifi on List the available networks: sudo nmcli device wifi list In case, it didn’t display any network, please rescan the available network and list it:...</p>
+Connect to a wifi network: Turn on the wifi module: sudo nmcli radio wifi on List the available networks: sudo nmcli device wifi list In case, it didn’t display any network, please rescan the available network and list it:
+...</p>
   </div>
   <footer class="entry-footer"><span title='2025-02-23 18:16:08 +0530 IST'>February 23, 2025</span></footer>
   <a class="entry-link" aria-label="post link to  `nmcli`" href="http://localhost:1313/posts/nmcli/"></a>
@@ -160,7 +162,8 @@ Connect to a wifi network: Turn on the wifi module: sudo nmcli radio wifi on Lis
     <p>Why Open Source? Well, why not?
 I like open source applications and I prefer using them over monopolized, propreitary or closed-source applications. I want to break the cyle and inspire people to use alternative and support FOSS in every possible way.
 besides I’m an open-source/FOSS enthusiast &#43; a nerd (hehe)
-1. droid-ify - F-Droid client with Material UI This is like a play-store for Open-Source applications. Finding the applications is a breeze!...</p>
+1. droid-ify - F-Droid client with Material UI This is like a play-store for Open-Source applications. Finding the applications is a breeze! I have listed it because the downstream is easy after installing this application.
+...</p>
   </div>
   <footer class="entry-footer"><span title='2025-02-17 23:22:02 +0530 IST'>February 17, 2025</span></footer>
   <a class="entry-link" aria-label="post link to Goto: Open Source Android Applications to Use" href="http://localhost:1313/posts/goto-apps-android/"></a>
@@ -176,7 +179,8 @@ besides I’m an open-source/FOSS enthusiast &#43; a nerd (hehe)
 Extract the Files in your custom location.
 Install the dependencies
 sudo dnf install adb This would be enought to run the tool, now let’s see how to use it!
-Enable USB Debugging in your android phone. (mandatory) Connect the device with the computer you are running the tool....</p>
+Enable USB Debugging in your android phone. (mandatory) Connect the device with the computer you are running the tool. Run the Universal Android De-Bloater. Well, this would be my goto page whenever I need to remove the bloatware from my device.
+...</p>
   </div>
   <footer class="entry-footer"><span title='2025-02-14 23:31:30 +0530 IST'>February 14, 2025</span></footer>
   <a class="entry-link" aria-label="post link to Universal Android De-Bloater" href="http://localhost:1313/posts/de-bloater/"></a>
@@ -190,10 +194,11 @@ Enable USB Debugging in your android phone. (mandatory) Connect the device with 
   <div class="entry-content">
     <p>Changing DNS Settings In order to change the DNS settings, we can choose two ways
 Hard way (using CLI, actually that’s easy) Easy way (using GUI, kind of lame XD) But let’s do it the hard way, which is more rewarding than using GUI. I particularly don’t have any steps to mention but let’s do it with a scenario which can be easy to understand.
-You just installed a new operating system and you have to change the DNS settings....</p>
+You just installed a new operating system and you have to change the DNS settings.
+...</p>
   </div>
   <footer class="entry-footer"><span title='2025-02-08 21:06:31 +0530 IST'>February 8, 2025</span></footer>
-  <a class="entry-link" aria-label="post link to  DNS Change &amp; Troubleshoot (common)" href="http://localhost:1313/posts/dns-initial/"></a>
+  <a class="entry-link" aria-label="post link to  DNS Change & Troubleshoot (common)" href="http://localhost:1313/posts/dns-initial/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -205,7 +210,8 @@ You just installed a new operating system and you have to change the DNS setting
     <p>Customizing Logo in Forgejo Customizing the logo and favicon in Forgejo is quite simple and we just need an .svg file that needs to replaced with the current Forgejo icons.
 Read the docs for changing the logo
 Let’s use fedora.svg as an example for this:
-Head inside the parent directory of forgejo. Copy the fedora.svg into assets/. Change the name of fedora.svg into favicon.svg &amp; logo.svg (making it two files). From the parent directory of forgejo, run this command: make generate-images The above command will generate the respective files into public/assets/img, that is:...</p>
+Head inside the parent directory of forgejo. Copy the fedora.svg into assets/. Change the name of fedora.svg into favicon.svg &amp; logo.svg (making it two files). From the parent directory of forgejo, run this command: make generate-images The above command will generate the respective files into public/assets/img, that is:
+...</p>
   </div>
   <footer class="entry-footer"><span title='2025-02-05 15:47:35 +0530 IST'>February 5, 2025</span></footer>
   <a class="entry-link" aria-label="post link to  Forgejo Logo Change" href="http://localhost:1313/posts/forgejo-logo-change/"></a>
@@ -217,7 +223,8 @@ Head inside the parent directory of forgejo. Copy the fedora.svg into assets/. C
     </h2>
   </header>
   <div class="entry-content">
-    <p>Why this occurs? I don’t whether it’s happening to everyone, but whenever I try to install docker I always end up facing an issue, which won’t let me use docker unless I use sudo while executing the docker commands. Why it’s occurs? Well, it’s because the permission denied when you are trying to connect with the docker daemon socket at unix://var/run/docker.sock. (you will also see an error similar to this....</p>
+    <p>Why this occurs? I don’t whether it’s happening to everyone, but whenever I try to install docker I always end up facing an issue, which won’t let me use docker unless I use sudo while executing the docker commands. Why it’s occurs? Well, it’s because the permission denied when you are trying to connect with the docker daemon socket at unix://var/run/docker.sock. (you will also see an error similar to this.
+...</p>
   </div>
   <footer class="entry-footer"><span title='2025-02-01 16:01:19 +0530 IST'>February 1, 2025</span></footer>
   <a class="entry-link" aria-label="post link to Fix: Access `docker` without sudo" href="http://localhost:1313/posts/docker-sudo-fix/"></a>
@@ -232,10 +239,11 @@ Head inside the parent directory of forgejo. Copy the fedora.svg into assets/. C
     <p>Install Doom Emacs Head over to this repository and execute the scripts.
 git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs ~/.config/emacs/bin/doom install doom command not recognized Whenever I install doom emacs, I always face this problem and now we’re going to put an end to this error.(!panic)
 The error would look something like mentioned below:
-Error: file-missing (&#34;Cannot open load file&#34; &#34;No such file or directory&#34; &#34;/usr/early-init.el&#34;) mapbacktrace(#f(compiled-function (evald func args flags) #&lt;bytecode -0x1a9589d6c510f34&gt;)) debug-early-backtrace() debug-early(error (file-missing &#34;Cannot open load file&#34; &#34;No such file or directory&#34; &#34;/usr/early-init....</p>
+Error: file-missing (&#34;Cannot open load file&#34; &#34;No such file or directory&#34; &#34;/usr/early-init.el&#34;) mapbacktrace(#f(compiled-function (evald func args flags) #&lt;bytecode -0x1a9589d6c510f34&gt;)) debug-early-backtrace() debug-early(error (file-missing &#34;Cannot open load file&#34; &#34;No such file or directory&#34; &#34;/usr/early-init.el&#34;)) load(&#34;/usr/early-init.el&#34; nil nomessage nosuffix) (and (load init-file nil &#39;nomessage &#39;nosuffix) (featurep &#39;doom)) (or (and (load init-file nil &#39;nomessage &#39;nosuffix) (featurep &#39;doom)) (user-error &#34;Failed to load Doom from %s&#34; init-file)) (let* ((bin-dir (file-name-directory (file-truename load-file-name))) (init-file (expand-file-name &#34;../early-init.el&#34; bin-dir))) (or (and (load init-file nil &#39;nomessage &#39;nosuffix) (featurep &#39;doom)) (user-error &#34;Failed to load Doom from %s&#34; init-file))) (condition-case e (let* ((bin-dir (file-name-directory (file-truename load-file-name))) (init-file (expand-file-name &#34;../early-init.el&#34; bin-dir))) (or (and (load init-file nil &#39;nomessage &#39;nosuffix) (featurep &#39;doom)) (user-error &#34;Failed to load Doom from %s&#34; init-file))) (user-error (message &#34;Error: %s&#34; (car (cdr e))) (kill-emacs 2))) load-with-code-conversion(&#34;/usr/bin/doom&#34; &#34;/usr/bin/doom&#34; nil t) command-line-1((&#34;--load&#34; &#34;/usr/bin/doom&#34; &#34;--&#34;)) command-line() normal-top-level() Cannot open load file: No such file or directory, /usr/early-init.el Let’s fix it:
+...</p>
   </div>
   <footer class="entry-footer"><span title='2025-01-31 18:44:50 +0530 IST'>January 31, 2025</span></footer>
-  <a class="entry-link" aria-label="post link to Doc : `doom` Installation &amp; Unrecognized Command Fix" href="http://localhost:1313/posts/doom-cmd-fix/"></a>
+  <a class="entry-link" aria-label="post link to Doc : `doom` Installation & Unrecognized Command Fix" href="http://localhost:1313/posts/doom-cmd-fix/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -245,7 +253,8 @@ Error: file-missing (&#34;Cannot open load file&#34; &#34;No such file or direct
   </header>
   <div class="entry-content">
     <p>Fixing Wired LAN The scenario is very hard to explain, so I’ll write down what happened and we’ll relate them according to the situation. (*Yaash shrugs).
-Connection between my m1 and m2 has been severed. No matter what I do, it can’t establish the connection with the m2 from m1. So, I deleted the network from my machine. When entering nmcli con show, it won’t display the wired LAN. Now, the cable is connected from both sides, meaning the devices are connected physically but the ipv4....</p>
+Connection between my m1 and m2 has been severed. No matter what I do, it can’t establish the connection with the m2 from m1. So, I deleted the network from my machine. When entering nmcli con show, it won’t display the wired LAN. Now, the cable is connected from both sides, meaning the devices are connected physically but the ipv4.addresses are not mapped properly. Steps: Check the device status This command will display the devices that are connected to the machine. It can either be a connected or disconnected devices. Now we’ll identify whether the cable is connected and the machine acknowledged it’s connection.
+...</p>
   </div>
   <footer class="entry-footer"><span title='2025-01-30 20:58:55 +0530 IST'>January 30, 2025</span></footer>
   <a class="entry-link" aria-label="post link to  Fix Wired-LAN Connection; when physically connected but no endpoint" href="http://localhost:1313/posts/fix-lan/"></a>

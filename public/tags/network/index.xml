@@ -4,7 +4,7 @@
     <title>Network on stashed</title>
     <link>http://localhost:1313/tags/network/</link>
     <description>Recent content in Network on stashed</description>
-    <generator>Hugo -- 0.126.2</generator>
+    <generator>Hugo -- 0.147.2</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 13 Mar 2025 21:43:22 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/network/index.xml" rel="self" type="application/rss+xml" />
@@ -13,26 +13,108 @@
       <link>http://localhost:1313/posts/pihole-pizero-2w/</link>
       <pubDate>Thu, 13 Mar 2025 21:43:22 +0530</pubDate>
       <guid>http://localhost:1313/posts/pihole-pizero-2w/</guid>
-      <description>I just got my hands on &amp;ldquo;Raspberry Pi Zero 2W&amp;rdquo; today, let&amp;rsquo;s setup the Pi!
-Setup the Pi Make sure to use pi-imager for writing the OS into the microSD. Also use a router as well for easy-setup.
-Choose &amp;ldquo;Raspberry Pi OS 32-bit with no desktop environment&amp;rdquo; for the OS. Make sure to edit the username &amp;amp; password, SSID configurations, enable SSH using authentication, additonally note-down the hostname for ssh connection.</description>
+      <description>&lt;p&gt;I just got my hands on &amp;ldquo;Raspberry Pi Zero 2W&amp;rdquo; today, let&amp;rsquo;s setup the Pi!&lt;/p&gt;
+&lt;h1 id=&#34;setup-the-pi&#34;&gt;Setup the &lt;code&gt;Pi&lt;/code&gt;&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Make sure to use &lt;code&gt;pi-imager&lt;/code&gt; for writing the OS into the microSD. Also use a router as well for &lt;strong&gt;easy-setup&lt;/strong&gt;.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;Choose &amp;ldquo;&lt;strong&gt;Raspberry Pi OS 32-bit with no desktop environment&lt;/strong&gt;&amp;rdquo; for the OS.&lt;/li&gt;
+&lt;li&gt;Make sure to edit the &lt;strong&gt;username&lt;/strong&gt; &amp;amp; &lt;strong&gt;password&lt;/strong&gt;, &lt;strong&gt;SSID&lt;/strong&gt; configurations, &lt;strong&gt;enable SSH using authentication&lt;/strong&gt;, additonally &lt;strong&gt;note-down the hostname&lt;/strong&gt; for &lt;code&gt;ssh&lt;/code&gt; connection.&lt;/li&gt;
+&lt;li&gt;Insert the microSD into Pi Zero after the OS installation.&lt;/li&gt;
+&lt;li&gt;Plug in the microUSB into Pi and wait for few seconds to boot up.&lt;/li&gt;
+&lt;li&gt;Head inside the router web-page and look into the connected clients.&lt;/li&gt;
+&lt;li&gt;Identify the hostname (default:&amp;ldquo;raspberrypi&amp;rdquo;) and note-down the IP address.&lt;/li&gt;
+&lt;li&gt;Let&amp;rsquo;s &lt;code&gt;ssh&lt;/code&gt; into the Pi!&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ssh username@192.168.31.xxx
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now you are inside the Pi, please update &amp;amp; upgrade the packages in it for further installations.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Setup: A beginner `pi-hole` setup (Manual DNS Allocation for Each Device)</title>
       <link>http://localhost:1313/posts/pi-hole-setup-beginner/</link>
       <pubDate>Sat, 08 Mar 2025 17:00:31 +0530</pubDate>
       <guid>http://localhost:1313/posts/pi-hole-setup-beginner/</guid>
-      <description>I don&amp;rsquo;t have enough knowledge about this when writing the documenation for setting up the pi-hole. I&amp;rsquo;m running this on a container in Raspberry Pi 5 8GB device (I know it&amp;rsquo;s an overkill but it&amp;rsquo;s for learning).
-Let&amp;rsquo;s use docker compose to run the pi-hole container Create directory for storing pi-hole configurations mkdir pihole-config cd pihole-config Create a file named docker-compose.yml touch docker-compose.yml Copy &amp;amp; paste this YAML configuration into docker-compose.</description>
+      <description>&lt;p&gt;I don&amp;rsquo;t have enough knowledge about this when writing the documenation for setting up the &lt;code&gt;pi-hole&lt;/code&gt;. I&amp;rsquo;m running this on a
+container in &lt;strong&gt;Raspberry Pi 5 8GB&lt;/strong&gt; device (I know it&amp;rsquo;s an overkill but it&amp;rsquo;s for learning).&lt;/p&gt;
+&lt;h1 id=&#34;lets-use-docker-compose-to-run-the-pi-hole-container&#34;&gt;Let&amp;rsquo;s use &lt;code&gt;docker compose&lt;/code&gt; to run the &lt;code&gt;pi-hole&lt;/code&gt; container&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Create directory for storing &lt;code&gt;pi-hole&lt;/code&gt; configurations&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mkdir pihole-config
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd pihole-config
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Create a file named &lt;code&gt;docker-compose.yml&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;touch docker-compose.yml
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Copy &amp;amp; paste this &lt;code&gt;YAML&lt;/code&gt; configuration into &lt;code&gt;docker-compose.yml&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yml&#34; data-lang=&#34;yml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;services&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;pihole&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;container_name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;pihole&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;image&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;pihole/pihole:latest&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;ports&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;53:53/tcp&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# DNS Ports&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;53:53/udp&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# DNS Ports&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;80:80/tcp&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# Default HTTP Port&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;443:443/tcp&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# Default HTTPs Port&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;67:67/udp&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# using Pi-hole as your DHCP server&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;environment&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;TZ&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Asia/Kolkata&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#75715e&#34;&gt;# Not setting one will result in a random password being assigned&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;FTLCONF_webserver_api_password&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;pass&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#75715e&#34;&gt;# If using Docker&amp;#39;s default `bridge` network setting the dns listening mode should be set to &amp;#39;all&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;FTLCONF_dns_listeningMode&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;all&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;volumes&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#75715e&#34;&gt;# Pi-hole&amp;#39;s databases and common configuration file&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;./etc-pihole:/etc/pihole&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#75715e&#34;&gt;# Uncomment the below if you have custom dnsmasq config files that you want to persist. Not needed for most starting fresh with Pi-hole v6. If you&amp;#39;re upgrading from v5 you and have used this directory before, you should keep it enabled for the first v6 container start to allow for a complete migration. It can be removed afterwards. Needs environment variable FTLCONF_misc_etc_dnsmasq_d: &amp;#39;true&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#75715e&#34;&gt;#- &amp;#39;./etc-dnsmasq.d:/etc/dnsmasq.d&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;cap_add&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#75715e&#34;&gt;# See https://github.com/pi-hole/docker-pi-hole#note-on-capabilities&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#75715e&#34;&gt;# Required if you are using Pi-hole as your DHCP server, else not needed&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;NET_ADMIN&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#75715e&#34;&gt;# Required if you are using Pi-hole as your NTP client to be able to set the host&amp;#39;s system time&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;SYS_TIME&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#75715e&#34;&gt;# Optional, if Pi-hole should get some more processing time&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;SYS_NICE&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;restart&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;unless-stopped&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Run the &lt;code&gt;docker compose&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker compose up -d
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Head inside the weblogin. i.e, http://localhost:80/admin (&lt;strong&gt;Note&lt;/strong&gt;: Make sure the URL ends with &lt;code&gt;/admin&lt;/code&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;lets-setup-the-dns-address-and-connect-other-devices-to-use-pi-hole&#34;&gt;Let&amp;rsquo;s setup the DNS address and connect other devices to use &lt;code&gt;pi-hole&lt;/code&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Login into the &lt;code&gt;pi-hole&lt;/code&gt; web login&lt;/li&gt;
+&lt;li&gt;Goto &lt;strong&gt;Settings&lt;/strong&gt; &amp;raquo; &lt;strong&gt;DNS&lt;/strong&gt; &amp;gt; Click the DNS of your liking in &lt;em&gt;IPV4&lt;/em&gt;(I chose Open DNS)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;lets-connect-from-a-device&#34;&gt;Let&amp;rsquo;s Connect from a Device&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;pi-hole&lt;/code&gt; installed in &lt;code&gt;192.168.31.102&lt;/code&gt;, so make sure to point the devices to this IP address.&lt;/li&gt;
+&lt;li&gt;Change the DNS manually on a specific connection.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo nmcli connection modify device-name ipv4.dns &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;192.168.31.102&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo nmcli connection reload
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo nmcli connection up device-name
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Check whether it&amp;rsquo;s actually allocated to the device&lt;/p&gt;</description>
     </item>
     <item>
       <title> DNS Change &amp; Troubleshoot (common)</title>
       <link>http://localhost:1313/posts/dns-initial/</link>
       <pubDate>Sat, 08 Feb 2025 21:06:31 +0530</pubDate>
       <guid>http://localhost:1313/posts/dns-initial/</guid>
-      <description>Changing DNS Settings In order to change the DNS settings, we can choose two ways
-Hard way (using CLI, actually that&amp;rsquo;s easy) Easy way (using GUI, kind of lame XD) But let&amp;rsquo;s do it the hard way, which is more rewarding than using GUI. I particularly don&amp;rsquo;t have any steps to mention but let&amp;rsquo;s do it with a scenario which can be easy to understand.
-You just installed a new operating system and you have to change the DNS settings.</description>
+      <description>&lt;h1 id=&#34;changing-dns-settings&#34;&gt;Changing DNS Settings&lt;/h1&gt;
+&lt;p&gt;In order to change the DNS settings, we can choose two ways&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Hard way (&lt;em&gt;using CLI, actually that&amp;rsquo;s easy&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;Easy way (&lt;em&gt;using GUI, kind of lame XD&lt;/em&gt;)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;But let&amp;rsquo;s do it the hard way, which is more rewarding than using GUI. I particularly don&amp;rsquo;t have any steps to mention but let&amp;rsquo;s do it with a scenario which can be easy to understand.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You just installed a new operating system and you have to change the DNS settings.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

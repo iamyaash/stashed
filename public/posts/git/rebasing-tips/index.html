@@ -115,12 +115,11 @@
   </header> 
   <div class="post-content"><p>You might feel the things you are doing are just repetive and functional (<em>but old!</em>), after you get familiar using <code>git</code> regularly. You will face a situation where you need to make some specific adjustements to the commits or something similar. It is doable but more manual, you&rsquo;d wish if there&rsquo;s a feature that can accomplish what you want to do now.</p>
 <p>Among all that you have wished, the <strong><code>rebase</code></strong> is one of them!</p>
-<h1 id="what-is-rebase"><strong>What is <code>rebase</code>?</strong><a hidden class="anchor" aria-hidden="true" href="#what-is-rebase">#</a></h1>
+<h1 id="what-is"><strong>What is <code>rebase</code>?</strong><a hidden class="anchor" aria-hidden="true" href="#what-is">#</a></h1>
 <p>From my understanding I can&rsquo;t mention a specific definition for this, but let&rsquo;s keep this simple and let me phrase that in my own sentence.</p>
 <p>It does exactly as it sounds, because it picks the <strong>current branch(<code>A</code>)</strong> and places it on top of the <strong>specified branch(<code>B</code>)</strong>.</p>
 <blockquote>
-<p><em>i.e, All the changed that were made inside the <code>A</code> branch will be stacked on top of the branch <code>B</code>.</em></p>
-</blockquote>
+<p><em>i.e, All the changed that were made inside the <code>A</code> branch will be stacked on top of the branch <code>B</code>.</em></p></blockquote>
 <p>Apart from that, we can do so many things by using <code>rebase</code>,</p>
 <ul>
 <li><code>git pull --rebase upstream main</code> - To pull the upstream branch to local by rebasing local branch on top of the upstream branch. (i.e, <em>local branch changes will be stacked on top of the incoming branch</em>)</li>

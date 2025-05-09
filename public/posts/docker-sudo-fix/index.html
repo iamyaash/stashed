@@ -7,7 +7,8 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Fix: Access `docker` without sudo | stashed</title>
 <meta name="keywords" content="docs, docker, script">
-<meta name="description" content="Why this occurs? I don&rsquo;t whether it&rsquo;s happening to everyone, but whenever I try to install docker I always end up facing an issue, which won&rsquo;t let me use docker unless I use sudo while executing the docker commands. Why it&rsquo;s occurs? Well, it&rsquo;s because the permission denied when you are trying to connect with the docker daemon socket at unix://var/run/docker.sock. (you will also see an error similar to this.">
+<meta name="description" content="Why this occurs?
+I don&rsquo;t whether it&rsquo;s happening to everyone, but whenever I try to install docker I always end up facing an issue, which won&rsquo;t let me use docker unless I use sudo while executing the docker commands. Why it&rsquo;s occurs? Well, it&rsquo;s because the permission denied when you are trying to connect with the docker daemon socket at unix://var/run/docker.sock. (you will also see an error similar to this.">
 <meta name="author" content="">
 <link rel="canonical" href="http://localhost:1313/posts/docker-sudo-fix/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
@@ -122,15 +123,13 @@
 </ol>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>getent group | grep docker
 </span></span></code></pre></div><blockquote>
-<p>If not, create a group called <code>docker</code> then.</p>
-</blockquote>
+<p>If not, create a group called <code>docker</code> then.</p></blockquote>
 <ol start="2">
 <li>Assign the <code>docker</code> group to the user:</li>
 </ol>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo usermod -aG docker $USER
 </span></span></code></pre></div><blockquote>
-<p>$USER defines the current user.</p>
-</blockquote>
+<p>$USER defines the current user.</p></blockquote>
 <ol start="3">
 <li>Apply group changes:</li>
 </ol>
@@ -157,23 +156,20 @@ Ensure the Docker is usng the correct socket file. The typical socket file for D
 </ol>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>ls -la /var/run/docker.sock
 </span></span></code></pre></div><blockquote>
-<p>if not present or points to different location, you might need to adjust manually.</p>
-</blockquote>
+<p>if not present or points to different location, you might need to adjust manually.</p></blockquote>
 <ol start="3">
 <li>Use the correct socket path:</li>
 </ol>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>DOCKER_HOST<span style="color:#f92672">=</span>unix:///var/run/docker.sock docker images  
 </span></span></code></pre></div><blockquote>
-<p>If this works, your Docker installation may be misconfigured, and you can update the Docker socket location in your environment variables or Docker settings.</p>
-</blockquote>
+<p>If this works, your Docker installation may be misconfigured, and you can update the Docker socket location in your environment variables or Docker settings.</p></blockquote>
 <ol start="4">
 <li>Let&rsquo;s <code>DOCKET_HOST</code> to <code>.bashrc</code> or <code>.bash_profile</code></li>
 </ol>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo <span style="color:#e6db74">&#39;export DOCKER_HOST=unix:///var/run/docker.sock&#39;</span> &gt;&gt; ~/.bashrc  
 </span></span><span style="display:flex;"><span>source ~/.bashrc  
 </span></span></code></pre></div><blockquote>
-<p>This will set the <code>DOCKER_HOST</code> environment variable automatically in all your terminal sessions.</p>
-</blockquote>
+<p>This will set the <code>DOCKER_HOST</code> environment variable automatically in all your terminal sessions.</p></blockquote>
 
 
   </div>

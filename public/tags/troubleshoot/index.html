@@ -118,10 +118,11 @@
     <p>Install Doom Emacs Head over to this repository and execute the scripts.
 git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs ~/.config/emacs/bin/doom install doom command not recognized Whenever I install doom emacs, I always face this problem and now we’re going to put an end to this error.(!panic)
 The error would look something like mentioned below:
-Error: file-missing (&#34;Cannot open load file&#34; &#34;No such file or directory&#34; &#34;/usr/early-init.el&#34;) mapbacktrace(#f(compiled-function (evald func args flags) #&lt;bytecode -0x1a9589d6c510f34&gt;)) debug-early-backtrace() debug-early(error (file-missing &#34;Cannot open load file&#34; &#34;No such file or directory&#34; &#34;/usr/early-init....</p>
+Error: file-missing (&#34;Cannot open load file&#34; &#34;No such file or directory&#34; &#34;/usr/early-init.el&#34;) mapbacktrace(#f(compiled-function (evald func args flags) #&lt;bytecode -0x1a9589d6c510f34&gt;)) debug-early-backtrace() debug-early(error (file-missing &#34;Cannot open load file&#34; &#34;No such file or directory&#34; &#34;/usr/early-init.el&#34;)) load(&#34;/usr/early-init.el&#34; nil nomessage nosuffix) (and (load init-file nil &#39;nomessage &#39;nosuffix) (featurep &#39;doom)) (or (and (load init-file nil &#39;nomessage &#39;nosuffix) (featurep &#39;doom)) (user-error &#34;Failed to load Doom from %s&#34; init-file)) (let* ((bin-dir (file-name-directory (file-truename load-file-name))) (init-file (expand-file-name &#34;../early-init.el&#34; bin-dir))) (or (and (load init-file nil &#39;nomessage &#39;nosuffix) (featurep &#39;doom)) (user-error &#34;Failed to load Doom from %s&#34; init-file))) (condition-case e (let* ((bin-dir (file-name-directory (file-truename load-file-name))) (init-file (expand-file-name &#34;../early-init.el&#34; bin-dir))) (or (and (load init-file nil &#39;nomessage &#39;nosuffix) (featurep &#39;doom)) (user-error &#34;Failed to load Doom from %s&#34; init-file))) (user-error (message &#34;Error: %s&#34; (car (cdr e))) (kill-emacs 2))) load-with-code-conversion(&#34;/usr/bin/doom&#34; &#34;/usr/bin/doom&#34; nil t) command-line-1((&#34;--load&#34; &#34;/usr/bin/doom&#34; &#34;--&#34;)) command-line() normal-top-level() Cannot open load file: No such file or directory, /usr/early-init.el Let’s fix it:
+...</p>
   </div>
   <footer class="entry-footer"><span title='2025-01-31 18:44:50 +0530 IST'>January 31, 2025</span></footer>
-  <a class="entry-link" aria-label="post link to Doc : `doom` Installation &amp; Unrecognized Command Fix" href="http://localhost:1313/posts/doom-cmd-fix/"></a>
+  <a class="entry-link" aria-label="post link to Doc : `doom` Installation & Unrecognized Command Fix" href="http://localhost:1313/posts/doom-cmd-fix/"></a>
 </article>
 
 <article class="post-entry tag-entry"> 
@@ -131,7 +132,8 @@ Error: file-missing (&#34;Cannot open load file&#34; &#34;No such file or direct
   </header>
   <div class="entry-content">
     <p>Fixing Wired LAN The scenario is very hard to explain, so I’ll write down what happened and we’ll relate them according to the situation. (*Yaash shrugs).
-Connection between my m1 and m2 has been severed. No matter what I do, it can’t establish the connection with the m2 from m1. So, I deleted the network from my machine. When entering nmcli con show, it won’t display the wired LAN. Now, the cable is connected from both sides, meaning the devices are connected physically but the ipv4....</p>
+Connection between my m1 and m2 has been severed. No matter what I do, it can’t establish the connection with the m2 from m1. So, I deleted the network from my machine. When entering nmcli con show, it won’t display the wired LAN. Now, the cable is connected from both sides, meaning the devices are connected physically but the ipv4.addresses are not mapped properly. Steps: Check the device status This command will display the devices that are connected to the machine. It can either be a connected or disconnected devices. Now we’ll identify whether the cable is connected and the machine acknowledged it’s connection.
+...</p>
   </div>
   <footer class="entry-footer"><span title='2025-01-30 20:58:55 +0530 IST'>January 30, 2025</span></footer>
   <a class="entry-link" aria-label="post link to  Fix Wired-LAN Connection; when physically connected but no endpoint" href="http://localhost:1313/posts/fix-lan/"></a>

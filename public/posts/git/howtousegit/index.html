@@ -1,24 +1,47 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>git cli | stashed</title>
 <meta name="keywords" content="git, script, docs">
-<meta name="description" content="Setting up git in your device git config --global user.name &lt;your-username&gt; git config --global user.email &lt;your-email&gt; git config --global user.signingKey &lt;keyID&gt; --global: The configuration applies to all repositories for the current user. --local: The configuration applies only to the current repository. --system: The configuration applies to all users on the system. user.name &amp; user.email define the author&rsquo;s identity for commits. user.signingKey specifies the GPG key ID used for signing commits and tags.">
+<meta name="description" content="Setting up git in your device
+git config --global user.name &lt;your-username&gt;
+git config --global user.email &lt;your-email&gt;
+git config --global user.signingKey &lt;keyID&gt;
+
+
+
+--global: The configuration applies to all repositories for the current user.
+--local: The configuration applies only to the current repository.
+--system: The configuration applies to all users on the system.
+
+
+
+
+user.name &amp; user.email define the author&rsquo;s identity for commits.
+
+
+
+
+user.signingKey specifies the GPG key ID used for signing commits and tags.
+
+
+
+To display all the current configurations:">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/posts/git/howtousegit/">
+<link rel="canonical" href="https://iamyaash.github.io/posts/git/howtousegit/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="icon" href="https://iamyaash.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://iamyaash.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://iamyaash.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://iamyaash.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://iamyaash.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/git/howtousegit/">
+<link rel="alternate" hreflang="en" href="https://iamyaash.github.io/posts/git/howtousegit/">
 <noscript>
     <style>
         #theme-toggle,
@@ -55,7 +78,97 @@
         }
 
     </style>
-</noscript>
+</noscript><meta property="og:url" content="https://iamyaash.github.io/posts/git/howtousegit/">
+  <meta property="og:site_name" content="stashed">
+  <meta property="og:title" content="git cli">
+  <meta property="og:description" content="Setting up git in your device git config --global user.name &lt;your-username&gt; git config --global user.email &lt;your-email&gt; git config --global user.signingKey &lt;keyID&gt; --global: The configuration applies to all repositories for the current user. --local: The configuration applies only to the current repository. --system: The configuration applies to all users on the system. user.name &amp; user.email define the author’s identity for commits. user.signingKey specifies the GPG key ID used for signing commits and tags. To display all the current configurations:">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-03-29T19:37:21+05:30">
+    <meta property="article:modified_time" content="2025-03-29T19:37:21+05:30">
+    <meta property="article:tag" content="Git">
+    <meta property="article:tag" content="Script">
+    <meta property="article:tag" content="Docs">
+    <meta property="og:image" content="https://iamyaash.github.io/posts/git/git.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://iamyaash.github.io/posts/git/git.png">
+<meta name="twitter:title" content="git cli">
+<meta name="twitter:description" content="Setting up git in your device
+git config --global user.name &lt;your-username&gt;
+git config --global user.email &lt;your-email&gt;
+git config --global user.signingKey &lt;keyID&gt;
+
+
+
+--global: The configuration applies to all repositories for the current user.
+--local: The configuration applies only to the current repository.
+--system: The configuration applies to all users on the system.
+
+
+
+
+user.name &amp; user.email define the author&rsquo;s identity for commits.
+
+
+
+
+user.signingKey specifies the GPG key ID used for signing commits and tags.
+
+
+
+To display all the current configurations:">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://iamyaash.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "git cli",
+      "item": "https://iamyaash.github.io/posts/git/howtousegit/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "git cli",
+  "name": "git cli",
+  "description": "Setting up git in your device git config --global user.name \u0026lt;your-username\u0026gt; git config --global user.email \u0026lt;your-email\u0026gt; git config --global user.signingKey \u0026lt;keyID\u0026gt; --global: The configuration applies to all repositories for the current user. --local: The configuration applies only to the current repository. --system: The configuration applies to all users on the system. user.name \u0026amp; user.email define the author\u0026rsquo;s identity for commits. user.signingKey specifies the GPG key ID used for signing commits and tags. To display all the current configurations:\n",
+  "keywords": [
+    "git", "script", "docs"
+  ],
+  "articleBody": "Setting up git in your device git config --global user.name git config --global user.email git config --global user.signingKey --global: The configuration applies to all repositories for the current user. --local: The configuration applies only to the current repository. --system: The configuration applies to all users on the system. user.name \u0026 user.email define the author’s identity for commits. user.signingKey specifies the GPG key ID used for signing commits and tags. To display all the current configurations:\ngit config --list To display the specific configurations:\ngit config --global user.name git config --global user.email Enable commit signing: git config --global commit.gpgSign true After enabling this, every commit will be automatically signed without needing the -S flag.\nDisable commit signing: git config --global --unset commit.gpgSign General Use Cases: Staging the changes: git add filename.ext -A will select all the changes in the current directory. (Not a good practice, unless you know what you are doing) -i for interactive picking the changes. (Useful for handling large changes) Committing the changes: git commit -S -am \"commit message\" -S - Signs the commit with your GPG key. -a - Stages all modified and deleted tracked files (but not new files). -m - Allows entering the commit message inline. Pushing the Changes: git push - The name of the remote repository (e.g., origin). # find the remote repository name by git remote -v ",
+  "wordCount" : "292",
+  "inLanguage": "en",
+  "image":"https://iamyaash.github.io/posts/git/git.png","datePublished": "2025-03-29T19:37:21+05:30",
+  "dateModified": "2025-03-29T19:37:21+05:30",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://iamyaash.github.io/posts/git/howtousegit/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "stashed",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://iamyaash.github.io/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
 
 <body class="" id="top">
@@ -73,7 +186,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="stashed (Alt + H)">stashed</a>
+            <a href="https://iamyaash.github.io/" accesskey="h" title="stashed (Alt + H)">stashed</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -114,7 +227,7 @@
 </div>
   </header> 
 <figure class="entry-cover">
-        <img loading="eager" src="http://localhost:1313/posts/git/git.png" alt="git-screenshot">
+        <img loading="eager" src="https://iamyaash.github.io/posts/git/git.png" alt="git-screenshot">
         
 </figure>
   <div class="post-content"><h2 id="setting-up-git-in-your-device">Setting up <strong><code>git</code></strong> in your device<a hidden class="anchor" aria-hidden="true" href="#setting-up-git-in-your-device">#</a></h2>
@@ -198,16 +311,16 @@
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/git/">Git</a></li>
-      <li><a href="http://localhost:1313/tags/script/">Script</a></li>
-      <li><a href="http://localhost:1313/tags/docs/">Docs</a></li>
+      <li><a href="https://iamyaash.github.io/tags/git/">Git</a></li>
+      <li><a href="https://iamyaash.github.io/tags/script/">Script</a></li>
+      <li><a href="https://iamyaash.github.io/tags/docs/">Docs</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/">stashed</a></span> · 
+        <span>&copy; 2025 <a href="https://iamyaash.github.io/">stashed</a></span> · 
 
     <span>
         Powered by

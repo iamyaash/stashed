@@ -4,7 +4,7 @@
     <title>Usage on stashed</title>
     <link>http://localhost:1313/tags/usage/</link>
     <description>Recent content in Usage on stashed</description>
-    <generator>Hugo -- 0.126.2</generator>
+    <generator>Hugo -- 0.147.2</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 27 Apr 2025 18:28:54 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/usage/index.xml" rel="self" type="application/rss+xml" />
@@ -20,10 +20,21 @@
       <link>http://localhost:1313/posts/nmcli/</link>
       <pubDate>Sun, 23 Feb 2025 18:16:08 +0530</pubDate>
       <guid>http://localhost:1313/posts/nmcli/</guid>
-      <description>What is nmcli? The nmcli means NetworkManager Command Line Interface. It&amp;rsquo;s command-line utility tool used for controlling NetworkManager and reporting network status.
-In simple terms, we use that to interact with network related devices.
-How to use it? I don&amp;rsquo;t have proper way to explain, but let&amp;rsquo;s learn it with a case-scenario:
-Connect to a wifi network: Turn on the wifi module: sudo nmcli radio wifi on List the available networks: sudo nmcli device wifi list In case, it didn&amp;rsquo;t display any network, please rescan the available network and list it:</description>
+      <description>&lt;h1 id=&#34;what-is-nmcli&#34;&gt;What is &lt;code&gt;nmcli&lt;/code&gt;?&lt;/h1&gt;
+&lt;p&gt;The &lt;code&gt;nmcli&lt;/code&gt; means &lt;strong&gt;NetworkManager Command Line Interface&lt;/strong&gt;. It&amp;rsquo;s command-line utility tool used for controlling &lt;code&gt;NetworkManager&lt;/code&gt; and reporting network status.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;In simple terms, we use that to interact with network related devices.&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;how-to-use-it&#34;&gt;How to use it?&lt;/h2&gt;
+&lt;p&gt;I don&amp;rsquo;t have proper way to explain, but let&amp;rsquo;s learn it with a case-scenario:&lt;/p&gt;
+&lt;h3 id=&#34;connect-to-a-wifi-network&#34;&gt;Connect to a wifi network:&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Turn on the &lt;code&gt;wifi&lt;/code&gt; module:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo nmcli radio wifi on
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;List the available networks:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo nmcli device wifi list
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;In case, it didn&amp;rsquo;t display any network, please &lt;code&gt;rescan&lt;/code&gt; the available network and list it:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

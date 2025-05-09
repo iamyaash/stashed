@@ -7,10 +7,21 @@
 <meta name="robots" content="noindex, nofollow">
 <title> `nmcli` | stashed</title>
 <meta name="keywords" content="docs, usage">
-<meta name="description" content="What is nmcli? The nmcli means NetworkManager Command Line Interface. It&rsquo;s command-line utility tool used for controlling NetworkManager and reporting network status.
+<meta name="description" content="What is nmcli?
+The nmcli means NetworkManager Command Line Interface. It&rsquo;s command-line utility tool used for controlling NetworkManager and reporting network status.
 In simple terms, we use that to interact with network related devices.
-How to use it? I don&rsquo;t have proper way to explain, but let&rsquo;s learn it with a case-scenario:
-Connect to a wifi network: Turn on the wifi module: sudo nmcli radio wifi on List the available networks: sudo nmcli device wifi list In case, it didn&rsquo;t display any network, please rescan the available network and list it:">
+How to use it?
+I don&rsquo;t have proper way to explain, but let&rsquo;s learn it with a case-scenario:
+Connect to a wifi network:
+
+Turn on the wifi module:
+
+sudo nmcli radio wifi on
+
+List the available networks:
+
+sudo nmcli device wifi list
+In case, it didn&rsquo;t display any network, please rescan the available network and list it:">
 <meta name="author" content="">
 <link rel="canonical" href="http://localhost:1313/posts/nmcli/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
@@ -147,8 +158,7 @@ Let&rsquo;s take an example and connect to that device</li>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo nmcli connection show
 </span></span></code></pre></div><blockquote>
 <p>This will show the available networks connected to your device.
-<strong>Output:</strong></p>
-</blockquote>
+<strong>Output:</strong></p></blockquote>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>NAME                UUID                                  TYPE      DEVICE  
 </span></span><span style="display:flex;"><span>Wired connection <span style="color:#ae81ff">1</span>  82aadf2b-xxxx-xxxx-a3ec-xxxxxxxxxxxx  ethernet  enp2s0  
 </span></span><span style="display:flex;"><span>lo                  e6b49b80-xxxx-xxxx-b8d7-xxxxxxxxxxxx  loopback  lo      
@@ -198,8 +208,7 @@ Check if the IP has been assigned successfully:</li>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo rm /etc/resolv.conf
 </span></span><span style="display:flex;"><span>sudo ln -s /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
 </span></span></code></pre></div><blockquote>
-<p><strong>Note</strong>: The symlink to <code>stub-resolv.conf</code> ensures system-default DNS resolution.</p>
-</blockquote>
+<p><strong>Note</strong>: The symlink to <code>stub-resolv.conf</code> ensures system-default DNS resolution.</p></blockquote>
 <ol start="2">
 <li>Now that it resets, we can restart the DNS services which is managed is by <code>NetworkManager</code>.</li>
 </ol>

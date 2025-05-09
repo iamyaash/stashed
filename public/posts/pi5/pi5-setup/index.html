@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title> Setting Up Raspberry Pi 5 | stashed</title>
 <meta name="keywords" content="docs, setup, raspberry">
 <meta name="description" content="I got my hands on the Raspberry Pi 5 few weeks ago, but I wasn&rsquo;t able to use it for any purpose (more like I&rsquo;m out of ideas). I mostly wanted to test the pihole in my network, but using Pi 5 just for that would be an overkill!
-So I got a Raspberry Pi Zero 2 W and installed Pihole natively. I wrote a post about it, feel free check-out.">
+
+So I got a Raspberry Pi Zero 2 W and installed Pihole natively. I wrote a post about it, feel free check-out. Also, when I ordered for the Raspberry Pi Zero 2 W, I forgot to order for a microSD, so I used the one in the Pi 5 which is a 64GB microSD card (I know it&rsquo;s an overkill!). The entire Pi Zero is running just the Pihole with a 64GB microSD.">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/posts/pi5/pi5-setup/">
+<link rel="canonical" href="https://iamyaash.github.io/posts/pi5/pi5-setup/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="icon" href="https://iamyaash.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://iamyaash.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://iamyaash.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://iamyaash.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://iamyaash.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/pi5/pi5-setup/">
+<link rel="alternate" hreflang="en" href="https://iamyaash.github.io/posts/pi5/pi5-setup/">
 <noscript>
     <style>
         #theme-toggle,
@@ -56,7 +57,77 @@ So I got a Raspberry Pi Zero 2 W and installed Pihole natively. I wrote a post a
         }
 
     </style>
-</noscript>
+</noscript><meta property="og:url" content="https://iamyaash.github.io/posts/pi5/pi5-setup/">
+  <meta property="og:site_name" content="stashed">
+  <meta property="og:title" content=" Setting Up Raspberry Pi 5">
+  <meta property="og:description" content="I got my hands on the Raspberry Pi 5 few weeks ago, but I wasn’t able to use it for any purpose (more like I’m out of ideas). I mostly wanted to test the pihole in my network, but using Pi 5 just for that would be an overkill!
+So I got a Raspberry Pi Zero 2 W and installed Pihole natively. I wrote a post about it, feel free check-out. Also, when I ordered for the Raspberry Pi Zero 2 W, I forgot to order for a microSD, so I used the one in the Pi 5 which is a 64GB microSD card (I know it’s an overkill!). The entire Pi Zero is running just the Pihole with a 64GB microSD.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-03-17T19:22:47+05:30">
+    <meta property="article:modified_time" content="2025-03-17T19:22:47+05:30">
+    <meta property="article:tag" content="Docs">
+    <meta property="article:tag" content="Setup">
+    <meta property="article:tag" content="Raspberry">
+    <meta property="og:image" content="https://iamyaash.github.io/posts/pi5/pi5-box.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://iamyaash.github.io/posts/pi5/pi5-box.png">
+<meta name="twitter:title" content=" Setting Up Raspberry Pi 5">
+<meta name="twitter:description" content="I got my hands on the Raspberry Pi 5 few weeks ago, but I wasn&rsquo;t able to use it for any purpose (more like I&rsquo;m out of ideas). I mostly wanted to test the pihole in my network, but using Pi 5 just for that would be an overkill!
+
+So I got a Raspberry Pi Zero 2 W and installed Pihole natively. I wrote a post about it, feel free check-out. Also, when I ordered for the Raspberry Pi Zero 2 W, I forgot to order for a microSD, so I used the one in the Pi 5 which is a 64GB microSD card (I know it&rsquo;s an overkill!). The entire Pi Zero is running just the Pihole with a 64GB microSD.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://iamyaash.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": " Setting Up Raspberry Pi 5",
+      "item": "https://iamyaash.github.io/posts/pi5/pi5-setup/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": " Setting Up Raspberry Pi 5",
+  "name": " Setting Up Raspberry Pi 5",
+  "description": "I got my hands on the Raspberry Pi 5 few weeks ago, but I wasn\u0026rsquo;t able to use it for any purpose (more like I\u0026rsquo;m out of ideas). I mostly wanted to test the pihole in my network, but using Pi 5 just for that would be an overkill!\nSo I got a Raspberry Pi Zero 2 W and installed Pihole natively. I wrote a post about it, feel free check-out. Also, when I ordered for the Raspberry Pi Zero 2 W, I forgot to order for a microSD, so I used the one in the Pi 5 which is a 64GB microSD card (I know it\u0026rsquo;s an overkill!). The entire Pi Zero is running just the Pihole with a 64GB microSD.\n",
+  "keywords": [
+    "docs", "setup", "raspberry"
+  ],
+  "articleBody": "I got my hands on the Raspberry Pi 5 few weeks ago, but I wasn’t able to use it for any purpose (more like I’m out of ideas). I mostly wanted to test the pihole in my network, but using Pi 5 just for that would be an overkill!\nSo I got a Raspberry Pi Zero 2 W and installed Pihole natively. I wrote a post about it, feel free check-out. Also, when I ordered for the Raspberry Pi Zero 2 W, I forgot to order for a microSD, so I used the one in the Pi 5 which is a 64GB microSD card (I know it’s an overkill!). The entire Pi Zero is running just the Pihole with a 64GB microSD.\nKeep it mind that we’re using the Pi 5 as an headless machine! I’m using the Fedora Linux for setting up Raspberry Pi 5. Let’s Install Raspberry Pi OS Insert the microSD into a card reader and plug it into the computer.\nChoose the device that you want to install as: Raspberry Pi 5 - Raspberry Pi 5, 500 and Computing Module 5 Choose the Operating System as Raspberry Pi OS (other): Raspberry Pi OS Lite (64-bit) - A port of Debian Bookworm with no desktop environment Choose the Storage as the one that you plugged. (and click “Next”…) It would show a prompt, make sure to edit them by clicking the “Edit Settings” button:\nSet a custom hostname, username and password (don’t forget!). Configure the wireless network (since you are going to be using a headless machine, make sure that it can automatically ssh into the network, else you won’t be able to access it unless you connect a keyboard \u0026 display). Change the timezone and keyboard layout (optional!) Head into SERVICES \u003e Click “Enable SSH - Use Password Authentication” Feel free to check other settings (if you completed the above mentioned steps, then you are done!) Finally, click install it would download and install the OS in ~30 minutes.\nLet’s ssh into the Pi 5 Login to your router and copy the IP address allocated the hostname pi-master. Then, ssh into the Pi 5: ssh username@192.168.1.x Replace username \u0026 192.168.1.x with the your credentials.\nUpdate the packages sudo apt update \u0026\u0026 sudo apt upgrade By now, you would have a stable OS running in the Pi without any problems!\n",
+  "wordCount" : "393",
+  "inLanguage": "en",
+  "image":"https://iamyaash.github.io/posts/pi5/pi5-box.png","datePublished": "2025-03-17T19:22:47+05:30",
+  "dateModified": "2025-03-17T19:22:47+05:30",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://iamyaash.github.io/posts/pi5/pi5-setup/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "stashed",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://iamyaash.github.io/favicon.ico"
+    }
+  }
+}
+</script>
 </head>
 
 <body class="" id="top">
@@ -74,7 +145,7 @@ So I got a Raspberry Pi Zero 2 W and installed Pihole natively. I wrote a post a
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="stashed (Alt + H)">stashed</a>
+            <a href="https://iamyaash.github.io/" accesskey="h" title="stashed (Alt + H)">stashed</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -115,19 +186,17 @@ So I got a Raspberry Pi Zero 2 W and installed Pihole natively. I wrote a post a
 </div>
   </header> 
 <figure class="entry-cover">
-        <img loading="eager" src="http://localhost:1313/posts/pi5/pi5-box.png" alt="pi5-box">
+        <img loading="eager" src="https://iamyaash.github.io/posts/pi5/pi5-box.png" alt="pi5-box">
         
 </figure>
   <div class="post-content"><p>I got my hands on the <strong>Raspberry Pi 5</strong> few weeks ago, but I wasn&rsquo;t able to use it for any purpose (more like I&rsquo;m out of ideas). I mostly wanted to test the <strong><code>pihole</code></strong> in my network, but using <strong>Pi 5</strong> just for that would be an overkill!</p>
 <blockquote>
-<p>So I got a <strong>Raspberry Pi Zero 2 W</strong> and installed <strong><code>Pihole</code></strong> natively. <a href="https://iamyaash.github.io/stashed/posts/pihole-pizero-2w/">I wrote a post about it, feel free check-out</a>. Also, when I ordered for the <strong>Raspberry Pi Zero 2 W</strong>, I forgot to order for a microSD, so I used the one in the <strong>Pi 5</strong> which is a <strong>64GB</strong> microSD card (<em>I know it&rsquo;s an overkill!</em>). The entire <strong>Pi Zero</strong> is running just the <strong><code>Pihole</code></strong> with a 64GB microSD.</p>
-</blockquote>
+<p>So I got a <strong>Raspberry Pi Zero 2 W</strong> and installed <strong><code>Pihole</code></strong> natively. <a href="https://iamyaash.github.io/stashed/posts/pihole-pizero-2w/">I wrote a post about it, feel free check-out</a>. Also, when I ordered for the <strong>Raspberry Pi Zero 2 W</strong>, I forgot to order for a microSD, so I used the one in the <strong>Pi 5</strong> which is a <strong>64GB</strong> microSD card (<em>I know it&rsquo;s an overkill!</em>). The entire <strong>Pi Zero</strong> is running just the <strong><code>Pihole</code></strong> with a 64GB microSD.</p></blockquote>
 <blockquote>
 <ul>
 <li><em>Keep it mind that we&rsquo;re using the <strong>Pi 5</strong> as an headless machine!</em></li>
 <li><em>I&rsquo;m using the Fedora Linux for setting up <strong>Raspberry Pi 5</strong></em>.</li>
-</ul>
-</blockquote>
+</ul></blockquote>
 <h1 id="lets-install-raspberry-pi-os">Let&rsquo;s Install <code>Raspberry Pi OS</code><a hidden class="anchor" aria-hidden="true" href="#lets-install-raspberry-pi-os">#</a></h1>
 <ol>
 <li>
@@ -167,8 +236,7 @@ So I got a Raspberry Pi Zero 2 W and installed Pihole natively. I wrote a post a
 </ol>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>ssh username@192.168.1.x
 </span></span></code></pre></div><blockquote>
-<p>Replace <code>username</code> &amp; <code>192.168.1.x</code> with the your credentials.</p>
-</blockquote>
+<p>Replace <code>username</code> &amp; <code>192.168.1.x</code> with the your credentials.</p></blockquote>
 <ol start="3">
 <li>Update the packages</li>
 </ol>
@@ -180,16 +248,16 @@ So I got a Raspberry Pi Zero 2 W and installed Pihole natively. I wrote a post a
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/docs/">Docs</a></li>
-      <li><a href="http://localhost:1313/tags/setup/">Setup</a></li>
-      <li><a href="http://localhost:1313/tags/raspberry/">Raspberry</a></li>
+      <li><a href="https://iamyaash.github.io/tags/docs/">Docs</a></li>
+      <li><a href="https://iamyaash.github.io/tags/setup/">Setup</a></li>
+      <li><a href="https://iamyaash.github.io/tags/raspberry/">Raspberry</a></li>
     </ul>
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/">stashed</a></span> · 
+        <span>&copy; 2025 <a href="https://iamyaash.github.io/">stashed</a></span> · 
 
     <span>
         Powered by
