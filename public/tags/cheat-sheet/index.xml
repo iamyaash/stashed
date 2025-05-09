@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Cheat-Sheet on stashed</title>
+    <link>http://localhost:1313/tags/cheat-sheet/</link>
+    <description>Recent content in Cheat-Sheet on stashed</description>
+    <generator>Hugo -- 0.147.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 09 May 2025 16:22:55 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/cheat-sheet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>cheat: tmux basic usage</title>
+      <link>http://localhost:1313/posts/tmux/tmux/</link>
+      <pubDate>Fri, 09 May 2025 16:22:55 +0530</pubDate>
+      <guid>http://localhost:1313/posts/tmux/tmux/</guid>
+      <description>&lt;h1 id=&#34;what-is-tmux&#34;&gt;What is tmux?&lt;/h1&gt;
+&lt;p&gt;tmux is a program which runs in a terminal and allows multiple other terminal programs to be run inside it. Each program inside tmux gets its own terminal managed by tmux, which can be accessed from the single terminal where tmux is running - this called multiplexing and tmux is a terminal multiplexer.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

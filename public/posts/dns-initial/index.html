@@ -7,8 +7,14 @@
 <meta name="robots" content="noindex, nofollow">
 <title> DNS Change &amp; Troubleshoot (common) | stashed</title>
 <meta name="keywords" content="docs, network, script">
-<meta name="description" content="Changing DNS Settings In order to change the DNS settings, we can choose two ways
-Hard way (using CLI, actually that&rsquo;s easy) Easy way (using GUI, kind of lame XD) But let&rsquo;s do it the hard way, which is more rewarding than using GUI. I particularly don&rsquo;t have any steps to mention but let&rsquo;s do it with a scenario which can be easy to understand.
+<meta name="description" content="Changing DNS Settings
+In order to change the DNS settings, we can choose two ways
+
+Hard way (using CLI, actually that&rsquo;s easy)
+Easy way (using GUI, kind of lame XD)
+
+But let&rsquo;s do it the hard way, which is more rewarding than using GUI. I particularly don&rsquo;t have any steps to mention but let&rsquo;s do it with a scenario which can be easy to understand.
+
 You just installed a new operating system and you have to change the DNS settings.">
 <meta name="author" content="">
 <link rel="canonical" href="http://localhost:1313/posts/dns-initial/">
@@ -123,8 +129,7 @@ You just installed a new operating system and you have to change the DNS setting
 </ol>
 <p>But let&rsquo;s do it the hard way, which is more rewarding than using GUI. I particularly don&rsquo;t have any steps to mention but let&rsquo;s do it with a scenario which can be easy to understand.</p>
 <blockquote>
-<p>You just installed a new operating system and you have to change the DNS settings.</p>
-</blockquote>
+<p>You just installed a new operating system and you have to change the DNS settings.</p></blockquote>
 <h2 id="check-the-current-dns-settings">Check the current DNS settings<a hidden class="anchor" aria-hidden="true" href="#check-the-current-dns-settings">#</a></h2>
 <p>The DNS addresses are managed by <code>nmcli</code> and <code>systemd-resolved</code>, so be ready to see some errors when making changes using CLI.
 Let&rsquo;s look at the current DNS settings,</p>
@@ -193,8 +198,7 @@ If not, let&rsquo;s debug it :)</p>
 <pre tabindex="0"><code>cat /etc/resolve.conf
 </code></pre><p>Well this should definitely fix the DNS. Else, the problem might be different!</p>
 <blockquote>
-<p><strong>Note:</strong> We are making the changes to reflected globally across the machine and not bound to the specific device.</p>
-</blockquote>
+<p><strong>Note:</strong> We are making the changes to reflected globally across the machine and not bound to the specific device.</p></blockquote>
 
 
   </div>

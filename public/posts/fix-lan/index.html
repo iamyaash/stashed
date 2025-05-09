@@ -7,8 +7,16 @@
 <meta name="robots" content="noindex, nofollow">
 <title> Fix Wired-LAN Connection; when physically connected but no endpoint | stashed</title>
 <meta name="keywords" content="docs, troubleshoot, script">
-<meta name="description" content="Fixing Wired LAN The scenario is very hard to explain, so I&rsquo;ll write down what happened and we&rsquo;ll relate them according to the situation. (*Yaash shrugs).
-Connection between my m1 and m2 has been severed. No matter what I do, it can&rsquo;t establish the connection with the m2 from m1. So, I deleted the network from my machine. When entering nmcli con show, it won&rsquo;t display the wired LAN. Now, the cable is connected from both sides, meaning the devices are connected physically but the ipv4.">
+<meta name="description" content="Fixing Wired LAN
+The scenario is very hard to explain, so I&rsquo;ll write down what happened and we&rsquo;ll relate them according to the situation. (*Yaash shrugs).
+
+Connection between my m1 and m2 has been severed. No matter what I do, it can&rsquo;t establish the connection with the m2 from m1.
+So, I deleted the network from my machine. When entering nmcli con show, it won&rsquo;t display the wired LAN.
+Now, the cable is connected from both sides, meaning the devices are connected physically but the ipv4.addresses are not mapped properly.
+
+Steps:
+Check the device status
+This command will display the devices that are connected to the machine. It can either be a connected or disconnected devices. Now we&rsquo;ll identify whether the cable is connected and the machine acknowledged it&rsquo;s connection.">
 <meta name="author" content="">
 <link rel="canonical" href="http://localhost:1313/posts/fix-lan/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
@@ -134,8 +142,7 @@ Connection between my m1 and m2 has been severed. No matter what I do, it can&rs
 </span></span><span style="display:flex;"><span>enp2s0          ethernet  unavailable             --              
 </span></span></code></pre></div><p>Now the <code>enp2s0</code> is the device that have physical connection but no ipv4 address is mapped in it. Let&rsquo;s fix it!</p>
 <blockquote>
-<p>If the device is not shown in this cmd, make sure the cable is connected properly and try this cmd again.</p>
-</blockquote>
+<p>If the device is not shown in this cmd, make sure the cable is connected properly and try this cmd again.</p></blockquote>
 <h3 id="add-a-connection">Add a connection:<a hidden class="anchor" aria-hidden="true" href="#add-a-connection">#</a></h3>
 <p>Now that we have the name of the device that has connection to the <code>m2</code> from <code>m1</code>. We have to <code>add</code> the device to the network. For that we need to add many arguements as well, they are:</p>
 <ul>

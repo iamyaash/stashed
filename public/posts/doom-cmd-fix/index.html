@@ -7,10 +7,28 @@
 <meta name="robots" content="noindex, nofollow">
 <title>Doc : `doom` Installation &amp; Unrecognized Command Fix | stashed</title>
 <meta name="keywords" content="docs, troubleshoot, script">
-<meta name="description" content="Install Doom Emacs Head over to this repository and execute the scripts.
-git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs ~/.config/emacs/bin/doom install doom command not recognized Whenever I install doom emacs, I always face this problem and now we&rsquo;re going to put an end to this error.(!panic)
+<meta name="description" content="Install Doom Emacs
+Head over to this repository and execute the scripts.
+git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
+~/.config/emacs/bin/doom install
+doom command not recognized
+Whenever I install doom emacs, I always face this problem and now we&rsquo;re going to put an end to this error.(!panic)
 The error would look something like mentioned below:
-Error: file-missing (&#34;Cannot open load file&#34; &#34;No such file or directory&#34; &#34;/usr/early-init.el&#34;) mapbacktrace(#f(compiled-function (evald func args flags) #&lt;bytecode -0x1a9589d6c510f34&gt;)) debug-early-backtrace() debug-early(error (file-missing &#34;Cannot open load file&#34; &#34;No such file or directory&#34; &#34;/usr/early-init.">
+Error: file-missing (&#34;Cannot open load file&#34; &#34;No such file or directory&#34; &#34;/usr/early-init.el&#34;)
+  mapbacktrace(#f(compiled-function (evald func args flags) #&lt;bytecode -0x1a9589d6c510f34&gt;))
+  debug-early-backtrace()
+  debug-early(error (file-missing &#34;Cannot open load file&#34; &#34;No such file or directory&#34; &#34;/usr/early-init.el&#34;))
+  load(&#34;/usr/early-init.el&#34; nil nomessage nosuffix)
+  (and (load init-file nil &#39;nomessage &#39;nosuffix) (featurep &#39;doom))
+  (or (and (load init-file nil &#39;nomessage &#39;nosuffix) (featurep &#39;doom)) (user-error &#34;Failed to load Doom from %s&#34; init-file))
+  (let* ((bin-dir (file-name-directory (file-truename load-file-name))) (init-file (expand-file-name &#34;../early-init.el&#34; bin-dir))) (or (and (load init-file nil &#39;nomessage &#39;nosuffix) (featurep &#39;doom)) (user-error &#34;Failed to load Doom from %s&#34; init-file)))
+  (condition-case e (let* ((bin-dir (file-name-directory (file-truename load-file-name))) (init-file (expand-file-name &#34;../early-init.el&#34; bin-dir))) (or (and (load init-file nil &#39;nomessage &#39;nosuffix) (featurep &#39;doom)) (user-error &#34;Failed to load Doom from %s&#34; init-file))) (user-error (message &#34;Error: %s&#34; (car (cdr e))) (kill-emacs 2)))
+  load-with-code-conversion(&#34;/usr/bin/doom&#34; &#34;/usr/bin/doom&#34; nil t)
+  command-line-1((&#34;--load&#34; &#34;/usr/bin/doom&#34; &#34;--&#34;))
+  command-line()
+  normal-top-level()
+Cannot open load file: No such file or directory, /usr/early-init.el
+Let&rsquo;s fix it:">
 <meta name="author" content="">
 <link rel="canonical" href="http://localhost:1313/posts/doom-cmd-fix/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
@@ -154,8 +172,7 @@ Error: file-missing (&#34;Cannot open load file&#34; &#34;No such file or direct
 </ul>
 <p>Make sure to verify <strong>1 &amp; 2</strong> .</p>
 <blockquote>
-<p>The error mainly is caused because of the <strong><code>2</code></strong>, so make sure that directory is not present.</p>
-</blockquote>
+<p>The error mainly is caused because of the <strong><code>2</code></strong>, so make sure that directory is not present.</p></blockquote>
 <p><em>Alternative</em>:
 If that directory is needed, then we can directly point <code>doom</code> there instead of <code>~/.config/doom</code></p>
 <p><strong>Let&rsquo;s get fix it simple command!</strong>:</p>

@@ -133,7 +133,8 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>Setting up git in your device git config --global user.name &lt;your-username&gt; git config --global user.email &lt;your-email&gt; git config --global user.signingKey &lt;keyID&gt; --global: The configuration applies to all repositories for the current user. --local: The configuration applies only to the current repository. --system: The configuration applies to all users on the system. user.name &amp; user.email define the author’s identity for commits. user.signingKey specifies the GPG key ID used for signing commits and tags....</p>
+    <p>Setting up git in your device git config --global user.name &lt;your-username&gt; git config --global user.email &lt;your-email&gt; git config --global user.signingKey &lt;keyID&gt; --global: The configuration applies to all repositories for the current user. --local: The configuration applies only to the current repository. --system: The configuration applies to all users on the system. user.name &amp; user.email define the author’s identity for commits. user.signingKey specifies the GPG key ID used for signing commits and tags. To display all the current configurations:
+...</p>
   </div>
   <footer class="entry-footer"><span title='2025-03-29 19:37:21 +0530 IST'>March 29, 2025</span></footer>
   <a class="entry-link" aria-label="post link to git cli" href="http://localhost:1313/posts/git/howtousegit/"></a>
@@ -147,7 +148,7 @@
   <div class="entry-content">
     <p>I noticed that I’m keep deploying many pages on Github and still looking at the documentation. So I decided to make a short documentation how to do it fast (keeping me from looking at the documentation)
 Create a hugo site in a specific directory you want: hugo new site sitename Replace the sitename with the actual sitename you want to create.
-Head inside the directory(hugo site) cd sitename git init Download a theme (we’re using holy theme here) git submodule add https://github....</p>
+Head inside the directory(hugo site) cd sitename git init Download a theme (we’re using holy theme here) git submodule add https://github.com/serkodev/holy.git themes/holy echo &#34;theme = &#39;holy&#39;&#34; &gt;&gt; hugo.toml Let’s test it locally! hugo server Create a GitHub Repository Head inside the Repository on GitHub Goto Settings &gt; Pages Change the Source settings to “GitHub Actions” Create a file named hugo.yaml inside .github/workflows mkdir -p .github/workflows touch .github/workflows/hugo.yaml Copy and paste the text into YAML file # Sample workflow for building and deploying a Hugo site to GitHub Pages name: Deploy Hugo site to Pages on: # Runs on pushes targeting the default branch push: branches: - main # Allows you to run this workflow manually from the Actions tab workflow_dispatch: # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages permissions: contents: read pages: write id-token: write # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued. # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete. concurrency: group: &#34;pages&#34; cancel-in-progress: false # Default to bash defaults: run: shell: bash jobs: # Build job build: runs-on: ubuntu-latest env: HUGO_VERSION: 0.144.2 steps: - name: Install Hugo CLI run: | wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \ &amp;&amp; sudo dpkg -i ${{ runner.temp }}/hugo.deb - name: Install Dart Sass run: sudo snap install dart-sass - name: Checkout uses: actions/checkout@v4 with: submodules: recursive fetch-depth: 0 - name: Setup Pages id: pages uses: actions/configure-pages@v5 - name: Install Node.js dependencies run: &#34;[[ -f package-lock.json || -f npm-shrinkwrap.json ]] &amp;&amp; npm ci || true&#34; - name: Build with Hugo env: HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache HUGO_ENVIRONMENT: production TZ: America/Los_Angeles run: | hugo \ --gc \ --minify \ --baseURL &#34;${{ steps.pages.outputs.base_url }}/&#34; - name: Upload artifact uses: actions/upload-pages-artifact@v3 with: path: ./public # Deployment job deploy: environment: name: github-pages url: ${{ steps.deployment.outputs.page_url }} runs-on: ubuntu-latest needs: build steps: - name: Deploy to GitHub Pages id: deployment uses: actions/deploy-pages@v4 Head inside the root directory of your sitename hugo git add -A git commit -m &#34;deploying the sitename&#34; git push origin main </p>
   </div>
   <footer class="entry-footer"><span title='2025-03-07 21:45:47 +0530 IST'>March 7, 2025</span></footer>
   <a class="entry-link" aria-label="post link to Instant Page Deploy Hugo" href="http://localhost:1313/posts/instant-page-deploy-hugo/"></a>
@@ -161,10 +162,11 @@ Head inside the directory(hugo site) cd sitename git init Download a theme (we�
   <div class="entry-content">
     <p>Changing DNS Settings In order to change the DNS settings, we can choose two ways
 Hard way (using CLI, actually that’s easy) Easy way (using GUI, kind of lame XD) But let’s do it the hard way, which is more rewarding than using GUI. I particularly don’t have any steps to mention but let’s do it with a scenario which can be easy to understand.
-You just installed a new operating system and you have to change the DNS settings....</p>
+You just installed a new operating system and you have to change the DNS settings.
+...</p>
   </div>
   <footer class="entry-footer"><span title='2025-02-08 21:06:31 +0530 IST'>February 8, 2025</span></footer>
-  <a class="entry-link" aria-label="post link to  DNS Change &amp; Troubleshoot (common)" href="http://localhost:1313/posts/dns-initial/"></a>
+  <a class="entry-link" aria-label="post link to  DNS Change & Troubleshoot (common)" href="http://localhost:1313/posts/dns-initial/"></a>
 </article>
 
 <article class="post-entry tag-entry"> 
@@ -173,7 +175,8 @@ You just installed a new operating system and you have to change the DNS setting
     </h2>
   </header>
   <div class="entry-content">
-    <p>Why this occurs? I don’t whether it’s happening to everyone, but whenever I try to install docker I always end up facing an issue, which won’t let me use docker unless I use sudo while executing the docker commands. Why it’s occurs? Well, it’s because the permission denied when you are trying to connect with the docker daemon socket at unix://var/run/docker.sock. (you will also see an error similar to this....</p>
+    <p>Why this occurs? I don’t whether it’s happening to everyone, but whenever I try to install docker I always end up facing an issue, which won’t let me use docker unless I use sudo while executing the docker commands. Why it’s occurs? Well, it’s because the permission denied when you are trying to connect with the docker daemon socket at unix://var/run/docker.sock. (you will also see an error similar to this.
+...</p>
   </div>
   <footer class="entry-footer"><span title='2025-02-01 16:01:19 +0530 IST'>February 1, 2025</span></footer>
   <a class="entry-link" aria-label="post link to Fix: Access `docker` without sudo" href="http://localhost:1313/posts/docker-sudo-fix/"></a>
@@ -188,10 +191,11 @@ You just installed a new operating system and you have to change the DNS setting
     <p>Install Doom Emacs Head over to this repository and execute the scripts.
 git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs ~/.config/emacs/bin/doom install doom command not recognized Whenever I install doom emacs, I always face this problem and now we’re going to put an end to this error.(!panic)
 The error would look something like mentioned below:
-Error: file-missing (&#34;Cannot open load file&#34; &#34;No such file or directory&#34; &#34;/usr/early-init.el&#34;) mapbacktrace(#f(compiled-function (evald func args flags) #&lt;bytecode -0x1a9589d6c510f34&gt;)) debug-early-backtrace() debug-early(error (file-missing &#34;Cannot open load file&#34; &#34;No such file or directory&#34; &#34;/usr/early-init....</p>
+Error: file-missing (&#34;Cannot open load file&#34; &#34;No such file or directory&#34; &#34;/usr/early-init.el&#34;) mapbacktrace(#f(compiled-function (evald func args flags) #&lt;bytecode -0x1a9589d6c510f34&gt;)) debug-early-backtrace() debug-early(error (file-missing &#34;Cannot open load file&#34; &#34;No such file or directory&#34; &#34;/usr/early-init.el&#34;)) load(&#34;/usr/early-init.el&#34; nil nomessage nosuffix) (and (load init-file nil &#39;nomessage &#39;nosuffix) (featurep &#39;doom)) (or (and (load init-file nil &#39;nomessage &#39;nosuffix) (featurep &#39;doom)) (user-error &#34;Failed to load Doom from %s&#34; init-file)) (let* ((bin-dir (file-name-directory (file-truename load-file-name))) (init-file (expand-file-name &#34;../early-init.el&#34; bin-dir))) (or (and (load init-file nil &#39;nomessage &#39;nosuffix) (featurep &#39;doom)) (user-error &#34;Failed to load Doom from %s&#34; init-file))) (condition-case e (let* ((bin-dir (file-name-directory (file-truename load-file-name))) (init-file (expand-file-name &#34;../early-init.el&#34; bin-dir))) (or (and (load init-file nil &#39;nomessage &#39;nosuffix) (featurep &#39;doom)) (user-error &#34;Failed to load Doom from %s&#34; init-file))) (user-error (message &#34;Error: %s&#34; (car (cdr e))) (kill-emacs 2))) load-with-code-conversion(&#34;/usr/bin/doom&#34; &#34;/usr/bin/doom&#34; nil t) command-line-1((&#34;--load&#34; &#34;/usr/bin/doom&#34; &#34;--&#34;)) command-line() normal-top-level() Cannot open load file: No such file or directory, /usr/early-init.el Let’s fix it:
+...</p>
   </div>
   <footer class="entry-footer"><span title='2025-01-31 18:44:50 +0530 IST'>January 31, 2025</span></footer>
-  <a class="entry-link" aria-label="post link to Doc : `doom` Installation &amp; Unrecognized Command Fix" href="http://localhost:1313/posts/doom-cmd-fix/"></a>
+  <a class="entry-link" aria-label="post link to Doc : `doom` Installation & Unrecognized Command Fix" href="http://localhost:1313/posts/doom-cmd-fix/"></a>
 </article>
 
 <article class="post-entry tag-entry"> 
@@ -201,7 +205,8 @@ Error: file-missing (&#34;Cannot open load file&#34; &#34;No such file or direct
   </header>
   <div class="entry-content">
     <p>Fixing Wired LAN The scenario is very hard to explain, so I’ll write down what happened and we’ll relate them according to the situation. (*Yaash shrugs).
-Connection between my m1 and m2 has been severed. No matter what I do, it can’t establish the connection with the m2 from m1. So, I deleted the network from my machine. When entering nmcli con show, it won’t display the wired LAN. Now, the cable is connected from both sides, meaning the devices are connected physically but the ipv4....</p>
+Connection between my m1 and m2 has been severed. No matter what I do, it can’t establish the connection with the m2 from m1. So, I deleted the network from my machine. When entering nmcli con show, it won’t display the wired LAN. Now, the cable is connected from both sides, meaning the devices are connected physically but the ipv4.addresses are not mapped properly. Steps: Check the device status This command will display the devices that are connected to the machine. It can either be a connected or disconnected devices. Now we’ll identify whether the cable is connected and the machine acknowledged it’s connection.
+...</p>
   </div>
   <footer class="entry-footer"><span title='2025-01-30 20:58:55 +0530 IST'>January 30, 2025</span></footer>
   <a class="entry-link" aria-label="post link to  Fix Wired-LAN Connection; when physically connected but no endpoint" href="http://localhost:1313/posts/fix-lan/"></a>
@@ -213,12 +218,13 @@ Connection between my m1 and m2 has been severed. No matter what I do, it can’
     </h2>
   </header>
   <div class="entry-content">
-    <p>Note: Make sure to Disable Secure Boot, else whatever you do it won’t work :)
+    <p> Note: Make sure to Disable Secure Boot, else whatever you do it won’t work :)
 Install &amp; Switch to NVIDIA 1. Install the required dependencies
 sudo dnf install akmod-nvidia xorg-x11-drv-nvidia xorg-x11-drv-nvidia-cuda 2. Edit the environment configuration file for your shell
 sudo nano /etc/environment 3. Add the following lines to enable the GPU
 __GLX_VENDOR_LIBRARY_NAME=nvidia __NV_PRIME_RENDER_OFFLOAD=1 __VK_LAYER_NV_optimus=NVIDIA_only 4. Restart the system
-sudo reboot 5. Check the status of the currently selected GPU...</p>
+sudo reboot 5. Check the status of the currently selected GPU
+...</p>
   </div>
   <footer class="entry-footer"><span title='2025-01-27 20:32:26 +0530 IST'>January 27, 2025</span></footer>
   <a class="entry-link" aria-label="post link to  Switch to NVIDIA GPU on Linux" href="http://localhost:1313/posts/switch-nvidia/"></a>

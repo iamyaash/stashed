@@ -4,7 +4,7 @@
     <title>Explanation on stashed</title>
     <link>http://localhost:1313/tags/explanation/</link>
     <description>Recent content in Explanation on stashed</description>
-    <generator>Hugo -- 0.126.2</generator>
+    <generator>Hugo -- 0.147.2</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 15 Mar 2025 05:51:27 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/explanation/index.xml" rel="self" type="application/rss+xml" />
@@ -13,8 +13,10 @@
       <link>http://localhost:1313/posts/dhcp/dhcp/</link>
       <pubDate>Sat, 15 Mar 2025 05:51:27 +0000</pubDate>
       <guid>http://localhost:1313/posts/dhcp/dhcp/</guid>
-      <description>What is DHCP? DHCP (Dynamic Host Configuration Protocol) is a network management protol that automates the assignment of IP address to the devices that connect to a network and it also handles other network configuration parameters such as subnet mask, default gateway and DNS settings.
-Why do we need IP address anyway? Let&amp;rsquo;s take an example, You visit a coffee shop and connect to it&amp;rsquo;s Wi-Fi network. In doing so, you are essentially connecting to the shop&amp;rsquo;s router, which provides the internet connection.</description>
+      <description>&lt;h1 id=&#34;what-is-dhcp&#34;&gt;What is DHCP?&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;DHCP (Dynamic Host Configuration Protocol)&lt;/strong&gt; is a network management protol that automates the assignment of IP address to the devices that connect to a network and it also handles other network configuration parameters such as &lt;strong&gt;subnet mask, default gateway and DNS settings&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;why-do-we-need-ip-address-anyway&#34;&gt;Why do we need IP address anyway?&lt;/h3&gt;
+&lt;p&gt;Let&amp;rsquo;s take an example, You visit a coffee shop and connect to it&amp;rsquo;s Wi-Fi network. In doing so, you are essentially connecting to the shop&amp;rsquo;s router, which provides the internet connection. The router itself is connected to an internet service provider(&lt;em&gt;&lt;strong&gt;ISP&lt;/strong&gt;&lt;/em&gt;) via a modem or an antenna(&lt;em&gt;in case of wireless broadband&lt;/em&gt;).&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

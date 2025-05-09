@@ -4,133 +4,133 @@
     <title>Tags on stashed</title>
     <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on stashed</description>
-    <generator>Hugo -- 0.126.2</generator>
+    <generator>Hugo -- 0.147.2</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 29 Apr 2025 17:27:49 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Docs</title>
       <link>http://localhost:1313/tags/docs/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 29 Apr 2025 17:27:49 +0530</pubDate>
       <guid>http://localhost:1313/tags/docs/</guid>
       <description></description>
     </item>
     <item>
       <title>Git</title>
       <link>http://localhost:1313/tags/git/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 29 Apr 2025 17:27:49 +0530</pubDate>
       <guid>http://localhost:1313/tags/git/</guid>
       <description></description>
     </item>
     <item>
       <title>Git-Rebase</title>
       <link>http://localhost:1313/tags/git-rebase/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 29 Apr 2025 17:27:49 +0530</pubDate>
       <guid>http://localhost:1313/tags/git-rebase/</guid>
       <description></description>
     </item>
     <item>
       <title>Tips</title>
       <link>http://localhost:1313/tags/tips/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 29 Apr 2025 17:27:49 +0530</pubDate>
       <guid>http://localhost:1313/tags/tips/</guid>
       <description></description>
     </item>
     <item>
       <title>Jrnl</title>
       <link>http://localhost:1313/tags/jrnl/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 27 Apr 2025 18:28:54 +0530</pubDate>
       <guid>http://localhost:1313/tags/jrnl/</guid>
       <description></description>
     </item>
     <item>
       <title>Notes</title>
       <link>http://localhost:1313/tags/notes/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 27 Apr 2025 18:28:54 +0530</pubDate>
       <guid>http://localhost:1313/tags/notes/</guid>
       <description></description>
     </item>
     <item>
       <title>Usage</title>
       <link>http://localhost:1313/tags/usage/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 27 Apr 2025 18:28:54 +0530</pubDate>
       <guid>http://localhost:1313/tags/usage/</guid>
       <description></description>
     </item>
     <item>
       <title>Backup</title>
       <link>http://localhost:1313/tags/backup/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 18 Apr 2025 20:48:28 +0530</pubDate>
       <guid>http://localhost:1313/tags/backup/</guid>
       <description></description>
     </item>
     <item>
       <title>Setup</title>
       <link>http://localhost:1313/tags/setup/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 18 Apr 2025 20:48:28 +0530</pubDate>
       <guid>http://localhost:1313/tags/setup/</guid>
       <description></description>
     </item>
     <item>
       <title>Script</title>
       <link>http://localhost:1313/tags/script/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 14 Apr 2025 11:28:49 +0530</pubDate>
       <guid>http://localhost:1313/tags/script/</guid>
       <description></description>
     </item>
     <item>
       <title>Server</title>
       <link>http://localhost:1313/tags/server/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 14 Apr 2025 11:28:49 +0530</pubDate>
       <guid>http://localhost:1313/tags/server/</guid>
       <description></description>
     </item>
     <item>
       <title>Raspberry</title>
       <link>http://localhost:1313/tags/raspberry/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 17 Mar 2025 19:22:47 +0530</pubDate>
       <guid>http://localhost:1313/tags/raspberry/</guid>
       <description></description>
     </item>
     <item>
       <title>Explanation</title>
       <link>http://localhost:1313/tags/explanation/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 15 Mar 2025 05:51:27 +0000</pubDate>
       <guid>http://localhost:1313/tags/explanation/</guid>
       <description></description>
     </item>
     <item>
       <title>Pizero</title>
       <link>http://localhost:1313/tags/pizero/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 15 Mar 2025 05:51:27 +0000</pubDate>
       <guid>http://localhost:1313/tags/pizero/</guid>
       <description></description>
     </item>
     <item>
       <title>Network</title>
       <link>http://localhost:1313/tags/network/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 13 Mar 2025 21:43:22 +0530</pubDate>
       <guid>http://localhost:1313/tags/network/</guid>
       <description></description>
     </item>
     <item>
       <title>Android</title>
       <link>http://localhost:1313/tags/android/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 17 Feb 2025 23:22:02 +0530</pubDate>
       <guid>http://localhost:1313/tags/android/</guid>
       <description></description>
     </item>
     <item>
       <title>Docker</title>
       <link>http://localhost:1313/tags/docker/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 01 Feb 2025 16:01:19 +0530</pubDate>
       <guid>http://localhost:1313/tags/docker/</guid>
       <description></description>
     </item>
     <item>
       <title>Troubleshoot</title>
       <link>http://localhost:1313/tags/troubleshoot/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 31 Jan 2025 18:44:50 +0530</pubDate>
       <guid>http://localhost:1313/tags/troubleshoot/</guid>
       <description></description>
     </item>

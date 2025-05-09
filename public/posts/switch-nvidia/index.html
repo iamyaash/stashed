@@ -7,12 +7,20 @@
 <meta name="robots" content="noindex, nofollow">
 <title> Switch to NVIDIA GPU on Linux | stashed</title>
 <meta name="keywords" content="docs, script">
-<meta name="description" content="Note: Make sure to Disable Secure Boot, else whatever you do it won&rsquo;t work :)
-Install &amp; Switch to NVIDIA 1. Install the required dependencies
-sudo dnf install akmod-nvidia xorg-x11-drv-nvidia xorg-x11-drv-nvidia-cuda 2. Edit the environment configuration file for your shell
-sudo nano /etc/environment 3. Add the following lines to enable the GPU
-__GLX_VENDOR_LIBRARY_NAME=nvidia __NV_PRIME_RENDER_OFFLOAD=1 __VK_LAYER_NV_optimus=NVIDIA_only 4. Restart the system
-sudo reboot 5. Check the status of the currently selected GPU">
+<meta name="description" content="
+Note: Make sure to Disable Secure Boot, else whatever you do it won&rsquo;t work :)
+Install &amp; Switch to NVIDIA
+1. Install the required dependencies
+sudo dnf install akmod-nvidia xorg-x11-drv-nvidia xorg-x11-drv-nvidia-cuda
+2. Edit the environment configuration file for your shell
+sudo nano /etc/environment
+3. Add the following lines to enable the GPU
+__GLX_VENDOR_LIBRARY_NAME=nvidia
+__NV_PRIME_RENDER_OFFLOAD=1
+__VK_LAYER_NV_optimus=NVIDIA_only
+4. Restart the system
+sudo reboot
+5. Check the status of the currently selected GPU">
 <meta name="author" content="">
 <link rel="canonical" href="http://localhost:1313/posts/switch-nvidia/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.f49d66caae9ea0fd43f21f29e71a8d3e284517ed770f2aa86fa012953ad3c9ef.css" integrity="sha256-9J1myq6eoP1D8h8p5xqNPihFF&#43;13Dyqob6ASlTrTye8=" rel="preload stylesheet" as="style">
@@ -119,8 +127,7 @@ sudo reboot 5. Check the status of the currently selected GPU">
 </div>
   </header> 
   <div class="post-content"><blockquote>
-<p><code>Note</code>: Make sure to <strong>Disable Secure Boot</strong>, else whatever you do it won&rsquo;t work :)</p>
-</blockquote>
+<p><code>Note</code>: Make sure to <strong>Disable Secure Boot</strong>, else whatever you do it won&rsquo;t work :)</p></blockquote>
 <h1 id="install--switch-to-nvidia">Install &amp; Switch to NVIDIA<a hidden class="anchor" aria-hidden="true" href="#install--switch-to-nvidia">#</a></h1>
 <p><strong>1. Install the required dependencies</strong></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo dnf install akmod-nvidia xorg-x11-drv-nvidia xorg-x11-drv-nvidia-cuda
@@ -137,15 +144,13 @@ sudo reboot 5. Check the status of the currently selected GPU">
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>thisisyaash@yaashs-fedora:~$ glxinfo | grep <span style="color:#e6db74">&#34;OpenGL renderer&#34;</span>
 </span></span><span style="display:flex;"><span>OpenGL renderer string: NVIDIA GeForce RTX <span style="color:#ae81ff">3050</span> Laptop GPU/PCIe/SSE2
 </span></span></code></pre></div><blockquote>
-<p>It will show the result something like this with the respective gpu information</p>
-</blockquote>
+<p>It will show the result something like this with the respective gpu information</p></blockquote>
 <hr>
 <h1 id="if-the-above-steps-didnt-worked-then-follow-the-below-steps-">If the above steps didn&rsquo;t worked, then follow the below steps :)<a hidden class="anchor" aria-hidden="true" href="#if-the-above-steps-didnt-worked-then-follow-the-below-steps-">#</a></h1>
 <p><strong>1. Veriify the NVIDIA Kernel Module:</strong></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>lsmod | grep nvidia
 </span></span></code></pre></div><blockquote>
-<p>If no output then it&rsquo;s not loaded, else <strong>Good</strong>!</p>
-</blockquote>
+<p>If no output then it&rsquo;s not loaded, else <strong>Good</strong>!</p></blockquote>
 <p><strong>2. Reinstall the NVIDIA drivers</strong></p>
 <ul>
 <li><strong>check whether the NVIDIA driver is connected</strong></li>
