@@ -4,10 +4,24 @@
     <title>Tags on stashed</title>
     <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on stashed</description>
-    <generator>Hugo -- 0.147.2</generator>
+    <generator>Hugo -- 0.147.5</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 29 Apr 2025 17:27:49 +0530</lastBuildDate>
+    <lastBuildDate>Fri, 09 May 2025 16:22:55 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cheat-Sheet</title>
+      <link>http://localhost:1313/tags/cheat-sheet/</link>
+      <pubDate>Fri, 09 May 2025 16:22:55 +0530</pubDate>
+      <guid>http://localhost:1313/tags/cheat-sheet/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tmux</title>
+      <link>http://localhost:1313/tags/tmux/</link>
+      <pubDate>Fri, 09 May 2025 16:22:55 +0530</pubDate>
+      <guid>http://localhost:1313/tags/tmux/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Docs</title>
       <link>http://localhost:1313/tags/docs/</link>

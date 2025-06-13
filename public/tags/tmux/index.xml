@@ -4,17 +4,16 @@
     <title>Tmux on stashed</title>
     <link>http://localhost:1313/tags/tmux/</link>
     <description>Recent content in Tmux on stashed</description>
-    <generator>Hugo -- 0.147.2</generator>
+    <generator>Hugo -- 0.147.5</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 09 May 2025 16:22:55 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/tmux/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>cheat: tmux basic usage</title>
+      <title>cheat-sheet: tmux basic usage</title>
       <link>http://localhost:1313/posts/tmux/tmux/</link>
       <pubDate>Fri, 09 May 2025 16:22:55 +0530</pubDate>
       <guid>http://localhost:1313/posts/tmux/tmux/</guid>
-      <description>&lt;h1 id=&#34;what-is-tmux&#34;&gt;What is tmux?&lt;/h1&gt;
-&lt;p&gt;tmux is a program which runs in a terminal and allows multiple other terminal programs to be run inside it. Each program inside tmux gets its own terminal managed by tmux, which can be accessed from the single terminal where tmux is running - this called multiplexing and tmux is a terminal multiplexer.&lt;/p&gt;</description>
+      <description>Cheat Sheet &amp;amp; Quick Reference for tmux</description>
     </item>
   </channel>
 </rss>

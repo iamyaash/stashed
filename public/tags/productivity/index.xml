@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Productivity on stashed</title>
+    <link>http://localhost:1313/tags/productivity/</link>
+    <description>Recent content in Productivity on stashed</description>
+    <generator>Hugo -- 0.147.5</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 12 Jun 2025 23:12:13 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/productivity/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Do You Keep Forgetting The Shortcut Keys Often?</title>
+      <link>http://localhost:1313/posts/tips/tip-of-the-sesstion/</link>
+      <pubDate>Thu, 12 Jun 2025 23:12:13 +0530</pubDate>
+      <guid>http://localhost:1313/posts/tips/tip-of-the-sesstion/</guid>
+      <description>I often forget the shortcut keys of editors and other tools. This post explains how I overcame the problem by using a simple trick that makes them easier to remember over time.</description>
+    </item>
+  </channel>
+</rss>
