@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>User &amp; Group Management | stashed</title>
+<meta name="keywords" content="linux, permissions, user-group">
+<meta name="description" content="How to manage users &amp; groups on Linux based operating systems, with exercise based explanations!">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/user-group-management/user-group/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.93f625d739f1d6a5c6f20c146bc6a8d26b233492b34b2220c54b12fd46a04ded.css" integrity="sha256-k/Yl1znx1qXG8gwUa8ao0msjNJKzSyIgxUsS/UagTe0=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/user-group-management/user-group/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="stashed (Alt + H)">stashed</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      User &amp; Group Management
+    </h1>
+    <div class="post-meta"><span title='2025-06-15 14:51:16 +0530 IST'>June 15, 2025</span>&nbsp;·&nbsp;4 min
+
+</div>
+  </header> <div class="toc">
+    <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#what-is-a-user--group-in-linux" aria-label="What is a user &amp; group in Linux?">What is a user &amp; group in Linux?</a><ul>
+                        <ul>
+                        
+                <li>
+                    <a href="#user" aria-label="User">User</a></li>
+                <li>
+                    <a href="#group" aria-label="Group">Group</a></li></ul>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#how-permissions-work" aria-label="How Permissions Work?">How Permissions Work?</a></li>
+                <li>
+                    <a href="#how-to-manage-user--group" aria-label="How to Manage user &amp; group?">How to Manage user &amp; group?</a><ul>
+                        <ul>
+                        
+                <li>
+                    <a href="#1-view-current-user-information" aria-label="1. View Current User Information">1. View Current User Information</a></li>
+                <li>
+                    <a href="#2-create-a-new-user" aria-label="2. Create a New User">2. Create a New User</a></li>
+                <li>
+                    <a href="#3-create-a-new-group" aria-label="3. Create a New Group">3. Create a New Group</a></li>
+                <li>
+                    <a href="#4-add-a-user-to-a-group" aria-label="4. Add a User to a Group">4. Add a User to a Group</a></li>
+                <li>
+                    <a href="#5-create-a-file-and-set-group-ownership" aria-label="5. Create a File and Set Group Ownership">5. Create a File and Set Group Ownership</a></li>
+                <li>
+                    <a href="#6-set-group-permissions-on-a-file" aria-label="6. Set Group Permissions on a File">6. Set Group Permissions on a File</a></li>
+                <li>
+                    <a href="#7-test-access-as-another-group-member" aria-label="7. Test Access as Another Group Member">7. Test Access as Another Group Member</a></li></ul>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#summary" aria-label="Summary">Summary</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h1 id="what-is-a-user--group-in-linux">What is a <code>user</code> &amp; <code>group</code> in Linux?<a hidden class="anchor" aria-hidden="true" href="#what-is-a-user--group-in-linux">#</a></h1>
+<p>In Linux, the terms <code>user</code> &amp; <code>group</code> refer to system identities and how access is managed. A <code>user</code> represents an individual identity, while a <code>group</code> defines a collection of users who share the same access rights. Ultimately, access control in Linux revolves around these two concepts, who is accessing (<code>user</code>) and what permissions they have through the group that they are associated with (<code>group</code>).</p>
+<p>A Linux system without proper user and group management would be insecure, allowing anyone to access any data they want.</p>
+<h3 id="user">User<a hidden class="anchor" aria-hidden="true" href="#user">#</a></h3>
+<p>A <code>user</code> is an individual account on the system. Each user has:</p>
+<ul>
+<li>A <strong>username</strong></li>
+<li>A <strong>password</strong></li>
+<li>Their own <strong>home directory</strong> (<code>/home/&lt;username&gt;</code>)</li>
+<li>Their own set of <strong>permissions</strong></li>
+</ul>
+<p>Every time someone logs into the system, they do so as a &ldquo;user&rdquo;.</p>
+<h3 id="group">Group<a hidden class="anchor" aria-hidden="true" href="#group">#</a></h3>
+<p>A group is a collection of users. Instead of assigning permission to each other individually, Linux allows permissions to be assigned to a group. All users in a group inherit the group&rsquo;s permissions.</p>
+<h1 id="how-permissions-work">How Permissions Work?<a hidden class="anchor" aria-hidden="true" href="#how-permissions-work">#</a></h1>
+<p>Every file and directory in Linux has <strong>three types of access control</strong>:</p>
+<ol>
+<li>Owner (<code>user</code>)</li>
+<li>Group (<code>group</code>)</li>
+<li>Others</li>
+</ol>
+<p>Each of these can be given different permission levels:</p>
+<ol>
+<li>Read(<code>r</code>) - View the Contents</li>
+<li>Write (<code>w</code>) - Modify the Contens</li>
+<li>Execute (<code>x</code>) - Run/Execute the File (script/program)</li>
+</ol>
+<p>Let take a look at a good example of how it&rsquo;s going to look like on a file:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>total <span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span>drwxr-xr-x. <span style="color:#ae81ff">1</span> iamyaash iamyaash  <span style="color:#ae81ff">20</span> Jun <span style="color:#ae81ff">12</span> 23:09 archetypes
+</span></span><span style="display:flex;"><span>-rw-r--r--. <span style="color:#ae81ff">1</span> iamyaash iamyaash <span style="color:#ae81ff">596</span> Jun <span style="color:#ae81ff">15</span> 14:40 config.yaml
+</span></span><span style="display:flex;"><span>drwxr-xr-x. <span style="color:#ae81ff">1</span> iamyaash iamyaash  <span style="color:#ae81ff">28</span> Jun <span style="color:#ae81ff">12</span> 23:09 content
+</span></span><span style="display:flex;"><span>drwxr-xr-x. <span style="color:#ae81ff">1</span> iamyaash iamyaash <span style="color:#ae81ff">180</span> Jun <span style="color:#ae81ff">12</span> 23:09 public
+</span></span><span style="display:flex;"><span>drwxr-xr-x. <span style="color:#ae81ff">1</span> iamyaash iamyaash  <span style="color:#ae81ff">56</span> Jun <span style="color:#ae81ff">13</span> 19:28 scripts
+</span></span><span style="display:flex;"><span>drwxr-xr-x. <span style="color:#ae81ff">1</span> iamyaash iamyaash  <span style="color:#ae81ff">16</span> Jun <span style="color:#ae81ff">12</span> 23:09 themes
+</span></span></code></pre></div><ol>
+<li><code>drwxr-xr-x</code>  - Means the</li>
+</ol>
+<ul>
+<li><strong>owner has full access (<code>iamyaash</code>)</strong></li>
+<li><strong>group has execute &amp; read access</strong></li>
+<li><strong>others have execute access</strong>.</li>
+</ul>
+<ol start="2">
+<li><code>rw-r-r</code> - Means the</li>
+</ol>
+<ul>
+<li><strong>owner has read &amp; write access</strong></li>
+<li><strong>group and others only have read access</strong></li>
+</ul>
+<ol start="3">
+<li><code>iamyaash</code> is the owner.</li>
+<li><code>iamyaash</code> is the group (<em>same name as the user, nvm :P</em>)</li>
+</ol>
+<h1 id="how-to-manage-user--group">How to Manage <code>user</code> &amp; <code>group</code>?<a hidden class="anchor" aria-hidden="true" href="#how-to-manage-user--group">#</a></h1>
+<p>Let&rsquo;s learn how to manage both <code>user</code> &amp; <code>group</code> using hands-on excercize to help understand and practice how users and groups work in Linux.</p>
+<h3 id="1-view-current-user-information">1. View Current User Information<a hidden class="anchor" aria-hidden="true" href="#1-view-current-user-information">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>whoami
+</span></span><span style="display:flex;"><span>id
+</span></span></code></pre></div><ul>
+<li><code>whoami</code> displays the current username</li>
+<li><code>id</code> display the group IDs which the current user is part of.</li>
+</ul>
+<h3 id="2-create-a-new-user">2. Create a New User<a hidden class="anchor" aria-hidden="true" href="#2-create-a-new-user">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo useradd newUser
+</span></span><span style="display:flex;"><span>sudo passwd newUser
+</span></span></code></pre></div><ul>
+<li><code>useradd</code> create a user named &ldquo;<code>newUser</code>&rdquo;</li>
+<li><code>passwd</code> to set password for the user &ldquo;<code>newUser</code>&rdquo;</li>
+</ul>
+<h3 id="3-create-a-new-group">3. Create a New Group<a hidden class="anchor" aria-hidden="true" href="#3-create-a-new-group">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo groupadd devGroup
+</span></span></code></pre></div><ul>
+<li>create a group named <code>devGroup</code></li>
+</ul>
+<h3 id="4-add-a-user-to-a-group">4. Add a User to a Group<a hidden class="anchor" aria-hidden="true" href="#4-add-a-user-to-a-group">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo usermod -aG devGroup newUser
+</span></span></code></pre></div><ul>
+<li>Add <code>newUser</code> (<strong><code>user</code></strong>) to <code>devGroup</code> (<strong><code>group</code></strong>)</li>
+<li><code>a</code> &ldquo;a&rdquo; stands of append used with <code>G</code>, it ensures the user is added to the specified group(s) without being removed from the existing groups.</li>
+<li><code>G</code> specifies the supplementary group(s) which the user should be added. (you can user multiple group separated by commas)</li>
+</ul>
+<h3 id="5-create-a-file-and-set-group-ownership">5. Create a File and Set Group Ownership<a hidden class="anchor" aria-hidden="true" href="#5-create-a-file-and-set-group-ownership">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo su - newUser
+</span></span><span style="display:flex;"><span>cd -
+</span></span><span style="display:flex;"><span>touch demo.txt
+</span></span><span style="display:flex;"><span>ls -l demo.txt
+</span></span></code></pre></div><p>In the above commands, we&rsquo;re switching to <code>newUser</code> and creating a file with it. Listing it will show the file&rsquo;s owner is <code>newUser</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#75715e"># Output from my device</span>
+</span></span><span style="display:flex;"><span>iamyaash@fedora:~$ ll
+</span></span><span style="display:flex;"><span>total <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>-rw-r--r--. <span style="color:#ae81ff">1</span> iamyaash iamyaash   <span style="color:#ae81ff">0</span> Jun <span style="color:#ae81ff">15</span> 16:07  demo.txt
+</span></span></code></pre></div><p>Let&rsquo;s switch to <code>root</code> user and change the group permissions,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo chgrp dev /home/newUser/demo.txt
+</span></span><span style="display:flex;"><span>ls -l /home/newUser/demo.txt
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#75715e"># Output from my device</span>
+</span></span><span style="display:flex;"><span>iamyaash@fedora:~$ sudo chgrp wheel demo.txt 
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>sudo<span style="color:#f92672">]</span> password <span style="color:#66d9ef">for</span> iamyaash: 
+</span></span><span style="display:flex;"><span>iamyaash@fedora:~$ ll
+</span></span><span style="display:flex;"><span>total <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>-rw-r--r--. <span style="color:#ae81ff">1</span> iamyaash wheel      <span style="color:#ae81ff">0</span> Jun <span style="color:#ae81ff">15</span> 16:07  demo.txt
+</span></span></code></pre></div><h3 id="6-set-group-permissions-on-a-file">6. Set Group Permissions on a File<a hidden class="anchor" aria-hidden="true" href="#6-set-group-permissions-on-a-file">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>chmod <span style="color:#ae81ff">640</span> /home/newUser/demo.txt
+</span></span></code></pre></div><p>Let&rsquo;s understand the numeric permissions notations:</p>
+<ol>
+<li><code>4</code> - r: Read</li>
+<li><code>2</code> - w: Write</li>
+<li><code>1</code> - x: Execute</li>
+</ol>
+<p>This is the permission of the current file:</p>
+<ol>
+<li><code>6</code> - user: read/write (4+2)</li>
+<li><code>4</code> - group: read (4)</li>
+<li><code>0</code> - others: no permission (0)</li>
+</ol>
+<h3 id="7-test-access-as-another-group-member">7. Test Access as Another Group Member<a hidden class="anchor" aria-hidden="true" href="#7-test-access-as-another-group-member">#</a></h3>
+<ol>
+<li>Add yourself into <code>customGroup</code> (create a group for this to experiment)</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>sudo usermod -aG customGroup newUser
+</span></span></code></pre></div><ol start="2">
+<li>Update your <code>group</code> access or log out and log back in.</li>
+</ol>
+<pre tabindex="0"><code>newgrp customGroup
+</code></pre><ol start="3">
+<li>Try accessing the <code>/home/newUser/demo.txt</code></li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>cat /home/newUser/demo.txt
+</span></span></code></pre></div><h1 id="summary">Summary<a hidden class="anchor" aria-hidden="true" href="#summary">#</a></h1>
+<p>To sum it up, <code>user</code> is an individual identity in Linux with its own <em>username</em> &amp; <em>password</em> and set of permissions. A <code>group</code> is a collection of multiple users that allows shared access to files or resources based on group permissions. They both form the Foundation of Linux&rsquo;s access control system.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/linux/">Linux</a></li>
+      <li><a href="http://localhost:1313/tags/permissions/">Permissions</a></li>
+      <li><a href="http://localhost:1313/tags/user-group/">User-Group</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">stashed</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

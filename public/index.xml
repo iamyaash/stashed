@@ -6,8 +6,15 @@
     <description>Recent content on stashed</description>
     <generator>Hugo -- 0.147.5</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 12 Jun 2025 23:12:13 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 15 Jun 2025 14:51:16 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>User &amp; Group Management</title>
+      <link>http://localhost:1313/posts/user-group-management/user-group/</link>
+      <pubDate>Sun, 15 Jun 2025 14:51:16 +0530</pubDate>
+      <guid>http://localhost:1313/posts/user-group-management/user-group/</guid>
+      <description>How to manage users &amp;amp; groups on Linux based operating systems, with exercise based explanations!</description>
+    </item>
     <item>
       <title>An Easy Way to Remember Shortcuts</title>
       <link>http://localhost:1313/posts/tips/tip-of-the-sesstion/</link>
@@ -357,20 +364,6 @@ container in &lt;strong&gt;Raspberry Pi 5 8GB&lt;/strong&gt; device (I know it&a
 &lt;/ol&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo nmcli device wifi list
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;In case, it didn&amp;rsquo;t display any network, please &lt;code&gt;rescan&lt;/code&gt; the available network and list it:&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Goto: Open Source Android Applications to Use</title>
-      <link>http://localhost:1313/posts/goto-apps-android/</link>
-      <pubDate>Mon, 17 Feb 2025 23:22:02 +0530</pubDate>
-      <guid>http://localhost:1313/posts/goto-apps-android/</guid>
-      <description>&lt;h1 id=&#34;why-open-source&#34;&gt;Why Open Source?&lt;/h1&gt;
-&lt;p&gt;Well, why not?&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;I like open source applications and I prefer using them over monopolized, propreitary or closed-source applications. I want to break the cyle and inspire people to use alternative and support FOSS in every possible way&lt;/em&gt;.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;besides I&amp;rsquo;m an open-source/FOSS enthusiast + a nerd (hehe)&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;
-&lt;h2 id=&#34;1-droid-ify---f-droid-client-with-material-ui&#34;&gt;1. &lt;a href=&#34;https://github.com/Droid-ify/client&#34;&gt;&lt;code&gt;droid-ify&lt;/code&gt;&lt;/a&gt; - F-Droid client with Material UI&lt;/h2&gt;
-&lt;p&gt;This is like a play-store for &lt;strong&gt;Open-Source&lt;/strong&gt; applications. Finding the applications is a breeze!
-I have listed it because the downstream is easy after installing this application.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Universal Android De-Bloater</title>

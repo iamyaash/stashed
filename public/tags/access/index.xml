@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Access on stashed</title>
+    <link>http://localhost:1313/tags/access/</link>
+    <description>Recent content in Access on stashed</description>
+    <generator>Hugo -- 0.147.5</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 12 May 2025 14:51:16 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/access/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>User &amp; Group Management</title>
+      <link>http://localhost:1313/posts/user-group-management/user-group/</link>
+      <pubDate>Mon, 12 May 2025 14:51:16 +0530</pubDate>
+      <guid>http://localhost:1313/posts/user-group-management/user-group/</guid>
+      <description>How to manage users &amp;amp; groups on Linux based operating systems, with exercise based explanations!</description>
+    </item>
+  </channel>
+</rss>

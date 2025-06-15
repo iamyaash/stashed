@@ -6,6 +6,8 @@ draft: false
 tags:
   - tips
   - productivity
+Params:
+    ShowReadingTime: true
 cover:
   image: posts/tips/tips.png
   alt: tips
