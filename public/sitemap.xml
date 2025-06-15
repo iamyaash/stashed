@@ -8,16 +8,22 @@
     <loc>http://localhost:1313/posts/</loc>
     <lastmod>2025-06-12T23:12:13+05:30</lastmod>
   </url><url>
+    <loc>http://localhost:1313/tags/productivity/</loc>
+    <lastmod>2025-06-12T23:12:13+05:30</lastmod>
+  </url><url>
     <loc>http://localhost:1313/</loc>
+    <lastmod>2025-06-12T23:12:13+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-06-12T23:12:13+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/tips/</loc>
     <lastmod>2025-06-12T23:12:13+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/cheat-sheet/</loc>
     <lastmod>2025-05-09T16:22:55+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/tmux/tmux/</loc>
-    <lastmod>2025-05-09T16:22:55+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-05-09T16:22:55+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/tmux/</loc>
@@ -33,9 +39,6 @@
     <lastmod>2025-04-29T17:27:49+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/git/rebasing-tips/</loc>
-    <lastmod>2025-04-29T17:27:49+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/tips/</loc>
     <lastmod>2025-04-29T17:27:49+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/jrnl/</loc>

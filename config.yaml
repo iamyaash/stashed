@@ -13,3 +13,16 @@ outputs:
     - HTML
     - RSS
     - JSON # necessary for search
+
+languages:
+  en:
+    languageName: "English"
+    weight: 1
+    menu:
+      main:
+        - name: Search
+          url: search/
+          weight: 8
+        - name: Tags
+          url: tags/
+          weight: 10

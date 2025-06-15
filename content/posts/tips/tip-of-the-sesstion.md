@@ -1,5 +1,5 @@
 ---
-title: 'Do You Keep Forgetting The Shortcut Keys Often?'
+title: 'An Easy Way to Remember Shortcuts'
 summary: "I often forget the shortcut keys of editors and other tools. This post explains how I overcame the problem by using a simple trick that makes them easier to remember over time."
 date: 2025-06-12T23:12:13+05:30
 draft: false
