@@ -16,13 +16,6 @@
       <description>I often forget the shortcut keys of editors and other tools. This post explains how I overcame the problem by using a simple trick that makes them easier to remember over time.</description>
     </item>
     <item>
-      <title>User &amp; Group Management</title>
-      <link>http://localhost:1313/posts/user-group-management/user-group/</link>
-      <pubDate>Mon, 12 May 2025 14:51:16 +0530</pubDate>
-      <guid>http://localhost:1313/posts/user-group-management/user-group/</guid>
-      <description>How to manage users &amp;amp; groups on Linux based operating systems, with exercise based explanations!</description>
-    </item>
-    <item>
       <title>cheat-sheet: tmux basic usage</title>
       <link>http://localhost:1313/posts/tmux/tmux/</link>
       <pubDate>Fri, 09 May 2025 16:22:55 +0530</pubDate>
