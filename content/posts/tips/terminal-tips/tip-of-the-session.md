@@ -9,7 +9,7 @@ tags:
 Params:
     ShowReadingTime: true
 cover:
-  image: posts/tips/tips.png
+  image: posts/tips/terminal-tips/tips.png
   alt: tips
 ---
 
