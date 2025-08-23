@@ -5,8 +5,8 @@ theme: ["PaperMod"]
 
 params:
   homeInfoParams:
-    Title: I store my documents and reports here!
-    Content: It consists of docs, fixes, reports, tips and so on... Moslty the stuffs that I feel like to make note of it for future reference!
+    Title: My Collection of Docs, Reports & Tips (and maybe yours too!)
+    Content: It contains documentation, fixes, reports, tips, and related material. The focus is primarily on experimentation and exploration, either in areas that interest me or in efforts to expand my knowledge. I also use it to record notes for future reference.
 
 outputs:
   home:
