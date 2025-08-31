@@ -25,6 +25,8 @@ List of privacy-focussed or open-source applications are listed here. It will up
 
 _I like `chromite` tho :P_
 
-## 3. [`bitwarden mobile`](https://github.com/bitwarden/mobile) - Password Manager
+## 3. [Obtainium](https://github.com/ImranR98/Obtainium) - Get Android app updates straight from the source.
+
+## 4. [`bitwarden mobile`](https://github.com/bitwarden/mobile) - Password Manager
 
 Well, now you'll need the crendentials to login and that's where `bitwarden` comes in. Generate strong passwords with in-build _Password Generator_ and store the passwords in there. Also you can store ssh keys, notes, cards and more.

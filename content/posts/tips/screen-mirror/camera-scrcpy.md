@@ -7,8 +7,11 @@ tags:
 - scrcpy
 - utils
 params:
+    author: "Yashwanth Rathakrishnan"
     ShowReadingTime: true
     ShowCodeCopyButtons: true
+    ShowToc: true
+    TocOpen: true
     ShowBreadCrumbs: true
 cover:
     image: posts/tips/screen-mirror/img/scrcpy.png
