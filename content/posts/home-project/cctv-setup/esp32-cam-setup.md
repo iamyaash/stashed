@@ -7,6 +7,10 @@ tags:
 - DIY
 - CCTV
 params:
+    author: "Yashwanth Rathakrishnan"
+    ShowReadingTime: true
+    ShowCodeCopyButtons: true
+    ShowToc: true
     TocOpen: true
     ShowBreadCrumbs: true
 cover:
