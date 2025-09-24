@@ -7,6 +7,7 @@ tags:
 - Docker
 - Forgejo
 - Playwright
+- Test
 params:
     author: "Yashwanth Rathakrishnan"
     ShowReadingTime: true
