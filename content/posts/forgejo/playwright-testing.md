@@ -36,15 +36,24 @@ docker pull iamyaash8/playwright-forgejo:v1.54.2.1-noble
 cd forgejo/
 ```
 ```sh
-docker run -it --rm -v .:/home/forgejo-tester iamyaash8/playwright-forgejo:v1.54.2.1-noble
+docker run -it --rm -v .:/home/forgejo-tester/forgejo iamyaash8/playwright-forgejo:v1.54.2.1-noble
 ```
 
 ---
 ### Inside the Container
-Make sure to clean frontend build, before running any tests and install `playwright`:
+Run this commands to install playwright and it's dependencies:
 ```sh
-make clean frontend && npx playwright install-deps
+npx playwright install-deps && npx playwright install
 ```
+
+The files inside `~/forgejo` are owned by the root user of the running container, which in this case is `ubuntu` (both `username` & `groupname`). Make sure to change the ownership of the files to `$USER`. In this container, the user `forgejo-tester`.
+```sh
+sudo chown -R forgejo-tester:forgejo-tester *
+```
+
+> **Note**: Make sure to execute this command again outside the container to revert the ownership back to the user after terminating the container.
+
+
 <!-- - Set the environment variable for `TAGS`:
 ```sh
 TAGS="sqlite sqlite_unlock_notify" >> ~/.bashrc
