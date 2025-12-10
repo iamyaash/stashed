@@ -76,3 +76,34 @@ PASS
 
 > Note: Running a `make` commad to run test case will always initiate a `debugserver` in background and runs on tests  on top of the running server.
 
+---
+
+### Running Integration Test on Docker Container
+1. Pull this Docker Image:
+```sh
+docker pull iamyaash8/playwright-forgejo:v1.54.2.1-noble
+```
+2. Run the container while inside the Forgejo directory:
+```sh
+docker run -it --rm -v .:/home/forgejo-tester/forgejo iamyaash8/playwright-forgejo:v1.54.2.1-noble
+```
+3. Install Dependencies
+```sh
+npx playwright install-deps && npx playwright install
+```
+
+> By now, you should have all the required dependencies to run the integration test inside the container.
+Ensure you run this command before executing any tests:
+```sh
+make clean build
+```
+Run individual test using this command:
+```sh
+make test-sqlite#GPG
+```
+Or run full-suite test using these commands:
+```sh
+make test-sqlite #runs tests using SQLite
+make test-pgsql  #runs tests using PostgreSQL
+make test-mysql  #runs tests using MySQL
+```
