@@ -1,7 +1,7 @@
 ---
-date: '2025-09-24T17:10:43+05:30'
+date: '2025-12-23'
 draft: false
-title: 'Forgejo: Getting Started with Integration Tests'
+title: 'Forgejo: Getting Started with Integration Tests & E2E Tests'
 summary: "A beginner-friendly guide to running integration tests in Forgejo. Learn how to execute individual tests, use tools like 'make' and 'go', and explore the essential basics to help you get started with integration testing."
 tags:
 - Forgejo
@@ -75,9 +75,7 @@ PASS
 {{< /collapse >}}
 
 > Note: Running a `make` commad to run test case will always initiate a `debugserver` in background and runs on tests  on top of the running server.
-
 ---
-
 ### Running Integration Test on Docker Container
 1. Pull this Docker Image:
 ```sh
@@ -106,4 +104,42 @@ Or run full-suite test using these commands:
 make test-sqlite #runs tests using SQLite
 make test-pgsql  #runs tests using PostgreSQL
 make test-mysql  #runs tests using MySQL
+```
+
+# Running E2E Tests
+1. **Clean** cached data & **Build** the binary:
+```sh
+make clean     #delete backend and integration files
+make clean all #delete backend, frontend and integration files
+```
+```sh
+make build          #build everything
+make build frontend #build frontend files
+make build backend  #build backend files
+```
+Run these commands in case you run into any functional or visual error, while making changes or updating the code.
+
+
+2. Run **Debug Server**:
+```sh
+make test-e2e-debugserver
+```
+Debug server runs on port `3003` and it must run in the background to execute e2e tests.
+
+3. **Running Playwright** E2E Tests:
+```sh
+npx playwright test --ui
+```
+It runs **Playwright in UI mode** which uses Chromium to simulate navigating and executing test on real time in browser and it shows the screen-shot as well.
+
+### Running Playwright Tests on Terminal
+```sh
+npx playwright test tests/e2e/pr-review.test.e2e.ts
+npx playwright test tests/e2e/* # run e2e tests only
+# it's flexible to use it the way you want
+```
+
+### Running Playwright Tests on UI
+```sh
+npx playwright test --ui
 ```
