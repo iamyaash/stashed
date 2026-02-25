@@ -1,28 +1,30 @@
 ---
 date: '2026-02-25T16:31:44+05:30'
-draft: true
-title: 'Cloudflare Tunnel Setup On Airfiber Internet'
+draft: false
+title: 'Cloudflare Tunnel Setup On Airfiber/Cellular Internet'
 summary: "If you own an Airfiber connection, then you most probably have trouble hosting your application on public domain. Airfiber depends on cellular internet connection, hence you won't be provided with static IP. That's where Cloudflare tunnel comes in to save you!"
 tags:
 - Cloudflare
 - Tunnel
 - Airfiber/Cellular Internet
 - Self Host
+
 author: "Yashwanth Rathakrishnan"
 ShowToc: true
 TocOpen: true 
 ShowReadingTime: true
 ShowBreadCrumbs: true
 ShowCodeCopyButtons: true
+
 cover:
     image: "posts/cloudflare/img/cloudflare-tunnel.png"
     alt: "Cloudflare Tunnel"
 ---
 
 # Why Airfiber?
-I'm living in a remote area, and getting internet connection is impossible. Fortunately, I was able to get an [Airfiber](https://www.jio.com/airfiber/) connection from [Jio](https://www.jio.com/), and I have been using that as my primary internet source for a while. I started using Raspberry Pi, broke some things and I have been using locally hosted services, then I got a free domain name using my college student email, and I decided to host my own services on public domain only to find out that I need static IP to host applications. Which is not possible, if you are using cellular internet connection, because it changes frequently.
+I'm living in a remote area, and getting internet connection is nearly impossible. Fortunately, I was able to get an [Airfiber](https://www.jio.com/airfiber/) connection from [Jio](https://www.jio.com/), and I have been using that as my primary internet source for a while. I started using Raspberry Pi, broke some things and I have been using locally hosted services, then I got a free domain name using my college student email, and I decided to host my own services on public domain only to find out that I need static IP to host applications. Which is not possible, if you are using cellular internet connection, because it changes frequently.
 
-I started digging into this issue, and that eventually led me to [Cloudflare tunnels](https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/) which helped me host services even with Airfiber/Cellular internet connection. The process is straightforward and simple, but I did faced some errors in the beginning but I found a workaround to make it happen. This post will be about how to host services on public domain with the help of Cloudflare tunnels and let's get started!
+I started digging into this issue, and that eventually led me to [Cloudflare tunnels](https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/) which helped me host servcies even with Airfiber/Cellular internet connection. The process is straightforward and simple, but I did faced some errors in the beginning but I found a workaround to make it happen. This post will be about how to host services on public domain with the help of Cloudflare tunnels and let's get started!
 
 # Getting Started
 ## Install `cloudflared`
@@ -62,23 +64,29 @@ cloudflared tunnel login
 ```
 - Running this command will prompt you the link to log into your Cloudflared account and also opens the default browser with the provided link.
 - Also, it generates an account certificate, which will be used for cloudflared authentication purposes.
-2. Create a tunnel
+{{< figure 
+  src="/posts/cloudflare/img/authorize-login.png"  
+  caption="Ensure you see this 'Success' page after authorization and proceed to the next step." 
+  alt="Cloudflared Login Authorization" 
+  width="100%"
+>}}
+2. Create a Tunnel
 ```sh
 cloudflared tunnel create <TUNNEL_NAME>
 ```
 *Sample Output*:
 ```sh
 iamyaash-lubuntu@lubuntu:~$ cloudflared tunnel create l-tunnel
-Tunnel credentials written to /home/iamyaash-lubuntu/.cloudflared/75c13246-0467-4f74-98c6-494207162f91.json. cloudflared chose this file based on where your origin certificate was found. Keep this file secret. To revoke these credentials, delete the tunnel.
+Tunnel credentials written to /home/iamyaash-lubuntu/.cloudflared/75xxxx46-xxxx-xxxx-xxxx-xxxxxxxxxxxx.json. cloudflared chose this file based on where your origin certificate was found. Keep this file secret. To revoke these credentials, delete the tunnel.
 
-Created tunnel l-tunnel with id 75c13246-0467-4f74-98c6-494207162f91
+Created tunnel l-tunnel with id 75xxxx46-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 ```
 > **Copy the UUID** because you'll need it later!
-- Running this command creates credential file into `~/.cloudflared/*.json` (_default directory_)
+- Running this command creates a credential file into `~/.cloudflared/*.json` (_default directory_)
 - Create a tunnel by establishing a persistent relationship between the name you provide and a UUID for your tunnel. 
-- But there's no connection is active within the tunnel yet. Because, we need to configure the tunnel before activating any connection.
+- However, there's no connection is active currently within the tunnel yet. Because, we need to configure the tunnel before establishing any connection.
 
-3. Verify the tunnel has been created successfully (_Optional_)
+3. Verify the tunnel has been created successfully
 ```sh
 cloudflared tunnel list
 ```
