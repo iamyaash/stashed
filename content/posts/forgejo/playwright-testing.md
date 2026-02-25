@@ -15,7 +15,6 @@ params:
     ShowToc: true
     TocOpen: true
     ShowBreadCrumbs: true
-    ShowCodeCopyButtons: true
 ---
 # Overview
 The Forgejo project uses Playwright for testing its codebase. However, Playwright does not work on non-Debian-based Linux distributions. The usual workaround is to spin up a VM, but this consumes many resources and slows down your machine. 

@@ -13,7 +13,6 @@ params:
     ShowToc: true
     TocOpen: true
     ShowBreadCrumbs: true
-    ShowCodeCopyButtons: true
 ---
 <!-- # Overview
 This guide will focus on looking through the errors and finding ways to debug and fix it instead of vaguely mentioning how to work with it. -->
