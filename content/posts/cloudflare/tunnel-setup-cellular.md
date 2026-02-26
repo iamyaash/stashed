@@ -65,7 +65,7 @@ cloudflared tunnel login
 - Running this command will prompt you the link to log into your Cloudflared account and also opens the default browser with the provided link.
 - Also, it generates an account certificate, which will be used for cloudflared authentication purposes.
 {{< figure 
-  src="/posts/cloudflare/img/authorize-login.png"  
+  src="/stashed/posts/cloudflare/img/authorize-login.png"  
   caption="Ensure you see this 'Success' page after authorization and proceed to the next step." 
   alt="Cloudflared Login Authorization" 
   width="100%"
