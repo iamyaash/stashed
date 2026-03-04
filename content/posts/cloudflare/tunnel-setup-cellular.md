@@ -101,8 +101,8 @@ touch ~/.cloudflared/config.yml
 nvim config.yml
 ```
 ```yaml
-tunnel: <UUID>
-credentials-file: /home/<username>/.cloudflared/<TUNNEL_ID>.json
+tunnel: <TUNNEL_UUID>
+credentials-file: /home/<username>/.cloudflared/<TUNNEL_UUID>.json
 origincert: /home/<username>/.cloudflared/cert.pem
 
 
@@ -113,7 +113,7 @@ ingress:
 
   - service: http_status:404
 ```
-- Paste the tunnel id you copied before in `<UUID>`.
+- Paste the tunnel id you copied before in `<TUNNEL_UUID>`.
 - Point both the `credentials-file` & `origincert` to the correct location.
 - Ensure, you enter the right sub-domain & domain name to the application you would like to host.
 
