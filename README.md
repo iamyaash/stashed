@@ -35,3 +35,4 @@ Make sure to stay on the parent directory of your `{hugo-site}`.
 ```sh
 ./scripts/theme-sync.sh 
 ```
+> Note: **Do not execute the scripts** from within the `scripts/` directory
