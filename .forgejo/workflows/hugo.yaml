@@ -21,11 +21,20 @@ jobs:
           submodules: recursive
           fetch-depth: 0
 
-      # NATIVE METHOD: Just install hugo using apt inside the container
-      - name: Install Hugo Natively
+      # NATIVE METHOD: Download your exact Hugo version for ARM64 architecture
+      - name: Install Specific Hugo Version
         run: |
-          sudo apt update
-          sudo apt install -y hugo
+          # 1. Download the native tar.gz package for ARM64 from GitHub's release servers
+          wget https://github.com/gohugoio/hugo/releases/download/v0.147.5/hugo_extended_0.147.5_linux-arm64.tar.gz
+          
+          # 2. Extract just the 'hugo' executable binary
+          tar -xzf hugo_extended_0.147.5_linux-arm64.tar.gz hugo
+          
+          # 3. Move it to a system path inside the container so it can be executed globally
+          mv hugo /usr/local/bin/hugo
+          
+          # 4. Confirm the version matches
+          hugo version
 
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
