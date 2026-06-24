@@ -48,13 +48,23 @@ jobs:
             --gc \
             --minify
 
-      # Step 5: Instantly push the compiled static directory to your Google Cloud Free-Tier VM via SSH
-      # - name: Deploy to GCloud VM
-      #   uses: easingthemes/ssh-deploy@v5
-      #   with:
-      #     SSH_PRIVATE_KEY: ${{ secrets.VM_SSH_KEY }}
-      #     REMOTE_HOST: ${{ secrets.VM_HOST }}
-      #     REMOTE_USER: ${{ secrets.VM_USER }}
-      #     SOURCE: "public/" # Hugo builds static elements directly into this directory
-      #     TARGET: "/var/www/html/" # The target path where your Caddy server points to
-      #     ARGS: "-rlgoDIVz --delete" # Synchronizes perfectly, clearing old files out dynamically
+      # Step 5: Native bash rsync deployment using your Forgejo Secrets
+      - name: Deploy to Google Cloud's free-vm
+        env:
+          SSH_KEY: ${{ secrets.VM_SSH_KEY }}
+          VM_IP: ${{ secrets.VM_HOST }}
+          VM_USER: ${{ secrets.VM_USER }}
+        run: |
+          # 1. Install SSH and Rsync utilities inside the runner container
+          apt-get update && apt-get install -y openssh-client rsync
+
+          # 2. Set up the private SSH key safely using absolute $HOME variable
+          mkdir -p $HOME/.ssh
+          echo "$SSH_KEY" > $HOME/.ssh/cloud-ssh-login
+          chmod 600 $HOME/.ssh/cloud-ssh-login
+
+          # 3. Disable strict host key checking so it connects automatically
+          echo -e "Host *\n\tStrictHostKeyChecking no\n\tIdentityFile $HOME/.ssh/cloud-ssh-login\n" > $HOME/.ssh/config
+
+          # 4. Run the exact same production rsync synchronization natively
+          rsync -rlgoDIVz --delete public/ ${VM_USER}@${VM_IP}:/var/www/html/stashed/
