@@ -12,28 +12,24 @@ defaults:
 
 jobs:
   build-and-deploy:
-    runs-on: docker # Your runner maps this to your Pi 5 Docker environment
+    runs-on: docker
 
     steps:
-      # Step 1: Checkout the source code cleanly
       - name: Checkout
         uses: actions/checkout@v4
         with:
           submodules: recursive
           fetch-depth: 0
 
-      # Step 2: Use an official container step that supports arm64 architecture natively
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
-        with:
-          hugo-version: '0.147.5'
-          extended: true # Automatically handles Dart Sass / SCSS requirements globally
+      # NATIVE METHOD: Just install hugo using apt inside the container
+      - name: Install Hugo Natively
+        run: |
+          sudo apt update
+          sudo apt install -y hugo
 
-      # Step 3: Install Node dependencies if your theme requires them
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
 
-      # Step 4: Build with Hugo
       - name: Build with Hugo
         env:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
